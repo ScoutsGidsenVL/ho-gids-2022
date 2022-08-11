@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ho_gids_2022">
+    package="be.scoutsengidsenvlaanderen.hogids">
    <application
-        android:label="ho_gids_2022"
+        android:label="HO-gids"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,4 +1,4 @@
-package com.example.ho_gids_2022
+package be.scoutsengidsenvlaanderen.hogids
 
 import io.flutter.embedding.android.FlutterActivity
 

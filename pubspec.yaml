@@ -1,5 +1,5 @@
-name: ho_gids_2022
-description: A new Flutter project.
+name: ho_gids
+description: HO-gids
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

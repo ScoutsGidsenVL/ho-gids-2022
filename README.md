@@ -1,4 +1,4 @@
-# ho_gids_2022
+# ho-gids-2022
 
 A new Flutter project.
 
