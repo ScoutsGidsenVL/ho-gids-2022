@@ -1,16 +1,14 @@
-# ho-gids-2022
+# HO gids 2022
+> Gids voor de Herfstontmoeting van Scouts en Gidsen Vlaanderen.
 
-A new Flutter project.
+Built with [Flutter](https://docs.flutter.dev/).
 
-## Getting Started
+## Development
 
-This project is a starting point for a Flutter application.
+1. Install flutter: [Get started](https://docs.flutter.dev/get-started/install)
+2. App content is in `lib/` and `assets/`.
+3. Icons are generated using [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons). See `pubspec.yaml` for config.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Deployment
+1. [Flutter instructions for Android](https://docs.flutter.dev/deployment/android)
+2. [Flutter instructions for iOS](https://docs.flutter.dev/deployment/ios)
