@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ho_gids/widgets/contact.dart';
 import 'package:ho_gids/widgets/welkom.dart';
 import 'package:ho_gids/widgets/jaarlied.dart';
 import 'package:ho_gids/widgets/kaart.dart';
@@ -40,7 +39,6 @@ class MyApp extends StatelessWidget {
           '/jaarlied': (context) => const Jaarlied(),
           '/praktisch': (context) => const Praktisch(),
           '/leefregels': (context) => const Leefregels(),
-          '/contact': (context) => const Contact(),
         });
   }
 }

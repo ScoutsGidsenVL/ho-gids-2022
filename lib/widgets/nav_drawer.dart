@@ -52,11 +52,6 @@ class NavDrawer extends StatelessWidget {
             title: const Text('Leefregels'),
             onTap: () => {Navigator.of(context).popAndPushNamed('/leefregels')},
           ),
-          ListTile(
-            leading: const Icon(Icons.contact_support),
-            title: const Text('Contact'),
-            onTap: () => {Navigator.of(context).popAndPushNamed('/contact')},
-          ),
         ],
       ),
     );
