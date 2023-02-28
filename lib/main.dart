@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ho_gids/widgets/welkom.dart';
-import 'package:ho_gids/widgets/jaarlied.dart';
-import 'package:ho_gids/widgets/kaart.dart';
-import 'package:ho_gids/widgets/leefregels.dart';
-import 'package:ho_gids/widgets/praktisch.dart';
-import 'package:ho_gids/widgets/programma.dart';
+import 'package:ho_gids/pages/welkom.dart';
+import 'package:ho_gids/pages/jaarlied.dart';
+import 'package:ho_gids/pages/kaart.dart';
+import 'package:ho_gids/pages/leefregels.dart';
+import 'package:ho_gids/pages/praktisch.dart';
+import 'package:ho_gids/pages/programma.dart';
 
 void main() {
   runApp(const MyApp());
