@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ho_gids/model/dynamic_data.dart';
 import 'package:ho_gids/widgets/nav_drawer.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 
@@ -21,6 +23,9 @@ class KaartState extends State<Kaart> {
 
   @override
   Widget build(BuildContext context) {
+    var features = context.watch<DynamicData>().annotations ?? [];
+    var markers = features.where((f) => f.geometry.type == 'Point');
+
     return Scaffold(
         appBar: AppBar(
           title: const Text('Kaart'),
@@ -43,6 +48,17 @@ class KaartState extends State<Kaart> {
               urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
               userAgentPackageName: 'be.scoutsengidsenvlaanderen.hogids',
               retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
+            ),
+            MarkerLayer(
+              markers: [
+                ...markers.map((f) => Marker(
+                    point: LatLng(
+                        f.geometry.coordinates[1], f.geometry.coordinates[0]),
+                    width: 60,
+                    height: 60,
+                    builder: (context) => const Image(
+                        image: AssetImage('assets/images/kaart/tent.png')))),
+              ],
             ),
             CurrentLocationLayer(),
           ],
