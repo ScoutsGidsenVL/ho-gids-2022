@@ -16,6 +16,20 @@ class Kaart extends StatefulWidget {
 }
 
 class KaartState extends State<Kaart> {
+  static final Map<String, PolygonStyle> styles = {
+    'podium': const PolygonStyle(fill: Color(0x77F07D00)),
+    'podiumgrond': const PolygonStyle(fill: Color(0x77006F93)),
+    'pavilioen': const PolygonStyle(fill: Color(0x77E2AFC4)),
+    'loods': const PolygonStyle(fill: Color(0x77DAE283)),
+    'kampeergrond': const PolygonStyle(fill: Color(0x7751AF31)),
+    'kampeergrond-ongebruikt': const PolygonStyle(fill: Color(0x77FDF7F4)),
+    'aanbod': const PolygonStyle(fill: Color(0x77DA0C25)),
+    'vijver': const PolygonStyle(fill: Color(0x88009FE3)),
+    'bos': const PolygonStyle(fill: Color(0x777E216E)),
+    'faciliteit': const PolygonStyle(fill: Color(0x770E7594)),
+    'border': const PolygonStyle(border: Color(0x77000000)),
+  };
+
   @override
   void initState() {
     super.initState();
@@ -24,7 +38,8 @@ class KaartState extends State<Kaart> {
   @override
   Widget build(BuildContext context) {
     var features = context.watch<DynamicData>().annotations ?? [];
-    var markers = features.where((f) => f.geometry.type == 'Point');
+    var polygons = features.where((f) => f.geometry.type == 'polygon');
+    var markers = features.where((f) => f.geometry.type == 'point');
 
     return Scaffold(
         appBar: AppBar(
@@ -36,9 +51,7 @@ class KaartState extends State<Kaart> {
           options: MapOptions(
             center: LatLng(51.2387, 4.9390),
             zoom: 14,
-            maxZoom: 17,
-            rotation: 0,
-            interactiveFlags: InteractiveFlag.all & ~InteractiveFlag.rotate,
+            maxZoom: 17.49,
           ),
           nonRotatedChildren: const [
             OsmAttribution(),
@@ -49,21 +62,50 @@ class KaartState extends State<Kaart> {
               userAgentPackageName: 'be.scoutsengidsenvlaanderen.hogids',
               retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
             ),
+            PolygonLayer(
+              polygons: polygons.map((f) {
+                var style = styles[f.properties.style] ?? const PolygonStyle();
+                try {
+                  return Polygon(
+                      borderColor: style.border ?? Colors.transparent,
+                      borderStrokeWidth: style.border != null ? 5 : 0,
+                      isDotted: style.border != null,
+                      color: style.fill ?? Colors.transparent,
+                      isFilled: style.fill != null,
+                      points: (f.geometry.coordinates as List<dynamic>)
+                          .map((p) => (p as List<dynamic>)
+                              .map((v) => v as double)
+                              .toList())
+                          .map((p) => LatLng(p[1], p[0]))
+                          .toList());
+                } catch (e) {
+                  return Polygon(points: []);
+                }
+              }).toList(),
+            ),
             MarkerLayer(
-              markers: [
-                ...markers.map((f) => Marker(
+              markers: markers.map((f) {
+                var image = AssetImage(
+                    'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
+                return Marker(
                     point: LatLng(
                         f.geometry.coordinates[1], f.geometry.coordinates[0]),
-                    width: 60,
-                    height: 60,
-                    builder: (context) => const Image(
-                        image: AssetImage('assets/images/kaart/tent.png')))),
-              ],
+                    width: 24,
+                    height: 24,
+                    builder: (context) => Image(image: image));
+              }).toList(),
             ),
             CurrentLocationLayer(),
           ],
         ));
   }
+}
+
+class PolygonStyle {
+  const PolygonStyle({this.border, this.fill});
+
+  final Color? border;
+  final Color? fill;
 }
 
 class OsmAttribution extends StatelessWidget {

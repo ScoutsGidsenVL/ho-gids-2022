@@ -14,9 +14,8 @@ class MapAnnotations {
 
 @JsonSerializable(createToJson: false)
 class MapFeature {
-  MapFeature(this.type, this.properties, this.geometry);
+  MapFeature(this.properties, this.geometry);
 
-  String type;
   MapProperties properties;
   MapGeometry geometry;
 

@@ -14,7 +14,6 @@ MapAnnotations _$MapAnnotationsFromJson(Map<String, dynamic> json) =>
     );
 
 MapFeature _$MapFeatureFromJson(Map<String, dynamic> json) => MapFeature(
-      json['type'] as String,
       MapProperties.fromJson(json['properties'] as Map<String, dynamic>),
       MapGeometry.fromJson(json['geometry'] as Map<String, dynamic>),
     );
