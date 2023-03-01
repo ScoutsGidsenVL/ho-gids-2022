@@ -4,45 +4,37 @@ part 'map_data.g.dart';
 
 @JsonSerializable(createToJson: false)
 class MapAnnotations {
-  MapAnnotations(this.features);
+  MapAnnotations(this.regions, this.markers);
 
-  List<MapFeature> features;
+  List<MapRegion> regions;
+  List<MapMarker> markers;
 
   factory MapAnnotations.fromJson(Map<String, dynamic> json) =>
       _$MapAnnotationsFromJson(json);
 }
 
 @JsonSerializable(createToJson: false)
-class MapFeature {
-  MapFeature(this.properties, this.geometry);
-
-  MapProperties properties;
-  MapGeometry geometry;
-
-  factory MapFeature.fromJson(Map<String, dynamic> json) =>
-      _$MapFeatureFromJson(json);
-}
-
-@JsonSerializable(createToJson: false)
-class MapProperties {
-  MapProperties(this.name, this.style, this.comment, this.alias);
+class MapRegion {
+  MapRegion(this.name, this.style, this.alias, this.points);
 
   String? name;
   String? style;
-  String? comment;
   String? alias;
+  List<List<double>> points;
 
-  factory MapProperties.fromJson(Map<String, dynamic> json) =>
-      _$MapPropertiesFromJson(json);
+  factory MapRegion.fromJson(Map<String, dynamic> json) =>
+      _$MapRegionFromJson(json);
 }
 
 @JsonSerializable(createToJson: false)
-class MapGeometry {
-  MapGeometry(this.type, this.coordinates);
+class MapMarker {
+  MapMarker(this.name, this.style, this.alias, this.point);
 
-  String type;
-  dynamic coordinates;
+  String? name;
+  String? style;
+  String? alias;
+  List<double> point;
 
-  factory MapGeometry.fromJson(Map<String, dynamic> json) =>
-      _$MapGeometryFromJson(json);
+  factory MapMarker.fromJson(Map<String, dynamic> json) =>
+      _$MapMarkerFromJson(json);
 }

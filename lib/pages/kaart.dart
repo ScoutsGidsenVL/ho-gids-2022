@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
+import 'package:ho_gids/model/map_data.dart';
 import 'package:ho_gids/widgets/nav_drawer.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
@@ -37,9 +38,8 @@ class KaartState extends State<Kaart> {
 
   @override
   Widget build(BuildContext context) {
-    var features = context.watch<DynamicData>().annotations ?? [];
-    var polygons = features.where((f) => f.geometry.type == 'polygon');
-    var markers = features.where((f) => f.geometry.type == 'point');
+    var annotations =
+        context.watch<DynamicData>().annotations ?? MapAnnotations([], []);
 
     return Scaffold(
         appBar: AppBar(
@@ -63,8 +63,8 @@ class KaartState extends State<Kaart> {
               retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
             ),
             PolygonLayer(
-              polygons: polygons.map((f) {
-                var style = styles[f.properties.style] ?? const PolygonStyle();
+              polygons: annotations.regions.map((f) {
+                var style = styles[f.style] ?? const PolygonStyle();
                 try {
                   return Polygon(
                       borderColor: style.border ?? Colors.transparent,
@@ -72,26 +72,20 @@ class KaartState extends State<Kaart> {
                       isDotted: style.border != null,
                       color: style.fill ?? Colors.transparent,
                       isFilled: style.fill != null,
-                      points: (f.geometry.coordinates as List<dynamic>)
-                          .map((p) => (p as List<dynamic>)
-                              .map((v) => v as double)
-                              .toList())
-                          .map((p) => LatLng(p[1], p[0]))
-                          .toList());
+                      points: f.points.map((p) => LatLng(p[1], p[0])).toList());
                 } catch (e) {
                   return Polygon(points: []);
                 }
               }).toList(),
             ),
             MarkerLayer(
-              markers: markers.map((f) {
+              markers: annotations.markers.map((f) {
                 var image = AssetImage(
-                    'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
+                    'assets/images/kaart/${f.name?.toLowerCase() ?? ''}.png');
                 return Marker(
-                    point: LatLng(
-                        f.geometry.coordinates[1], f.geometry.coordinates[0]),
-                    width: 24,
-                    height: 24,
+                    point: LatLng(f.point[1], f.point[0]),
+                    width: 30,
+                    height: 30,
                     builder: (context) => Image(image: image));
               }).toList(),
             ),
