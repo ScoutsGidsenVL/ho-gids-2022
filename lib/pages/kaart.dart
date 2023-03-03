@@ -8,6 +8,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
+import 'package:collection/collection.dart';
 
 class Kaart extends StatefulWidget {
   const Kaart({Key? key}) : super(key: key);
@@ -31,6 +32,8 @@ class KaartState extends State<Kaart> {
     'border': const PolygonStyle(border: Color(0x77000000)),
   };
 
+  MapRegion? _selectedRegion;
+
   @override
   void initState() {
     super.initState();
@@ -52,9 +55,20 @@ class KaartState extends State<Kaart> {
             center: LatLng(51.2387, 4.9390),
             zoom: 14,
             maxZoom: 17.49,
+            onTap: (tapPosition, point) {
+              var region = annotations.regions
+                  .where((r) => r.contains(point) && r.style != 'border')
+                  .lastOrNull;
+              setState(() {
+                _selectedRegion = region;
+              });
+            },
           ),
-          nonRotatedChildren: const [
-            OsmAttribution(),
+          nonRotatedChildren: [
+            const OsmAttribution(),
+            _selectedRegion == null
+                ? Container()
+                : SelectedRegion(_selectedRegion!)
           ],
           children: [
             TileLayer(
@@ -65,13 +79,17 @@ class KaartState extends State<Kaart> {
             PolygonLayer(
               polygons: annotations.regions.map((f) {
                 var style = styles[f.style] ?? const PolygonStyle();
+                var selected = f == _selectedRegion;
                 try {
                   return Polygon(
-                      borderColor: style.border ?? Colors.transparent,
-                      borderStrokeWidth: style.border != null ? 5 : 0,
+                      borderColor: style.border ??
+                          (selected ? Colors.black : Colors.transparent),
+                      borderStrokeWidth:
+                          style.border != null ? 5 : (selected ? 2 : 0),
                       isDotted: style.border != null,
                       color: style.fill ?? Colors.transparent,
                       isFilled: style.fill != null,
+                      label: f.name,
                       points: f.points.map((p) => LatLng(p[1], p[0])).toList());
                 } catch (e) {
                   return Polygon(points: []);
@@ -84,8 +102,9 @@ class KaartState extends State<Kaart> {
                     'assets/images/kaart/${f.name?.toLowerCase() ?? ''}.png');
                 return Marker(
                     point: LatLng(f.point[1], f.point[0]),
-                    width: 30,
-                    height: 30,
+                    rotate: true,
+                    width: 24,
+                    height: 24,
                     builder: (context) => Image(image: image));
               }).toList(),
             ),
@@ -96,10 +115,23 @@ class KaartState extends State<Kaart> {
 }
 
 class PolygonStyle {
-  const PolygonStyle({this.border, this.fill});
-
   final Color? border;
   final Color? fill;
+
+  const PolygonStyle({this.border, this.fill});
+}
+
+class SelectedRegion extends StatelessWidget {
+  final MapRegion region;
+
+  const SelectedRegion(this.region, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+        alignment: Alignment.bottomCenter,
+        child: Card(child: Text(region.name ?? '')));
+  }
 }
 
 class OsmAttribution extends StatelessWidget {

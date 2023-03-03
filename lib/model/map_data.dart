@@ -1,4 +1,6 @@
+import 'package:flutter_map/flutter_map.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:latlong2/latlong.dart';
 
 part 'map_data.g.dart';
 
@@ -24,6 +26,12 @@ class MapRegion {
 
   factory MapRegion.fromJson(Map<String, dynamic> json) =>
       _$MapRegionFromJson(json);
+
+  bool contains(LatLng loc) {
+    return LatLngBounds.fromPoints(
+            points.map((p) => LatLng(p[1], p[0])).toList())
+        .contains(loc);
+  }
 }
 
 @JsonSerializable(createToJson: false)
