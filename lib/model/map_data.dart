@@ -22,10 +22,19 @@ class MapFeature {
   MapGeometry geometry;
 
   List<LatLng> getPoints() {
-    return ((geometry.coordinates as List)[0] as List)
-        .map((p) => (p as List).map((e) => e as double).toList())
-        .map((e) => LatLng(e[1], e[0]))
-        .toList();
+    switch (geometry.type) {
+      case 'Polygon':
+        return ((geometry.coordinates as List)[0] as List)
+            .map((p) => (p as List).map((e) => e as double).toList())
+            .map((e) => LatLng(e[1], e[0]))
+            .toList();
+      case 'Point':
+        var p = (geometry.coordinates as List).map((e) => e as double).toList();
+        return [LatLng(p[1], p[0])];
+      default:
+        throw UnsupportedError(
+            'Cannot get points for geometry ${geometry.type}');
+    }
   }
 
   bool contains(LatLng loc) {

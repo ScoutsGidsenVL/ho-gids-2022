@@ -53,7 +53,7 @@ class KaartState extends State<Kaart> {
         backgroundColor: Colors.white,
         body: FlutterMap(
           options: MapOptions(
-            center: LatLng(51.2387, 4.9390),
+            center: LatLng(51.2387, 4.9389),
             zoom: 14,
             maxZoom: 17.49,
             onTap: (tapPosition, point) {
@@ -70,7 +70,7 @@ class KaartState extends State<Kaart> {
             const OsmAttribution(),
             _selectedFeature == null
                 ? Container()
-                : SelectedFeature(_selectedFeature!)
+                : SelectedFeature(_selectedFeature!),
           ],
           children: [
             TileLayer(
@@ -92,6 +92,7 @@ class KaartState extends State<Kaart> {
                       color: style.fill ?? Colors.transparent,
                       isFilled: style.fill != null,
                       label: f.properties.name,
+                      rotateLabel: true,
                       points: f.getPoints());
                 } catch (e) {
                   return Polygon(points: []);
@@ -103,8 +104,7 @@ class KaartState extends State<Kaart> {
                 var image = AssetImage(
                     'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
                 return Marker(
-                    point: LatLng(
-                        f.geometry.coordinates[1], f.geometry.coordinates[0]),
+                    point: f.getPoints()[0],
                     rotate: true,
                     width: 24,
                     height: 24,
@@ -133,7 +133,12 @@ class SelectedFeature extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
         alignment: Alignment.bottomCenter,
-        child: Card(child: Text(feature.properties.name ?? '')));
+        child: Card(
+            child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                child: Text(feature.properties.name ?? '',
+                    style: Theme.of(context).textTheme.headlineSmall))));
   }
 }
 

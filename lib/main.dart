@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
                 colorScheme: const ColorScheme.light(
               primary: Color.fromRGBO(72, 130, 127, 1),
+              secondary: Color.fromRGBO(197, 227, 232, 1),
             )),
             initialRoute: '/',
             routes: <String, WidgetBuilder>{
