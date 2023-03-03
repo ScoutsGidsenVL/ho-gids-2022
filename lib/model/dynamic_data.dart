@@ -9,6 +9,7 @@ const dataRepo =
 
 class DynamicData extends ChangeNotifier {
   List<MapFeature>? annotations;
+  Map<String, String> text = {};
 
   DynamicData() {
     refreshData();
@@ -17,6 +18,10 @@ class DynamicData extends ChangeNotifier {
   Future refreshData() async {
     await Future.wait([
       refreshMapData(),
+      refreshText('jaarlied'),
+      refreshText('leefregels'),
+      refreshText('praktisch'),
+      refreshText('welkom'),
     ]);
     notifyListeners();
   }
@@ -25,6 +30,10 @@ class DynamicData extends ChangeNotifier {
     var source = await fetchAsset('content/kaart.json');
     var data = await json.decode(source);
     annotations = MapAnnotations.fromJson(data).features;
+  }
+
+  Future refreshText(String key) async {
+    text[key] = await fetchAsset('content/$key.md');
   }
 
   Future<String> fetchAsset(String path) async {

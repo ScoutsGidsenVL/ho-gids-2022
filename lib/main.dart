@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
+import 'package:ho_gids/pages/static.dart';
 import 'package:ho_gids/pages/welkom.dart';
-import 'package:ho_gids/pages/jaarlied.dart';
 import 'package:ho_gids/pages/kaart.dart';
-import 'package:ho_gids/pages/leefregels.dart';
-import 'package:ho_gids/pages/praktisch.dart';
 import 'package:ho_gids/pages/programma.dart';
 import 'package:provider/provider.dart';
 
@@ -31,9 +29,12 @@ class MyApp extends StatelessWidget {
               '/': (context) => const Welkom(),
               '/programma': (context) => const Programma(),
               '/kaart': (context) => const Kaart(),
-              '/jaarlied': (context) => const Jaarlied(),
-              '/praktisch': (context) => const Praktisch(),
-              '/leefregels': (context) => const Leefregels(),
+              '/jaarlied': (context) =>
+                  const Static(path: 'jaarlied', title: 'Jaarlied'),
+              '/praktisch': (context) =>
+                  const Static(path: 'praktisch', title: 'Praktisch'),
+              '/leefregels': (context) =>
+                  const Static(path: 'leefregels', title: 'Leefregels'),
             }));
   }
 }
