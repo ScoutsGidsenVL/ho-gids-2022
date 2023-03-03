@@ -8,7 +8,7 @@ const dataRepo =
     'https://raw.githubusercontent.com/ScoutsGidsenVL/ho-gids-2022/main';
 
 class DynamicData extends ChangeNotifier {
-  MapAnnotations? annotations;
+  List<MapFeature>? annotations;
 
   DynamicData() {
     refreshData();
@@ -24,7 +24,7 @@ class DynamicData extends ChangeNotifier {
   Future refreshMapData() async {
     var source = await fetchAsset('content/kaart.json');
     var data = await json.decode(source);
-    annotations = MapAnnotations.fromJson(data);
+    annotations = MapAnnotations.fromJson(data).features;
   }
 
   Future<String> fetchAsset(String path) async {

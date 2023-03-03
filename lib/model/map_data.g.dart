@@ -8,29 +8,25 @@ part of 'map_data.dart';
 
 MapAnnotations _$MapAnnotationsFromJson(Map<String, dynamic> json) =>
     MapAnnotations(
-      (json['regions'] as List<dynamic>)
-          .map((e) => MapRegion.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      (json['markers'] as List<dynamic>)
-          .map((e) => MapMarker.fromJson(e as Map<String, dynamic>))
+      (json['features'] as List<dynamic>)
+          .map((e) => MapFeature.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-MapRegion _$MapRegionFromJson(Map<String, dynamic> json) => MapRegion(
-      json['name'] as String?,
-      json['style'] as String?,
-      json['alias'] as String?,
-      (json['points'] as List<dynamic>)
-          .map((e) =>
-              (e as List<dynamic>).map((e) => (e as num).toDouble()).toList())
-          .toList(),
+MapFeature _$MapFeatureFromJson(Map<String, dynamic> json) => MapFeature(
+      MapProperties.fromJson(json['properties'] as Map<String, dynamic>),
+      MapGeometry.fromJson(json['geometry'] as Map<String, dynamic>),
     );
 
-MapMarker _$MapMarkerFromJson(Map<String, dynamic> json) => MapMarker(
+MapProperties _$MapPropertiesFromJson(Map<String, dynamic> json) =>
+    MapProperties(
       json['name'] as String?,
       json['style'] as String?,
+      json['comment'] as String?,
       json['alias'] as String?,
-      (json['point'] as List<dynamic>)
-          .map((e) => (e as num).toDouble())
-          .toList(),
+    );
+
+MapGeometry _$MapGeometryFromJson(Map<String, dynamic> json) => MapGeometry(
+      json['type'] as String,
+      json['coordinates'],
     );

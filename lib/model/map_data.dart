@@ -6,43 +6,56 @@ part 'map_data.g.dart';
 
 @JsonSerializable(createToJson: false)
 class MapAnnotations {
-  MapAnnotations(this.regions, this.markers);
+  MapAnnotations(this.features);
 
-  List<MapRegion> regions;
-  List<MapMarker> markers;
+  List<MapFeature> features;
 
   factory MapAnnotations.fromJson(Map<String, dynamic> json) =>
       _$MapAnnotationsFromJson(json);
 }
 
 @JsonSerializable(createToJson: false)
-class MapRegion {
-  MapRegion(this.name, this.style, this.alias, this.points);
+class MapFeature {
+  MapFeature(this.properties, this.geometry);
 
-  String? name;
-  String? style;
-  String? alias;
-  List<List<double>> points;
+  MapProperties properties;
+  MapGeometry geometry;
 
-  factory MapRegion.fromJson(Map<String, dynamic> json) =>
-      _$MapRegionFromJson(json);
+  List<LatLng> getPoints() {
+    return ((geometry.coordinates as List)[0] as List)
+        .map((p) => (p as List).map((e) => e as double).toList())
+        .map((e) => LatLng(e[1], e[0]))
+        .toList();
+  }
 
   bool contains(LatLng loc) {
-    return LatLngBounds.fromPoints(
-            points.map((p) => LatLng(p[1], p[0])).toList())
-        .contains(loc);
+    return LatLngBounds.fromPoints(getPoints()).contains(loc);
   }
+
+  factory MapFeature.fromJson(Map<String, dynamic> json) =>
+      _$MapFeatureFromJson(json);
 }
 
 @JsonSerializable(createToJson: false)
-class MapMarker {
-  MapMarker(this.name, this.style, this.alias, this.point);
+class MapProperties {
+  MapProperties(this.name, this.style, this.comment, this.alias);
 
   String? name;
   String? style;
+  String? comment;
   String? alias;
-  List<double> point;
 
-  factory MapMarker.fromJson(Map<String, dynamic> json) =>
-      _$MapMarkerFromJson(json);
+  factory MapProperties.fromJson(Map<String, dynamic> json) =>
+      _$MapPropertiesFromJson(json);
+}
+
+@JsonSerializable(createToJson: false)
+class MapGeometry {
+  MapGeometry(this.type, this.coordinates);
+
+  String type;
+  dynamic coordinates;
+
+  factory MapGeometry.fromJson(Map<String, dynamic> json) =>
+      _$MapGeometryFromJson(json);
 }

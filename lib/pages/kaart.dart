@@ -32,7 +32,7 @@ class KaartState extends State<Kaart> {
     'border': const PolygonStyle(border: Color(0x77000000)),
   };
 
-  MapRegion? _selectedRegion;
+  MapFeature? _selectedFeature;
 
   @override
   void initState() {
@@ -41,8 +41,9 @@ class KaartState extends State<Kaart> {
 
   @override
   Widget build(BuildContext context) {
-    var annotations =
-        context.watch<DynamicData>().annotations ?? MapAnnotations([], []);
+    var features = context.watch<DynamicData>().annotations ?? [];
+    var polygons = features.where((f) => f.geometry.type == 'Polygon');
+    var markers = features.where((f) => f.geometry.type == 'Point');
 
     return Scaffold(
         appBar: AppBar(
@@ -56,19 +57,20 @@ class KaartState extends State<Kaart> {
             zoom: 14,
             maxZoom: 17.49,
             onTap: (tapPosition, point) {
-              var region = annotations.regions
-                  .where((r) => r.contains(point) && r.style != 'border')
+              var region = polygons
+                  .where((r) =>
+                      r.contains(point) && r.properties.style != 'border')
                   .lastOrNull;
               setState(() {
-                _selectedRegion = region;
+                _selectedFeature = region;
               });
             },
           ),
           nonRotatedChildren: [
             const OsmAttribution(),
-            _selectedRegion == null
+            _selectedFeature == null
                 ? Container()
-                : SelectedRegion(_selectedRegion!)
+                : SelectedFeature(_selectedFeature!)
           ],
           children: [
             TileLayer(
@@ -77,9 +79,9 @@ class KaartState extends State<Kaart> {
               retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
             ),
             PolygonLayer(
-              polygons: annotations.regions.map((f) {
-                var style = styles[f.style] ?? const PolygonStyle();
-                var selected = f == _selectedRegion;
+              polygons: polygons.map((f) {
+                var style = styles[f.properties.style] ?? const PolygonStyle();
+                var selected = f == _selectedFeature;
                 try {
                   return Polygon(
                       borderColor: style.border ??
@@ -89,19 +91,20 @@ class KaartState extends State<Kaart> {
                       isDotted: style.border != null,
                       color: style.fill ?? Colors.transparent,
                       isFilled: style.fill != null,
-                      label: f.name,
-                      points: f.points.map((p) => LatLng(p[1], p[0])).toList());
+                      label: f.properties.name,
+                      points: f.getPoints());
                 } catch (e) {
                   return Polygon(points: []);
                 }
               }).toList(),
             ),
             MarkerLayer(
-              markers: annotations.markers.map((f) {
+              markers: markers.map((f) {
                 var image = AssetImage(
-                    'assets/images/kaart/${f.name?.toLowerCase() ?? ''}.png');
+                    'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
                 return Marker(
-                    point: LatLng(f.point[1], f.point[0]),
+                    point: LatLng(
+                        f.geometry.coordinates[1], f.geometry.coordinates[0]),
                     rotate: true,
                     width: 24,
                     height: 24,
@@ -121,16 +124,16 @@ class PolygonStyle {
   const PolygonStyle({this.border, this.fill});
 }
 
-class SelectedRegion extends StatelessWidget {
-  final MapRegion region;
+class SelectedFeature extends StatelessWidget {
+  final MapFeature feature;
 
-  const SelectedRegion(this.region, {super.key});
+  const SelectedFeature(this.feature, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Align(
         alignment: Alignment.bottomCenter,
-        child: Card(child: Text(region.name ?? '')));
+        child: Card(child: Text(feature.properties.name ?? '')));
   }
 }
 
