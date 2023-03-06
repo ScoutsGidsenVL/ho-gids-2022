@@ -22,9 +22,10 @@ class Welkom extends StatelessWidget {
           children: [
             Row(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   backgroundImage:
-                      AssetImage('assets/images/jo-deman-avatar.png'),
+                      const AssetImage('assets/images/jo-deman-avatar.png'),
+                  backgroundColor: Theme.of(context).colorScheme.secondary,
                   minRadius: 24,
                 ),
                 Column(

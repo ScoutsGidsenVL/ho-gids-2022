@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:ho_gids/model/calendar_data.dart';
 import 'package:ho_gids/model/map_data.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
@@ -9,6 +10,7 @@ const dataRepo =
 
 class DynamicData extends ChangeNotifier {
   List<MapFeature>? annotations;
+  List<CalendarTab>? calendar;
   Map<String, String> text = {};
 
   DynamicData() {
@@ -18,6 +20,7 @@ class DynamicData extends ChangeNotifier {
   Future refreshData() async {
     await Future.wait([
       refreshMapData(),
+      refreshCalendarData(),
       refreshText('jaarlied'),
       refreshText('leefregels'),
       refreshText('praktisch'),
@@ -30,6 +33,12 @@ class DynamicData extends ChangeNotifier {
     var source = await fetchAsset('content/kaart.json');
     var data = await json.decode(source);
     annotations = MapAnnotations.fromJson(data).features;
+  }
+
+  Future refreshCalendarData() async {
+    var source = await fetchAsset('content/programma.json');
+    var data = await json.decode(source);
+    calendar = CalendarData.fromJson(data).tabs;
   }
 
   Future refreshText(String key) async {

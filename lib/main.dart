@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
                 colorScheme: const ColorScheme.light(
               primary: Color.fromRGBO(72, 130, 127, 1),
               secondary: Color.fromRGBO(197, 227, 232, 1),
+              tertiary: Color.fromRGBO(227, 47, 43, 1),
             )),
             initialRoute: '/',
             routes: <String, WidgetBuilder>{
