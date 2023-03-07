@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -9,12 +10,22 @@ const dataRepo =
     'https://raw.githubusercontent.com/ScoutsGidsenVL/ho-gids-2022/main';
 
 class DynamicData extends ChangeNotifier {
+  late Timer timer;
   List<MapFeature>? annotations;
   List<CalendarTab>? calendar;
   Map<String, String> text = {};
 
   DynamicData() {
     refreshData();
+    timer = Timer.periodic(const Duration(minutes: 30), (timer) {
+      refreshData();
+    });
+  }
+
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
   }
 
   Future refreshData() async {
