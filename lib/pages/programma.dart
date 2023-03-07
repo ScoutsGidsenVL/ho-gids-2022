@@ -36,10 +36,14 @@ class ProgrammaTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const cellPadding = EdgeInsets.symmetric(vertical: 12, horizontal: 20);
     var rows = <TableRow>[];
-    String? lastGroup;
+    String? lastGroup = "none";
     for (var item in tab.items) {
+      var cellPadding = EdgeInsets.only(
+          top: item.group != lastGroup ? 25 : 10,
+          bottom: 10,
+          left: 20,
+          right: 20);
       if (item.group != lastGroup && item.group != null) {
         rows.add(TableRow(children: [
           Padding(
@@ -50,8 +54,9 @@ class ProgrammaTab extends StatelessWidget {
           ),
           Container(),
         ]));
-        lastGroup = item.group;
+        cellPadding = cellPadding.copyWith(top: 10);
       }
+      lastGroup = item.group;
       rows.add(TableRow(children: [
         Padding(
           padding: cellPadding,
