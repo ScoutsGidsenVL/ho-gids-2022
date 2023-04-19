@@ -35,6 +35,7 @@ dependencies:
   json_annotation: ^4.8.0
   collection: ^1.17.0
   flutter_markdown: ^0.6.14
+  beamer: ^1.5.3
 
 dev_dependencies:
   flutter_test:

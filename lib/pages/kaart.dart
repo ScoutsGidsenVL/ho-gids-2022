@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
 import 'package:ho_gids/model/map_data.dart';
-import 'package:ho_gids/widgets/nav_drawer.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
 import 'package:latlong2/latlong.dart';
@@ -46,10 +45,6 @@ class KaartState extends State<Kaart> {
     var markers = features.where((f) => f.geometry.type == 'Point');
 
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Kaart'),
-        ),
-        drawer: const NavDrawer(),
         backgroundColor: Colors.white,
         body: FlutterMap(
           options: MapOptions(

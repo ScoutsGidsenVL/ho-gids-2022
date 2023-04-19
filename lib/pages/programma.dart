@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/calendar_data.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
-import 'package:ho_gids/widgets/nav_drawer.dart';
 import 'package:provider/provider.dart';
 
 class Programma extends StatelessWidget {
@@ -15,12 +14,15 @@ class Programma extends StatelessWidget {
         length: calendar.length,
         child: Scaffold(
             appBar: AppBar(
-              title: const Text('Programma'),
-              bottom: TabBar(
-                  tabs: calendar.map((e) => Tab(text: e.label)).toList(),
-                  indicatorColor: Theme.of(context).colorScheme.secondary),
+              flexibleSpace: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TabBar(
+                      tabs: calendar.map((e) => Tab(text: e.label)).toList(),
+                      indicatorColor: Theme.of(context).colorScheme.secondary)
+                ],
+              ),
             ),
-            drawer: const NavDrawer(),
             body: TabBarView(
               children: calendar
                   .map((tab) => ListView(children: [ProgrammaTab(tab: tab)]))
