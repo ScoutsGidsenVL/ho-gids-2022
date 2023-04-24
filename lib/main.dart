@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
+import 'package:ho_gids/model/time_manager.dart';
 import 'package:ho_gids/pages/nieuws.dart';
 import 'package:ho_gids/pages/kaart.dart';
 import 'package:ho_gids/pages/programma.dart';
 import 'package:ho_gids/pages/static.dart';
 import 'package:provider/provider.dart';
 import 'package:beamer/beamer.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 final List<TabInfo> tabs = [
   TabInfo(
@@ -49,8 +51,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (_) => DynamicData(),
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => DynamicData()),
+          ChangeNotifierProvider(create: (_) => TimeManager()),
+        ],
         child: MaterialApp.router(
           title: 'HO-gids',
           theme: ThemeData(
@@ -58,6 +63,8 @@ class MyApp extends StatelessWidget {
                   primary: Color.fromRGBO(72, 130, 127, 1),
                   secondary: Color.fromRGBO(197, 227, 232, 1),
                   tertiary: Color.fromRGBO(227, 47, 43, 1))),
+          localizationsDelegates: GlobalMaterialLocalizations.delegates,
+          supportedLocales: const [Locale('nl')],
           routerDelegate: routerDelegate,
           routeInformationParser: BeamerParser(),
           backButtonDispatcher: BeamerBackButtonDispatcher(

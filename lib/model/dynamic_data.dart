@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:ho_gids/model/calendar_data.dart';
 import 'package:ho_gids/model/map_data.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:ho_gids/model/news_data.dart';
 
 const dataRepo =
     'https://raw.githubusercontent.com/ScoutsGidsenVL/ho-gids-2022/main';
@@ -13,6 +14,7 @@ class DynamicData extends ChangeNotifier {
   late Timer timer;
   List<MapFeature>? annotations;
   List<CalendarTab>? calendar;
+  List<NewsItemData>? news;
   Map<String, String> text = {};
 
   DynamicData() {
@@ -32,10 +34,10 @@ class DynamicData extends ChangeNotifier {
     await Future.wait([
       refreshMapData(),
       refreshCalendarData(),
+      refreshNewsData(),
       refreshText('jaarlied'),
       refreshText('leefregels'),
       refreshText('praktisch'),
-      refreshText('welkom'),
     ]);
     notifyListeners();
   }
@@ -50,6 +52,12 @@ class DynamicData extends ChangeNotifier {
     var source = await fetchAsset('content/programma.json');
     var data = await json.decode(source);
     calendar = CalendarData.fromJson(data).tabs;
+  }
+
+  Future refreshNewsData() async {
+    var source = await fetchAsset('content/nieuws.json');
+    var data = await json.decode(source);
+    news = NewsData.fromJson(data).news;
   }
 
   Future refreshText(String key) async {

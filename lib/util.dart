@@ -31,3 +31,21 @@ void Function(String, String?, String) linkHandler(BuildContext context) {
     }
   };
 }
+
+final startDate = DateTime(2022, 8, 26, 0, 0);
+const days = ['VR', 'ZA', 'ZO'];
+
+DateTime? parseTime(String str) {
+  final parts = str.split(' ');
+  if (parts.length != 2) return null;
+  final dayIndex = days.indexOf(parts[0]);
+  if (dayIndex == -1) return null;
+  final timeParts = parts[1].split(':');
+  if (timeParts.length != 2) return null;
+  final hour = int.tryParse(timeParts[0]);
+  final minute = int.tryParse(timeParts[1]);
+  if (hour == null || minute == null) return null;
+  return startDate
+      .add(Duration(days: dayIndex))
+      .copyWith(hour: hour, minute: minute);
+}
