@@ -12,15 +12,15 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 final List<TabInfo> tabs = [
   TabInfo(
     title: 'Nieuws',
-    icon: (_) => const Icon(Icons.home),
-    path: '/',
+    icon: const Icon(Icons.home),
+    path: '/nieuws',
     locationBuilder: (info, params) {
       return NieuwsLocation(info);
     },
   ),
   TabInfo(
     title: 'Programma',
-    icon: (_) => const Icon(Icons.calendar_today),
+    icon: const Icon(Icons.calendar_today),
     path: '/programma',
     locationBuilder: (info, params) {
       return ProgrammaLocation(info);
@@ -28,7 +28,7 @@ final List<TabInfo> tabs = [
   ),
   TabInfo(
     title: 'Kaart',
-    icon: (_) => const Icon(Icons.map),
+    icon: const Icon(Icons.map),
     path: '/kaart',
     locationBuilder: (info, params) {
       return KaartLocation(info);
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
   final routerDelegate = BeamerDelegate(
-      initialPath: '/',
+      initialPath: '/nieuws',
       locationBuilder: RoutesLocationBuilder(routes: {
         '*': (context, state, data) => const ScaffoldWithNavBar(),
       }));
@@ -129,8 +129,7 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: tabs
-              .map((t) => BottomNavigationBarItem(
-                  icon: t.icon(context), label: t.title))
+              .map((t) => BottomNavigationBarItem(icon: t.icon, label: t.title))
               .toList(),
           currentIndex: _currentIndex,
           onTap: (index) {
@@ -157,7 +156,7 @@ class TabInfo {
   });
 
   final String title;
-  final Widget Function(BuildContext context) icon;
+  final Widget icon;
   final String path;
   final BeamLocation<RouteInformationSerializable<dynamic>> Function(
       RouteInformation info, BeamParameters? params) locationBuilder;
@@ -166,24 +165,24 @@ class TabInfo {
 class NieuwsLocation extends BeamLocation<BeamState> {
   NieuwsLocation(super.info);
   @override
-  List<String> get pathPatterns => ['/'];
+  List<String> get pathPatterns => ['/nieuws/*'];
   @override
   List<BeamPage> buildPages(BuildContext context, BeamState state) => [
         const BeamPage(
           key: ValueKey('nieuws'),
           child: Nieuws(),
         ),
-        if (state.uri.path.startsWith('/jaarlied'))
+        if (state.uri.path.startsWith('/nieuws/jaarlied'))
           const BeamPage(
             key: ValueKey('jaarlied'),
             child: Static(path: 'jaarlied', title: 'Jaarlied'),
           ),
-        if (state.uri.path.startsWith('/praktisch'))
+        if (state.uri.path.startsWith('/nieuws/praktisch'))
           const BeamPage(
             key: ValueKey('praktisch'),
             child: Static(path: 'praktisch', title: 'Praktisch'),
           ),
-        if (state.uri.path.startsWith('/leefregels'))
+        if (state.uri.path.startsWith('/nieuws/leefregels'))
           const BeamPage(
             key: ValueKey('leefregels'),
             child: Static(path: 'leefregels', title: 'Leefregels'),
@@ -210,9 +209,9 @@ class KaartLocation extends BeamLocation<BeamState> {
   List<String> get pathPatterns => ['/kaart'];
   @override
   List<BeamPage> buildPages(BuildContext context, BeamState state) => [
-        const BeamPage(
-          key: ValueKey('kaart'),
-          child: Kaart(),
+        BeamPage(
+          key: const ValueKey('kaart'),
+          child: Kaart(id: state.uri.queryParameters['id']),
         ),
       ];
 }

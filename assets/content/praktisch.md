@@ -23,34 +23,34 @@ Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Bel dan het 
 ---
 
 ## Gouw gronden
-|Gouw                |Locatie      |
-|--------------------|-------------|
-|Antwerpen           |Kamp 8 Zuid  |
-|Heide               |Kamp 42      |
-|Opsinjoor           |Kamp 10      |
-|Kempen              |Kamp 41      |
-|Webra               |Kamp 8 Noord |
-|Oost-Brabant        |Kamp 48 Oost |
-|Limburg             |Kamp 9       |
-|Gent                |Kamp 48 West |
-|Land van Egmont     |Kamp 49 Zuid |
-|Waas                |Kamp 7 Noord |
-|Noordzee            |Kamp 49 Noord|
-|Zuid-West-Vlaanderen|Kamp 7 Zuid  |
+|Gouw                |Locatie                       |
+|--------------------|------------------------------|
+|Antwerpen           |[Kamp 8 Zuid](/kaart?id=K8)   |
+|Heide               |[Kamp 42](/kaart?id=K42)      |
+|Opsinjoor           |[Kamp 10](/kaart?id=K10)      |
+|Kempen              |[Kamp 41](/kaart?id=K41)      |
+|Webra               |[Kamp 8 Noord](/kaart?id=K8)  |
+|Oost-Brabant        |[Kamp 48 Oost](/kaart?id=K48) |
+|Limburg             |[Kamp 9](/kaart?id=K9)        |
+|Gent                |[Kamp 48 West](/kaart?id=K48) |
+|Land van Egmont     |[Kamp 49 Zuid](/kaart?id=K49) |
+|Waas                |[Kamp 7 Noord](/kaart?id=K7)  |
+|Noordzee            |[Kamp 49 Noord](/kaart?id=K49)|
+|Zuid-West-Vlaanderen|[Kamp 7 Zuid](/kaart?id=K7)   |
 
 ---
 
 ## Vormingsaanbod zaterdag
 |Vorming                    |Locatie                            |
 |---------------------------|-----------------------------------|
-|Kapoenen                   |Kamp 30                            |
-|Welpen - Kabouters         |Kamp 33                            |
-|Jonggidsen - Jongverkenners|Kamp 34                            |
-|Jins                       |Rond vijver                        |
-|Groepsleiding (+ lokalen, financien en groepsadministratie)|Grote grond + gebouw 11|
-|Zeescouting                |Vijver                             |
-|Akabe                      |Kleine grond + loods kamp 30       |
-|Safety First (Rode Kruis)  |Grote tent op grote grond          |
-|Spel en actie              |Rond de kampvuurkring + grote grond|
-|Technieken                 |Grote grond rond kampvuur          |
-|Help ik stop als leiding   |Naast gebouw 9                     |
+|Kapoenen                   |[Kamp 30](/kaart?id=K30)           |
+|Welpen - Kabouters         |[Kamp 33](/kaart?id=K33)           |
+|Jonggidsen - Jongverkenners|[Kamp 34](/kaart?id=K34)           |
+|Jins                       |[Rond vijver](/kaart?id=Vijver%201)    |
+|Groepsleiding (+ lokalen, financien en groepsadministratie)|[Grote grond](/kaart?id=GG) + gebouw 11|
+|Zeescouting                |[Vijver](/kaart?id=Vijver%201)         |
+|Akabe                      |[Kleine grond](/kaart?id=KG) + [loods kamp 30](/kaart?id=30)|
+|Safety First (Rode Kruis)  |[Grote tent op grote grond](/kaart?id=GG)|
+|Spel en actie              |[Rond de kampvuurkring + grote grond](/kaart?id=GG)|
+|Technieken                 |[Grote grond rond kampvuur](/kaart?id=GG)|
+|Help ik stop als leiding   |[Naast gebouw 9](/kaart?id=9)      |

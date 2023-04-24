@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
 import 'package:ho_gids/model/map_data.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -10,7 +11,9 @@ import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:collection/collection.dart';
 
 class Kaart extends StatefulWidget {
-  const Kaart({Key? key}) : super(key: key);
+  const Kaart({Key? key, this.id}) : super(key: key);
+
+  final String? id;
 
   @override
   KaartState createState() => KaartState();
@@ -31,22 +34,43 @@ class KaartState extends State<Kaart> {
     'border': const PolygonStyle(border: Color(0x77000000)),
   };
 
+  final mapController = MapController();
   MapFeature? _selectedFeature;
 
   @override
   void initState() {
     super.initState();
+    if (widget.id != null) {
+      SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+        final features = context.read<DynamicData>().annotations ?? [];
+        final focusedFeature =
+            features.firstWhereOrNull((f) => f.properties.name == widget.id);
+        if (focusedFeature == null) return;
+        final focusedPoint = focusedFeature.getPoints()[0];
+        mapController.move(focusedPoint, 16.5);
+        setState(() {
+          _selectedFeature = focusedFeature;
+        });
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    mapController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    var features = context.watch<DynamicData>().annotations ?? [];
-    var polygons = features.where((f) => f.geometry.type == 'Polygon');
-    var markers = features.where((f) => f.geometry.type == 'Point');
+    final features = context.watch<DynamicData>().annotations ?? [];
+    final polygons = features.where((f) => f.geometry.type == 'Polygon');
+    final markers = features.where((f) => f.geometry.type == 'Point');
 
     return Scaffold(
         backgroundColor: Colors.white,
         body: FlutterMap(
+          mapController: mapController,
           options: MapOptions(
             center: LatLng(51.2387, 4.9389),
             zoom: 14,

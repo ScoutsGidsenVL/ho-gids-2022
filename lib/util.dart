@@ -1,3 +1,4 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -27,7 +28,7 @@ void Function(String, String?, String) linkHandler(BuildContext context) {
         url.startsWith("mailto:")) {
       launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
     } else if (url.startsWith("/")) {
-      Navigator.of(context).pushNamed(url);
+      Beamer.of(context, root: true).beamToNamed(url);
     }
   };
 }

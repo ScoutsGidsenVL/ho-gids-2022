@@ -54,19 +54,19 @@ class Nieuws extends StatelessWidget {
               leading: const Icon(Icons.music_note),
               title: const Text('Jaarlied'),
               onTap: () {
-                context.beamToNamed('/jaarlied');
+                context.beamToNamed('/nieuws/jaarlied');
               }),
           ListTile(
               leading: const Icon(Icons.near_me),
               title: const Text('Praktisch'),
               onTap: () {
-                context.beamToNamed('/praktisch');
+                context.beamToNamed('/nieuws/praktisch');
               }),
           ListTile(
               leading: const Icon(Icons.report),
               title: const Text('Leefregels'),
               onTap: () {
-                context.beamToNamed('/leefregels');
+                context.beamToNamed('/nieuws/leefregels');
               }),
         ],
       ),
