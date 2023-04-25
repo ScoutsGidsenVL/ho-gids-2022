@@ -1,3 +1,4 @@
+import 'package:ho_gids/util.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'news_data.g.dart';
@@ -31,6 +32,24 @@ class NewsItemData {
   String? publishTime;
   String? archiveTime;
   bool? pin;
+
+  DateTime? get published =>
+      publishTime == null ? null : parseTime(publishTime!);
+
+  DateTime? get archived =>
+      archiveTime == null ? null : parseTime(archiveTime!);
+
+  bool isPublished(DateTime clock) {
+    return published?.isBefore(clock) ?? false;
+  }
+
+  bool isArchived(DateTime clock) {
+    return archived?.isBefore(clock) ?? false;
+  }
+
+  bool isPinned(DateTime clock) {
+    return pin == true && !isArchived(clock);
+  }
 
   factory NewsItemData.fromJson(Map<String, dynamic> json) =>
       _$NewsItemDataFromJson(json);

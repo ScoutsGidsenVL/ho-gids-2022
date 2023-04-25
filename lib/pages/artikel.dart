@@ -4,8 +4,8 @@ import 'package:ho_gids/model/dynamic_data.dart';
 import 'package:ho_gids/util.dart';
 import 'package:provider/provider.dart';
 
-class Static extends StatelessWidget {
-  const Static({super.key, required this.path, required this.title});
+class Artikel extends StatelessWidget {
+  const Artikel({super.key, required this.path, required this.title});
 
   final String path;
   final String title;

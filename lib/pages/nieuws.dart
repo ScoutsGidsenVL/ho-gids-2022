@@ -6,7 +6,9 @@ import 'package:ho_gids/widgets/news_list.dart';
 import 'package:provider/provider.dart';
 
 class Nieuws extends StatelessWidget {
-  const Nieuws({Key? key}) : super(key: key);
+  final bool? includeArchive;
+
+  const Nieuws({Key? key, this.includeArchive}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,31 +39,7 @@ class Nieuws extends StatelessWidget {
                 icon: const Icon(Icons.today))
         ],
       ),
-      body: NewsList(news),
+      body: NewsList(news, includeArchive: includeArchive),
     );
   }
 }
-
-
-/*
-
-
-ListTile(
-              leading: const Icon(Icons.music_note),
-              title: const Text('Jaarlied'),
-              onTap: () {
-                context.beamToNamed('/nieuws/jaarlied');
-              }),
-          ListTile(
-              leading: const Icon(Icons.near_me),
-              title: const Text('Praktisch'),
-              onTap: () {
-                context.beamToNamed('/nieuws/praktisch');
-              }),
-          ListTile(
-              leading: const Icon(Icons.report),
-              title: const Text('Leefregels'),
-              onTap: () {
-                context.beamToNamed('/nieuws/leefregels');
-              }),
-              */

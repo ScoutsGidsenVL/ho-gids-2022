@@ -4,7 +4,7 @@ import 'package:ho_gids/model/time_manager.dart';
 import 'package:ho_gids/pages/nieuws.dart';
 import 'package:ho_gids/pages/kaart.dart';
 import 'package:ho_gids/pages/programma.dart';
-import 'package:ho_gids/pages/static.dart';
+import 'package:ho_gids/pages/artikel.dart';
 import 'package:provider/provider.dart';
 import 'package:beamer/beamer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -169,14 +169,17 @@ class NieuwsLocation extends BeamLocation<BeamState> {
   List<String> get pathPatterns => ['/nieuws/*'];
   @override
   List<BeamPage> buildPages(BuildContext context, BeamState state) => [
-        const BeamPage(
-          key: ValueKey('nieuws'),
-          child: Nieuws(),
+        BeamPage(
+          key: ValueKey(
+              'nieuws${state.uri.queryParameters['archive'] == 'true' ? '-archive' : ''}'),
+          child: Nieuws(
+              includeArchive: state.uri.queryParameters['archive'] == 'true'),
         ),
         if (state.uri.pathSegments.length == 2)
           BeamPage(
             key: ValueKey('nieuws/${state.uri.pathSegments[1]}'),
-            child: Static(
+            type: BeamPageType.noTransition,
+            child: Artikel(
                 path: state.uri.pathSegments[1],
                 title: (context.read<DynamicData>().news ?? [])
                     .firstWhere((n) => n.body == state.uri.pathSegments[1])
