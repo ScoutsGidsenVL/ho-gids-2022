@@ -52,24 +52,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (_) => DynamicData()),
-          ChangeNotifierProvider(create: (_) => TimeManager()),
-        ],
-        child: MaterialApp.router(
-          title: 'HO-gids',
-          theme: ThemeData(
-              colorScheme: const ColorScheme.light(
-                  primary: Color.fromRGBO(72, 130, 127, 1),
-                  secondary: Color.fromRGBO(197, 227, 232, 1),
-                  tertiary: Color.fromRGBO(227, 47, 43, 1))),
-          localizationsDelegates: GlobalMaterialLocalizations.delegates,
-          supportedLocales: const [Locale('nl')],
-          routerDelegate: routerDelegate,
-          routeInformationParser: BeamerParser(),
-          backButtonDispatcher: BeamerBackButtonDispatcher(
-              delegate: routerDelegate, fallbackToBeamBack: false),
-        ));
+      providers: [
+        ChangeNotifierProvider(create: (_) => DynamicData()),
+        ChangeNotifierProvider(create: (_) => TimeManager()),
+      ],
+      child: MaterialApp.router(
+        title: 'HO-gids',
+        theme: ThemeData(
+            colorScheme: const ColorScheme.light(
+                primary: Color.fromRGBO(72, 130, 127, 1),
+                secondary: Color.fromRGBO(197, 227, 232, 1),
+                tertiary: Color.fromRGBO(227, 47, 43, 1))),
+        localizationsDelegates: GlobalMaterialLocalizations.delegates,
+        supportedLocales: const [Locale('nl')],
+        routerDelegate: routerDelegate,
+        routeInformationParser: BeamerParser(),
+        backButtonDispatcher: BeamerBackButtonDispatcher(
+            delegate: routerDelegate, fallbackToBeamBack: false),
+      ),
+    );
   }
 }
 
@@ -172,20 +173,14 @@ class NieuwsLocation extends BeamLocation<BeamState> {
           key: ValueKey('nieuws'),
           child: Nieuws(),
         ),
-        if (state.uri.path.startsWith('/nieuws/jaarlied'))
-          const BeamPage(
-            key: ValueKey('jaarlied'),
-            child: Static(path: 'jaarlied', title: 'Jaarlied'),
-          ),
-        if (state.uri.path.startsWith('/nieuws/praktisch'))
-          const BeamPage(
-            key: ValueKey('praktisch'),
-            child: Static(path: 'praktisch', title: 'Praktisch'),
-          ),
-        if (state.uri.path.startsWith('/nieuws/leefregels'))
-          const BeamPage(
-            key: ValueKey('leefregels'),
-            child: Static(path: 'leefregels', title: 'Leefregels'),
+        if (state.uri.pathSegments.length == 2)
+          BeamPage(
+            key: ValueKey('nieuws/${state.uri.pathSegments[1]}'),
+            child: Static(
+                path: state.uri.pathSegments[1],
+                title: (context.read<DynamicData>().news ?? [])
+                    .firstWhere((n) => n.body == state.uri.pathSegments[1])
+                    .title),
           ),
       ];
 }

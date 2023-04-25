@@ -31,13 +31,12 @@ class DynamicData extends ChangeNotifier {
   }
 
   Future refreshData() async {
+    await refreshNewsData();
     await Future.wait([
       refreshMapData(),
       refreshCalendarData(),
-      refreshNewsData(),
-      refreshText('jaarlied'),
-      refreshText('leefregels'),
-      refreshText('praktisch'),
+      ...news?.where((n) => n.body != null).map((n) => refreshText(n.body!)) ??
+          [],
     ]);
     notifyListeners();
   }
@@ -61,7 +60,7 @@ class DynamicData extends ChangeNotifier {
   }
 
   Future refreshText(String key) async {
-    text[key] = await fetchAsset('content/$key.md');
+    text[key] = await fetchAsset('content/nieuws/$key.md');
   }
 
   Future<String> fetchAsset(String path) async {

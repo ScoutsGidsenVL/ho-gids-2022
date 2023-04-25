@@ -14,14 +14,23 @@ class NewsData {
 
 @JsonSerializable(createToJson: false)
 class NewsItemData {
-  NewsItemData(this.title, this.description, this.image, this.publishTime,
-      this.archiveTime);
+  NewsItemData(
+    this.title,
+    this.subtitle,
+    this.image,
+    this.body,
+    this.publishTime,
+    this.archiveTime,
+    this.pin,
+  );
 
   String title;
-  String? description;
+  String? subtitle;
   String? image;
-  String publishTime;
+  String? body;
+  String? publishTime;
   String? archiveTime;
+  bool? pin;
 
   factory NewsItemData.fromJson(Map<String, dynamic> json) =>
       _$NewsItemDataFromJson(json);

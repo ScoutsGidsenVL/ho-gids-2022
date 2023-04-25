@@ -14,8 +14,10 @@ NewsData _$NewsDataFromJson(Map<String, dynamic> json) => NewsData(
 
 NewsItemData _$NewsItemDataFromJson(Map<String, dynamic> json) => NewsItemData(
       json['title'] as String,
-      json['description'] as String?,
+      json['subtitle'] as String?,
       json['image'] as String?,
-      json['publishTime'] as String,
+      json['body'] as String?,
+      json['publishTime'] as String?,
       json['archiveTime'] as String?,
+      json['pin'] as bool?,
     );

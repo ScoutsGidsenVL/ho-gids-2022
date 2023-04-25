@@ -1,11 +1,8 @@
-import 'package:beamer/beamer.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
 import 'package:ho_gids/model/time_manager.dart';
-import 'package:ho_gids/util.dart';
-import 'package:ho_gids/widgets/news_card.dart';
+import 'package:ho_gids/widgets/news_list.dart';
 import 'package:provider/provider.dart';
 
 class Nieuws extends StatelessWidget {
@@ -40,17 +37,16 @@ class Nieuws extends StatelessWidget {
                 icon: const Icon(Icons.today))
         ],
       ),
-      body: ListView(
-        children: [
-          ...news
-              .sorted((a, b) => parseTime(b.publishTime)!
-                  .compareTo(parseTime(a.publishTime)!))
-              .where((n) =>
-                  timeManager.hasHappened(parseTime(n.publishTime)!) &&
-                  (n.archiveTime == null ||
-                      !timeManager.hasHappened(parseTime(n.archiveTime!)!)))
-              .map((n) => NewsCard(n)),
-          ListTile(
+      body: NewsList(news),
+    );
+  }
+}
+
+
+/*
+
+
+ListTile(
               leading: const Icon(Icons.music_note),
               title: const Text('Jaarlied'),
               onTap: () {
@@ -68,8 +64,4 @@ class Nieuws extends StatelessWidget {
               onTap: () {
                 context.beamToNamed('/nieuws/leefregels');
               }),
-        ],
-      ),
-    );
-  }
-}
+              */

@@ -1,3 +1,4 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/news_data.dart';
 import 'package:ho_gids/model/time_manager.dart';
@@ -12,7 +13,10 @@ class NewsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final timeManager = context.watch<TimeManager>();
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        if (item.body == null) return;
+        context.beamToNamed('/nieuws/${item.body}');
+      },
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Row(
@@ -22,12 +26,17 @@ class NewsCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(item.title, style: const TextStyle(fontSize: 18)),
-                  if (item.description != null)
-                    Text(item.description!,
-                        style: const TextStyle(fontSize: 14)),
-                  Text(timeManager.timeAgo(item.publishTime),
-                      style: Theme.of(context).textTheme.bodySmall)
+                  Text.rich(TextSpan(children: [
+                    if (item.pin == true)
+                      const WidgetSpan(child: Icon(Icons.push_pin, size: 16)),
+                    TextSpan(
+                        text: item.title, style: const TextStyle(fontSize: 18)),
+                  ])),
+                  if (item.subtitle != null)
+                    Text(item.subtitle!, style: const TextStyle(fontSize: 14)),
+                  if (item.publishTime != null)
+                    Text(timeManager.timeAgo(item.publishTime!),
+                        style: Theme.of(context).textTheme.bodySmall)
                 ],
               ),
             ),
@@ -37,7 +46,7 @@ class NewsCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: Image.asset(
-                    item.image!,
+                    'assets/images/${item.image!}',
                     width: 80,
                     height: 80,
                     fit: BoxFit.cover,

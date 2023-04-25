@@ -54,6 +54,7 @@ flutter:
   # https://docs.flutter.dev/development/ui/assets-and-images
   assets:
     - assets/content/
+    - assets/content/nieuws/
     - assets/images/
     - assets/images/kaart/
 

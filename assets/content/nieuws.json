@@ -1,10 +1,29 @@
 {
     "news": [
         {
-            "title": "Welkom op HO!",
-            "description": "Ontdek het jaarthema...",
-            "image": "assets/images/cover.jpg",
-            "publishTime": "VR 19:00"
+            "title": "Praktische informatie",
+            "body": "praktisch",
+            "publishTime": "VR 18:00"
+        },
+        {
+            "title": "DAS Goesting!",
+            "subtitle": "Ontdek het jaarthema...",
+            "image": "dasgoesting.jpg",
+            "body": "jaarthema",
+            "publishTime": "VR 18:00",
+            "pin": true
+        },
+        {
+            "title": "Jaarlied",
+            "image": "dasgoesting.jpg",
+            "body": "jaarlied"
+        },
+        {
+            "title": "Onze leefregels",
+            "image": "leefregels.png",
+            "body": "leefregels",
+            "publishTime": "VR 19:00",
+            "archiveTime": "ZO 23:59"
         },
         {
             "title": "Wat vond je van de vorming?",
