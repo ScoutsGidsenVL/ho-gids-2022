@@ -31,9 +31,13 @@ class NewsList extends StatelessWidget {
       return n.isPublished(clock) &&
           (includeArchive == true || !n.isArchived(clock));
     }).toList();
+    final allPublished = news.where((n) => n.isPublished(clock));
 
     return ListView.builder(
-      itemCount: feed.length + (includeArchive == true ? 0 : 1),
+      itemCount: feed.length +
+          (includeArchive == true || allPublished.length == feed.length
+              ? 0
+              : 1),
       itemBuilder: (context, index) {
         if (index == feed.length) {
           return Padding(

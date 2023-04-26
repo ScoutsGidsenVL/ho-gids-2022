@@ -21,6 +21,7 @@ MapFeature _$MapFeatureFromJson(Map<String, dynamic> json) => MapFeature(
 MapProperties _$MapPropertiesFromJson(Map<String, dynamic> json) =>
     MapProperties(
       json['name'] as String?,
+      json['displayName'] as String?,
       json['style'] as String?,
       json['comment'] as String?,
       json['alias'] as String?,

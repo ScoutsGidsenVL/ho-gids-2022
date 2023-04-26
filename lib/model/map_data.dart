@@ -47,9 +47,11 @@ class MapFeature {
 
 @JsonSerializable(createToJson: false)
 class MapProperties {
-  MapProperties(this.name, this.style, this.comment, this.alias);
+  MapProperties(
+      this.name, this.displayName, this.style, this.comment, this.alias);
 
   String? name;
+  String? displayName;
   String? style;
   String? comment;
   String? alias;

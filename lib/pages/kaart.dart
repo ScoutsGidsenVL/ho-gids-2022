@@ -68,71 +68,77 @@ class KaartState extends State<Kaart> {
     final markers = features.where((f) => f.geometry.type == 'Point');
 
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: FlutterMap(
-          mapController: mapController,
-          options: MapOptions(
-            center: LatLng(51.2387, 4.9389),
-            zoom: 14,
-            maxZoom: 17.49,
-            onTap: (tapPosition, point) {
-              var region = polygons
-                  .where((r) =>
-                      r.contains(point) && r.properties.style != 'border')
-                  .lastOrNull;
-              setState(() {
-                _selectedFeature = region;
-              });
-            },
+      backgroundColor: Colors.white,
+      body: FlutterMap(
+        mapController: mapController,
+        options: MapOptions(
+          center: LatLng(51.2387, 4.9389),
+          zoom: 14,
+          maxZoom: 17.49,
+          onTap: (tapPosition, point) {
+            var region = polygons
+                .where(
+                    (r) => r.contains(point) && r.properties.style != 'border')
+                .lastOrNull;
+            setState(() {
+              _selectedFeature = region;
+            });
+          },
+        ),
+        nonRotatedChildren: const [
+          OsmAttribution(),
+        ],
+        children: [
+          TileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            userAgentPackageName: 'be.scoutsengidsenvlaanderen.hogids',
+            retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
           ),
-          nonRotatedChildren: [
-            const OsmAttribution(),
-            _selectedFeature == null
-                ? Container()
-                : SelectedFeature(_selectedFeature!),
-          ],
-          children: [
-            TileLayer(
-              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-              userAgentPackageName: 'be.scoutsengidsenvlaanderen.hogids',
-              retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
+          PolygonLayer(
+            polygons: polygons.map((f) {
+              var style = styles[f.properties.style] ?? const PolygonStyle();
+              var selected = f == _selectedFeature;
+              try {
+                return Polygon(
+                    borderColor: style.border ??
+                        (selected ? Colors.black : Colors.transparent),
+                    borderStrokeWidth:
+                        style.border != null ? 5 : (selected ? 2 : 0),
+                    isDotted: style.border != null,
+                    color: style.fill ?? Colors.transparent,
+                    isFilled: style.fill != null,
+                    rotateLabel: true,
+                    points: f.getPoints());
+              } catch (e) {
+                return Polygon(points: []);
+              }
+            }).toList(),
+          ),
+          MarkerLayer(
+            markers: markers.map((f) {
+              var image = AssetImage(
+                  'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
+              return Marker(
+                  point: f.getPoints()[0],
+                  rotate: true,
+                  width: 24,
+                  height: 24,
+                  builder: (context) => Image(image: image));
+            }).toList(),
+          ),
+          CurrentLocationLayer(),
+        ],
+      ),
+      bottomSheet: _selectedFeature == null
+          ? null
+          : BottomSheet(
+              constraints: const BoxConstraints(minWidth: double.infinity),
+              onClosing: () {},
+              builder: (context) {
+                return SelectedFeature(_selectedFeature!);
+              },
             ),
-            PolygonLayer(
-              polygons: polygons.map((f) {
-                var style = styles[f.properties.style] ?? const PolygonStyle();
-                var selected = f == _selectedFeature;
-                try {
-                  return Polygon(
-                      borderColor: style.border ??
-                          (selected ? Colors.black : Colors.transparent),
-                      borderStrokeWidth:
-                          style.border != null ? 5 : (selected ? 2 : 0),
-                      isDotted: style.border != null,
-                      color: style.fill ?? Colors.transparent,
-                      isFilled: style.fill != null,
-                      label: f.properties.name,
-                      rotateLabel: true,
-                      points: f.getPoints());
-                } catch (e) {
-                  return Polygon(points: []);
-                }
-              }).toList(),
-            ),
-            MarkerLayer(
-              markers: markers.map((f) {
-                var image = AssetImage(
-                    'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
-                return Marker(
-                    point: f.getPoints()[0],
-                    rotate: true,
-                    width: 24,
-                    height: 24,
-                    builder: (context) => Image(image: image));
-              }).toList(),
-            ),
-            CurrentLocationLayer(),
-          ],
-        ));
+    );
   }
 }
 
@@ -150,14 +156,14 @@ class SelectedFeature extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-        alignment: Alignment.bottomCenter,
-        child: Card(
-            child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                child: Text(feature.properties.name ?? '',
-                    style: Theme.of(context).textTheme.headlineSmall))));
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      child: Text(
+        feature.properties.displayName ?? feature.properties.name ?? '',
+        style: const TextStyle(fontSize: 20),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }
 

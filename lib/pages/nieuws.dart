@@ -14,6 +14,7 @@ class Nieuws extends StatelessWidget {
   Widget build(BuildContext context) {
     final news = context.watch<DynamicData>().news ?? [];
     final timeManager = context.watch<TimeManager>();
+    final allPublished = news.where((n) => n.isPublished(timeManager.now()));
 
     return Scaffold(
       appBar: AppBar(
@@ -39,7 +40,9 @@ class Nieuws extends StatelessWidget {
                 icon: const Icon(Icons.today))
         ],
       ),
-      body: NewsList(news, includeArchive: includeArchive),
+      body: allPublished.isEmpty
+          ? const Center(child: Text('Nog geen nieuws...'))
+          : NewsList(news, includeArchive: includeArchive),
     );
   }
 }
