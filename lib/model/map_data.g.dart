@@ -23,8 +23,6 @@ MapProperties _$MapPropertiesFromJson(Map<String, dynamic> json) =>
       json['name'] as String?,
       json['displayName'] as String?,
       json['style'] as String?,
-      json['comment'] as String?,
-      json['alias'] as String?,
     );
 
 MapGeometry _$MapGeometryFromJson(Map<String, dynamic> json) => MapGeometry(

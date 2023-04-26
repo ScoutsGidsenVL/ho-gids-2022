@@ -47,14 +47,11 @@ class MapFeature {
 
 @JsonSerializable(createToJson: false)
 class MapProperties {
-  MapProperties(
-      this.name, this.displayName, this.style, this.comment, this.alias);
+  MapProperties(this.name, this.displayName, this.style);
 
   String? name;
   String? displayName;
   String? style;
-  String? comment;
-  String? alias;
 
   factory MapProperties.fromJson(Map<String, dynamic> json) =>
       _$MapPropertiesFromJson(json);

@@ -3,6 +3,8 @@
     "features": [{
         "type": "Feature",
         "properties": {
+            "name": "border",
+            "displayName": "Grens",
             "style": "border"
         },
         "geometry": {
@@ -60,10 +62,7 @@
         "properties": {
             "name": "GG",
             "displayName": "Grote Grond",
-            "style": "podiumgrond",
-            "alias": "KKG markt, KKG podium, KKG groot podium",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "podiumgrond"
         },
         "geometry": {
             "type": "Polygon",
@@ -83,9 +82,7 @@
         "properties": {
             "name": "K8",
             "displayName": "Kamp 8",
-            "style": "kampeergrond",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "kampeergrond"
         },
         "geometry": {
             "type": "Polygon",
@@ -110,9 +107,7 @@
         "properties": {
             "name": "K7",
             "style": "kampeergrond",
-            "displayName": "Kamp 7",
-            "shape": "Polygon",
-            "category": "default"
+            "displayName": "Kamp 7"
         },
         "geometry": {
             "type": "Polygon",
@@ -158,9 +153,7 @@
         "properties": {
             "name": "10",
             "displayName": "Loods 10",
-            "style": "loods",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -181,9 +174,7 @@
         "properties": {
             "name": "14",
             "displayName": "Pavilioen 14",
-            "style": "pavilioen",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "pavilioen"
         },
         "geometry": {
             "type": "Polygon",
@@ -243,9 +234,7 @@
         "properties": {
             "name": "11",
             "displayName": "Gebouw 11",
-            "style": "aanbod",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "aanbod"
         },
         "geometry": {
             "type": "Polygon",
@@ -265,10 +254,7 @@
         "properties": {
             "name": "SIS",
             "displayName": "Gebouw 37 (SIS)",
-            "style": "loods",
-            "comment": "SIS",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -369,9 +355,7 @@
         "properties": {
             "name": "K33",
             "displayName": "Kamp 33",
-            "style": "aanbod",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "aanbod"
         },
         "geometry": {
             "type": "Polygon",
@@ -416,9 +400,7 @@
         "properties": {
             "name": "35",
             "displayName": "Pavilioen 35",
-            "style": "pavilioen",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "pavilioen"
         },
         "geometry": {
             "type": "Polygon",
@@ -458,8 +440,7 @@
         "properties": {
             "name": "N&A",
             "displayName": "Pavilioen 45 (Natuur & Avontuur)",
-            "style": "pavilioen",
-            "alias": "Natuur & Avontuur"
+            "style": "pavilioen"
         },
         "geometry": {
             "type": "Polygon",
@@ -665,9 +646,7 @@
         "properties": {
             "name": "9",
             "displayName": "Loods 9",
-            "style": "loods",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -687,9 +666,7 @@
         "properties": {
             "name": "K9",
             "displayName": "Kamp 9",
-            "style": "kampeergrond",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "kampeergrond"
         },
         "geometry": {
             "type": "Polygon",
@@ -711,9 +688,7 @@
         "properties": {
             "name": "40",
             "displayName": "Loods 40",
-            "style": "loods",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -774,9 +749,7 @@
         "properties": {
             "name": "15",
             "displayName": "Loods 15",
-            "style": "loods",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -876,9 +849,7 @@
         "properties": {
             "name": "28",
             "displayName": "Pavilioen 28",
-            "style": "pavilioen",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "pavilioen"
         },
         "geometry": {
             "type": "Polygon",
@@ -958,9 +929,7 @@
         "properties": {
             "name": "27",
             "displayName": "Loods 27",
-            "style": "loods",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -978,9 +947,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "loods",
+            "name": "17",
             "displayName": "Loods 17",
-            "name": "17"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -998,9 +967,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "loods",
+            "name": "18",
             "displayName": "Loods 18",
-            "name": "18"
+            "style": "loods"
         },
         "geometry": {
             "type": "Polygon",
@@ -1052,6 +1021,7 @@
         "type": "Feature",
         "properties": {
             "name": "SIS",
+            "displayName": "SIS",
             "style": "faciliteit"
         },
         "geometry": {
@@ -1063,6 +1033,7 @@
         "type": "Feature",
         "properties": {
             "name": "infopunt",
+            "displayName": "Infopunt",
             "style": "faciliteit"
         },
         "geometry": {
@@ -1074,6 +1045,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1084,8 +1056,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "sanitair",
-            "name": "sanitair"
+            "name": "sanitair",
+            "displayName": "Sanitair",
+            "style": "sanitair"
         },
         "geometry": {
             "type": "Point",
@@ -1096,6 +1069,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1107,6 +1081,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1118,6 +1093,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1129,6 +1105,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1140,9 +1117,8 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
-            "style": "sanitair",
-            "shape": "Marker",
-            "category": "default"
+            "displayName": "Sanitair",
+            "style": "sanitair"
         },
         "geometry": {
             "type": "Point",
@@ -1153,6 +1129,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1164,6 +1141,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1175,6 +1153,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1185,8 +1164,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "sanitair",
-            "name": "sanitair"
+            "name": "sanitair",
+            "displayName": "Sanitair",
+            "style": "sanitair"
         },
         "geometry": {
             "type": "Point",
@@ -1197,6 +1177,7 @@
         "type": "Feature",
         "properties": {
             "name": "afwasbatterij",
+            "displayName": "Afwasbatterij",
             "style": "afwasbatterij"
         },
         "geometry": {
@@ -1208,6 +1189,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1219,6 +1201,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1230,6 +1213,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1262,6 +1246,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1292,9 +1277,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "faciliteit",
             "name": "bar",
-            "alias": "centrale bar"
+            "displayName": "Bar",
+            "style": "faciliteit"
         },
         "geometry": {
             "type": "Point",
@@ -1304,8 +1289,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "faciliteit",
-            "name": "eten"
+            "name": "eten",
+            "displayName": "Eten",
+            "style": "faciliteit"
         },
         "geometry": {
             "type": "Point",
@@ -1315,8 +1301,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "afwasbatterij",
-            "name": "afwasbatterij"
+            "name": "afwasbatterij",
+            "displayName": "Afwasbatterij",
+            "style": "afwasbatterij"
         },
         "geometry": {
             "type": "Point",
@@ -1326,8 +1313,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "afwasbatterij",
-            "name": "afwasbatterij"
+            "name": "afwasbatterij",
+            "displayName": "Afwasbatterij",
+            "style": "afwasbatterij"
         },
         "geometry": {
             "type": "Point",
@@ -1338,6 +1326,7 @@
         "type": "Feature",
         "properties": {
             "name": "sanitair",
+            "displayName": "Sanitair",
             "style": "sanitair"
         },
         "geometry": {
@@ -1348,8 +1337,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "evacuatiepunt",
-            "name": "evacuatiepunt"
+            "name": "evacuatiepunt",
+            "displayName": "Evacuatiepunt",
+            "style": "evacuatiepunt"
         },
         "geometry": {
             "type": "Point",
@@ -1359,7 +1349,8 @@
     }, {
         "type": "Feature",
         "properties": {
-            "name": "evacuatiepunt"
+            "name": "evacuatiepunt",
+            "displayName": "Evacuatiepunt"
         },
         "geometry": {
             "type": "Point",
@@ -1369,7 +1360,8 @@
     }, {
         "type": "Feature",
         "properties": {
-            "name": "evacuatiepunt"
+            "name": "evacuatiepunt",
+            "displayName": "Evacuatiepunt"
         },
         "geometry": {
             "type": "Point",
@@ -1420,10 +1412,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "vijver",
+            "name": "",
             "displayName": "Vijver",
-            "shape": "Polygon",
-            "category": "default"
+            "style": "vijver"
         },
         "geometry": {
             "type": "Polygon",
@@ -1447,10 +1438,9 @@
     }, {
         "type": "Feature",
         "properties": {
+            "name": "",
             "style": "vijver",
-            "displayName": "Vijver",
-            "shape": "Polygon",
-            "category": "default"
+            "displayName": "Vijver"
         },
         "geometry": {
             "type": "Polygon",
@@ -1499,8 +1489,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "faciliteit",
-            "name": "bar"
+            "name": "bar",
+            "displayName": "Bar",
+            "style": "faciliteit"
         },
         "geometry": {
             "type": "Point",
@@ -1510,8 +1501,9 @@
     }, {
         "type": "Feature",
         "properties": {
-            "style": "faciliteit",
-            "name": "eten"
+            "name": "eten",
+            "displayName": "Eten",
+            "style": "faciliteit"
         },
         "geometry": {
             "type": "Point",

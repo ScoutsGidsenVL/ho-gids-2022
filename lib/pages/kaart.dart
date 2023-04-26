@@ -75,11 +75,23 @@ class KaartState extends State<Kaart> {
           center: LatLng(51.2387, 4.9389),
           zoom: 14,
           maxZoom: 17.49,
-          onTap: (tapPosition, point) {
-            var region = polygons
-                .where(
-                    (r) => r.contains(point) && r.properties.style != 'border')
-                .lastOrNull;
+          onTap: (tapPos, point) {
+            final tPos = tapPos.relative;
+            final marker = markers.lastWhereOrNull((m) {
+              final mPos = mapController.latLngToScreenPoint(m.getPoints()[0]);
+              if (tPos == null || mPos == null) return false;
+              final d = (mPos.x - tPos.dx) * (mPos.x - tPos.dx) +
+                  (mPos.y - tPos.dy) * (mPos.y - tPos.dy);
+              return d <= 12 * 12;
+            });
+            if (marker != null) {
+              setState(() {
+                _selectedFeature = marker;
+              });
+              return;
+            }
+            final region = features.lastWhereOrNull(
+                (r) => r.contains(point) && r.properties.style != 'border');
             setState(() {
               _selectedFeature = region;
             });
@@ -118,12 +130,19 @@ class KaartState extends State<Kaart> {
             markers: markers.map((f) {
               var image = AssetImage(
                   'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
+              var selected = f == _selectedFeature;
               return Marker(
                   point: f.getPoints()[0],
                   rotate: true,
-                  width: 24,
-                  height: 24,
-                  builder: (context) => Image(image: image));
+                  width: selected ? 28 : 24,
+                  height: selected ? 28 : 24,
+                  builder: (context) => Container(
+                      decoration: !selected
+                          ? null
+                          : BoxDecoration(
+                              border: Border.all(width: 2),
+                              borderRadius: BorderRadius.circular(1000)),
+                      child: Image(image: image)));
             }).toList(),
           ),
           CurrentLocationLayer(),
