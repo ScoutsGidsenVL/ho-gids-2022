@@ -46,7 +46,8 @@ class KaartState extends State<Kaart> {
         final focusedFeature =
             features.firstWhereOrNull((f) => f.properties.name == widget.id);
         if (focusedFeature == null) return;
-        final focusedPoint = focusedFeature.getPoints()[0];
+        final focusedPoint =
+            LatLngBounds.fromPoints(focusedFeature.getPoints()).center;
         mapController.move(focusedPoint, 16.5);
         setState(() {
           _selectedFeature = focusedFeature;
@@ -123,23 +124,38 @@ class KaartState extends State<Kaart> {
             }).toList(),
           ),
           MarkerLayer(
-            markers: markers.map((f) {
-              var image = AssetImage(
-                  'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
-              var selected = f == _selectedFeature;
-              return Marker(
-                  point: f.getPoints()[0],
+            markers: [
+              ...polygons
+                  .where((f) => f.properties.style == 'kampeergrond')
+                  .map((f) {
+                final center = LatLngBounds.fromPoints(f.getPoints()).center;
+                return Marker(
+                  point: center,
                   rotate: true,
-                  width: selected ? 28 : 24,
-                  height: selected ? 28 : 24,
-                  builder: (context) => Container(
-                      decoration: !selected
-                          ? null
-                          : BoxDecoration(
-                              border: Border.all(width: 2),
-                              borderRadius: BorderRadius.circular(1000)),
-                      child: Image(image: image)));
-            }).toList(),
+                  width: 40,
+                  height: 40,
+                  builder: (context) => const Image(
+                      image: AssetImage('assets/images/kaart/tent.png')),
+                );
+              }),
+              ...markers.map((f) {
+                var image = AssetImage(
+                    'assets/images/kaart/${f.properties.name?.toLowerCase() ?? ''}.png');
+                var selected = f == _selectedFeature;
+                return Marker(
+                    point: f.getPoints()[0],
+                    rotate: true,
+                    width: selected ? 28 : 24,
+                    height: selected ? 28 : 24,
+                    builder: (context) => Container(
+                        decoration: !selected
+                            ? null
+                            : BoxDecoration(
+                                border: Border.all(width: 2),
+                                borderRadius: BorderRadius.circular(1000)),
+                        child: Image(image: image)));
+              }),
+            ],
           ),
           CurrentLocationLayer(),
         ],
