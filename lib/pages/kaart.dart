@@ -77,24 +77,20 @@ class KaartState extends State<Kaart> {
           maxZoom: 17.49,
           onTap: (tapPos, point) {
             final tPos = tapPos.relative;
-            final marker = markers.lastWhereOrNull((m) {
+            var feature = markers.lastWhereOrNull((m) {
               final mPos = mapController.latLngToScreenPoint(m.getPoints()[0]);
               if (tPos == null || mPos == null) return false;
               final d = (mPos.x - tPos.dx) * (mPos.x - tPos.dx) +
                   (mPos.y - tPos.dy) * (mPos.y - tPos.dy);
               return d <= 12 * 12;
             });
-            if (marker != null) {
-              setState(() {
-                _selectedFeature = marker;
-              });
-              return;
-            }
-            final region = features.lastWhereOrNull(
+            feature ??= polygons.lastWhereOrNull(
                 (r) => r.contains(point) && r.properties.style != 'border');
-            setState(() {
-              _selectedFeature = region;
-            });
+            if (_selectedFeature != feature) {
+              setState(() {
+                _selectedFeature = feature;
+              });
+            }
           },
         ),
         nonRotatedChildren: const [
