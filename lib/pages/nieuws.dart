@@ -1,13 +1,15 @@
 import 'dart:math';
 
 import 'package:beamer/beamer.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
 import 'package:ho_gids/model/time_manager.dart';
 import 'package:ho_gids/widgets/calendar_entry.dart';
 import 'package:ho_gids/widgets/news_list.dart';
 import 'package:provider/provider.dart';
+
+// Disable when publishing
+const canChangeClock = true;
 
 class Nieuws extends StatelessWidget {
   final bool? includeArchive;
@@ -25,6 +27,12 @@ class Nieuws extends StatelessWidget {
     final allEvents = calendar.expand((tab) => tab.items).toList();
     var nowEvent = allEvents.indexWhere((item) => item.isHappening(clock));
     if (nowEvent == -1) {
+      // if no event is currently happening, find the next upcoming event
+      nowEvent =
+          allEvents.indexWhere((item) => item.getStartTime().isAfter(clock));
+    }
+    if (nowEvent == -1) {
+      // if no event is upcoming, show the first event
       nowEvent = 0;
     }
     final featuredEvents =
@@ -34,7 +42,7 @@ class Nieuws extends StatelessWidget {
       appBar: AppBar(
         title: const Text('HO-Gids'),
         actions: [
-          if (kDebugMode)
+          if (canChangeClock)
             IconButton(
                 onPressed: () async {
                   final date = await showDatePicker(
@@ -63,6 +71,7 @@ class Nieuws extends StatelessWidget {
                     child: Center(child: Text('Nog geen nieuws...')),
                   )
                 : NewsList(news, includeArchive: includeArchive),
+            const SizedBox(height: 10),
             if (featuredEvents.isNotEmpty)
               Material(
                 color: Theme.of(context).colorScheme.secondary,

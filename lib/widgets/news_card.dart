@@ -30,12 +30,14 @@ class NewsCard extends StatelessWidget {
                 children: [
                   Text.rich(TextSpan(children: [
                     if (item.isPinned(clock))
-                      const WidgetSpan(child: Icon(Icons.push_pin, size: 16)),
+                      const WidgetSpan(child: Icon(Icons.push_pin, size: 18)),
                     TextSpan(
-                        text: item.title, style: const TextStyle(fontSize: 18)),
+                        text: item.title,
+                        style: const TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
                   ])),
                   if (item.subtitle != null)
-                    Text(item.subtitle!, style: const TextStyle(fontSize: 14)),
+                    Text(item.subtitle!, style: const TextStyle(fontSize: 16)),
                   if (item.publishTime != null)
                     Text(timeManager.timeAgo(item.publishTime!),
                         style: Theme.of(context).textTheme.bodySmall)
@@ -49,8 +51,8 @@ class NewsCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   child: Image.asset(
                     'assets/images/${item.image!}',
-                    width: 80,
-                    height: 80,
+                    width: 100,
+                    height: 100,
                     fit: BoxFit.cover,
                   ),
                 ),
