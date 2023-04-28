@@ -33,14 +33,11 @@ class NewsList extends StatelessWidget {
     }).toList();
     final allPublished = news.where((n) => n.isPublished(clock));
 
-    return ListView.builder(
-      itemCount: feed.length +
-          (includeArchive == true || allPublished.length == feed.length
-              ? 0
-              : 1),
-      itemBuilder: (context, index) {
-        if (index == feed.length) {
-          return Padding(
+    return Column(
+      children: [
+        ...feed.map((item) => NewsCard(item)),
+        if (includeArchive != true && allPublished.length != feed.length)
+          Padding(
             padding: const EdgeInsets.all(10),
             child: OutlinedButton(
                 onPressed: () {
@@ -48,11 +45,9 @@ class NewsList extends StatelessWidget {
                       transitionDelegate:
                           const NoAnimationTransitionDelegate());
                 },
-                child: const Text('Meer...')),
-          );
-        }
-        return NewsCard(feed[index]);
-      },
+                child: const Text('Meer nieuws...')),
+          ),
+      ],
     );
   }
 }
