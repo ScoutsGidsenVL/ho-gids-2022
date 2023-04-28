@@ -6,6 +6,7 @@
                 {
                     "title": "Aankomst",
                     "start": "VR 19:00",
+                    "end": "VR 22:00",
                     "location": "GG"
                 },
                 {
@@ -136,8 +137,8 @@
                 },
                 {
                     "title": "Slaapwel",
-                    "start": "ZA 02:00",
-                    "end": "ZA 02:30"
+                    "start": "ZO 02:00",
+                    "end": "ZO 02:30"
                 }
             ]
         },

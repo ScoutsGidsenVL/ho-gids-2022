@@ -1,3 +1,4 @@
+import 'package:ho_gids/util.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'calendar_data.g.dart';
@@ -6,26 +7,26 @@ part 'calendar_data.g.dart';
 class CalendarData {
   CalendarData(this.tabs);
 
-  List<CalendarTab> tabs;
+  List<CalendarTabData> tabs;
 
   factory CalendarData.fromJson(Map<String, dynamic> json) =>
       _$CalendarDataFromJson(json);
 }
 
 @JsonSerializable(createToJson: false)
-class CalendarTab {
-  CalendarTab(this.label, this.items);
+class CalendarTabData {
+  CalendarTabData(this.label, this.items);
 
   String label;
-  List<CalendarItem> items;
+  List<CalendarItemData> items;
 
-  factory CalendarTab.fromJson(Map<String, dynamic> json) =>
-      _$CalendarTabFromJson(json);
+  factory CalendarTabData.fromJson(Map<String, dynamic> json) =>
+      _$CalendarTabDataFromJson(json);
 }
 
 @JsonSerializable(createToJson: false)
-class CalendarItem {
-  CalendarItem(this.title, this.start);
+class CalendarItemData {
+  CalendarItemData(this.title, this.start);
 
   String title;
   String start;
@@ -33,22 +34,31 @@ class CalendarItem {
   String? location;
   String? group;
 
-  String formatTime() {
-    var time = start.substring(3);
-    if (time.startsWith("0")) {
-      time = time.substring(1);
-    }
+  DateTime getStartTime() {
+    return parseTime(start)!;
+  }
+
+  DateTime? getEndTime() {
+    return end == null ? null : parseTime(end!)!;
+  }
+
+  String formatTimeRange() {
+    var time = formatTime(getStartTime());
     if (end != null) {
-      var endPart = end!.substring(3);
-      if (endPart.startsWith("0")) {
-        endPart = endPart.substring(1);
-      }
-      time += '-$endPart';
+      time += '-${formatTime(getEndTime()!)}';
     }
-    time.replaceAll(':', '.');
     return time;
   }
 
-  factory CalendarItem.fromJson(Map<String, dynamic> json) =>
-      _$CalendarItemFromJson(json);
+  bool hasPassed(DateTime clock) {
+    return getEndTime()?.isBefore(clock) ?? false;
+  }
+
+  bool isHappening(DateTime clock) {
+    return getStartTime().isBefore(clock) &&
+        (getEndTime()?.isAfter(clock) ?? true);
+  }
+
+  factory CalendarItemData.fromJson(Map<String, dynamic> json) =>
+      _$CalendarItemDataFromJson(json);
 }

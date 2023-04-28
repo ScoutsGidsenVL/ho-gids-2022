@@ -13,7 +13,7 @@ const dataRepo =
 class DynamicData extends ChangeNotifier {
   late Timer timer;
   List<MapFeature>? annotations;
-  List<CalendarTab>? calendar;
+  List<CalendarTabData>? calendar;
   List<NewsItemData>? news;
   Map<String, String> text = {};
 

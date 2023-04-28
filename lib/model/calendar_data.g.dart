@@ -8,18 +8,20 @@ part of 'calendar_data.dart';
 
 CalendarData _$CalendarDataFromJson(Map<String, dynamic> json) => CalendarData(
       (json['tabs'] as List<dynamic>)
-          .map((e) => CalendarTab.fromJson(e as Map<String, dynamic>))
+          .map((e) => CalendarTabData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-CalendarTab _$CalendarTabFromJson(Map<String, dynamic> json) => CalendarTab(
+CalendarTabData _$CalendarTabDataFromJson(Map<String, dynamic> json) =>
+    CalendarTabData(
       json['label'] as String,
       (json['items'] as List<dynamic>)
-          .map((e) => CalendarItem.fromJson(e as Map<String, dynamic>))
+          .map((e) => CalendarItemData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-CalendarItem _$CalendarItemFromJson(Map<String, dynamic> json) => CalendarItem(
+CalendarItemData _$CalendarItemDataFromJson(Map<String, dynamic> json) =>
+    CalendarItemData(
       json['title'] as String,
       json['start'] as String,
     )
