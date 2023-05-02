@@ -9,7 +9,7 @@ class OsmAttribution extends StatelessWidget {
   Widget build(BuildContext context) {
     return AttributionWidget(
       attributionBuilder: (context) => Align(
-        alignment: Alignment.bottomRight,
+        alignment: Alignment.bottomLeft,
         child: ColoredBox(
           color: const Color(0xCCFFFFFF),
           child: GestureDetector(

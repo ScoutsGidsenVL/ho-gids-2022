@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:ho_gids/model/dynamic_data.dart';
@@ -10,6 +12,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:collection/collection.dart';
+import 'package:geolocator/geolocator.dart';
 
 class Kaart extends StatefulWidget {
   const Kaart({Key? key, this.id}) : super(key: key);
@@ -34,13 +37,19 @@ class KaartState extends State<Kaart> {
     'faciliteit': const PolygonStyle(fill: Color(0x770E7594)),
     'border': const PolygonStyle(border: Color(0x77000000)),
   };
+  static final center = LatLng(51.2421, 4.9335);
 
   final mapController = MapController();
+  late StreamController<LocationMarkerPosition> positionStreamController;
   MapFeature? _selectedFeature;
+  bool _locationEnabled = false;
+  bool _locationFixed = false;
+  bool _centerFixed = true;
 
   @override
   void initState() {
     super.initState();
+    positionStreamController = StreamController();
     if (widget.id != null) {
       SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
         final features = context.read<DynamicData>().annotations ?? [];
@@ -60,7 +69,71 @@ class KaartState extends State<Kaart> {
   @override
   void dispose() {
     mapController.dispose();
+    positionStreamController.close();
     super.dispose();
+  }
+
+  void _focusCenter() {
+    mapController.moveAndRotate(center, 14, 0);
+    setState(() {
+      _selectedFeature = null;
+      _locationFixed = false;
+      _centerFixed = true;
+    });
+  }
+
+  void _enableLocation() async {
+    try {
+      if (!_locationEnabled) {
+        var permission = await Geolocator.checkPermission();
+        if (permission == LocationPermission.denied) {
+          permission = await Geolocator.requestPermission();
+          if (permission == LocationPermission.denied ||
+              permission == LocationPermission.deniedForever) {
+            return;
+          }
+        }
+      }
+
+      final position = await Geolocator.getCurrentPosition();
+      setState(() {
+        _selectedFeature = null;
+        _locationEnabled = true;
+        _locationFixed = !_locationFixed;
+        _centerFixed = false;
+      });
+      _newPosition(position);
+    } catch (e) {
+      if (_locationEnabled) {
+        setState(() {
+          _locationEnabled = false;
+          _locationFixed = false;
+        });
+      }
+      return;
+    }
+    Geolocator.getPositionStream().listen((position) {
+      _newPosition(position);
+    }, onError: (Object error) {
+      if (_locationEnabled) {
+        setState(() {
+          _locationEnabled = false;
+          _locationFixed = false;
+        });
+      }
+    }, cancelOnError: true);
+  }
+
+  void _newPosition(Position position) {
+    if (_locationFixed) {
+      mapController.move(LatLng(position.latitude, position.longitude), 16.5);
+    }
+    if (!positionStreamController.isClosed) {
+      positionStreamController.add(LocationMarkerPosition(
+          latitude: position.latitude,
+          longitude: position.longitude,
+          accuracy: position.accuracy));
+    }
   }
 
   @override
@@ -74,9 +147,17 @@ class KaartState extends State<Kaart> {
       body: FlutterMap(
         mapController: mapController,
         options: MapOptions(
-          center: LatLng(51.2387, 4.9389),
+          onPositionChanged: (pos, hasGesture) {
+            if (((hasGesture && _locationFixed) || _centerFixed)) {
+              setState(() {
+                _locationFixed = false;
+                _centerFixed = false;
+              });
+            }
+          },
+          center: center,
           zoom: 14,
-          maxZoom: 17.49,
+          maxZoom: 18.49,
           onTap: (tapPos, point) {
             final tPos = tapPos.relative;
             var feature = markers.lastWhereOrNull((m) {
@@ -100,9 +181,11 @@ class KaartState extends State<Kaart> {
         ],
         children: [
           TileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            subdomains: const ['a', 'b', 'c'],
             userAgentPackageName: 'be.scoutsengidsenvlaanderen.hogids',
             retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
+            maxZoom: 19,
           ),
           PolygonLayer(
             polygons: polygons.map((f) {
@@ -158,7 +241,34 @@ class KaartState extends State<Kaart> {
               }),
             ],
           ),
-          CurrentLocationLayer(),
+          CurrentLocationLayer(
+            positionStream: positionStreamController.stream,
+          ),
+        ],
+      ),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            heroTag: 'centerButton',
+            onPressed: _focusCenter,
+            backgroundColor: Theme.of(context).colorScheme.surface,
+            child: Icon(Icons.home,
+                color: _centerFixed
+                    ? Theme.of(context).colorScheme.primary
+                    : null),
+          ),
+          const SizedBox(height: 10),
+          FloatingActionButton(
+              heroTag: 'gpsButton',
+              onPressed: _enableLocation,
+              backgroundColor: Theme.of(context).colorScheme.surface,
+              child: _locationEnabled
+                  ? _locationFixed
+                      ? Icon(Icons.gps_fixed,
+                          color: Theme.of(context).colorScheme.primary)
+                      : const Icon(Icons.gps_not_fixed)
+                  : const Icon(Icons.gps_off)),
         ],
       ),
       bottomSheet: _selectedFeature == null
