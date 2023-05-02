@@ -62,44 +62,42 @@ class Nieuws extends StatelessWidget {
                 icon: const Icon(Icons.today))
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            allPublished.isEmpty
-                ? const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 64, horizontal: 16),
-                    child: Center(child: Text('Nog geen nieuws...')),
-                  )
-                : NewsList(news, includeArchive: includeArchive),
-            const SizedBox(height: 10),
-            if (featuredEvents.isNotEmpty)
-              Material(
-                color: Theme.of(context).colorScheme.secondary,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ListTile(
-                        dense: true,
-                        onTap: () {
-                          Beamer.of(context, root: true)
-                              .beamToReplacementNamed('/programma');
-                        },
-                        leading: const Icon(Icons.calendar_today),
-                        horizontalTitleGap: 0,
-                        title: const Text('PROGRAMMA',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold)),
+      body: allPublished.isEmpty
+          ? const Padding(
+              padding: EdgeInsets.symmetric(vertical: 64, horizontal: 16),
+              child: Center(child: Text('Nog geen nieuws...')),
+            )
+          : NewsList(
+              news: news,
+              includeArchive: includeArchive,
+              children: [
+                if (featuredEvents.isNotEmpty)
+                  Material(
+                    color: Theme.of(context).colorScheme.secondary,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ListTile(
+                            dense: true,
+                            onTap: () {
+                              Beamer.of(context, root: true)
+                                  .beamToReplacementNamed('/programma');
+                            },
+                            leading: const Icon(Icons.calendar_today),
+                            horizontalTitleGap: 0,
+                            title: const Text('PROGRAMMA',
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold)),
+                          ),
+                          ...featuredEvents.map((item) => CalendarEntry(item)),
+                        ],
                       ),
-                      ...featuredEvents.map((item) => CalendarEntry(item)),
-                    ],
+                    ),
                   ),
-                ),
-              )
-          ],
-        ),
-      ),
+              ],
+            ),
     );
   }
 }

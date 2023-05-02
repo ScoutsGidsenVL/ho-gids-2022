@@ -1,3 +1,4 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/calendar_data.dart';
 import 'package:ho_gids/model/time_manager.dart';
@@ -15,7 +16,12 @@ class CalendarEntry extends StatelessWidget {
     final isHappening = item.isHappening(clock);
 
     return ListTile(
-      onTap: () {},
+      onTap: () {
+        if (item.location != null) {
+          Beamer.of(context, root: true)
+              .beamToNamed('/kaart?id=${item.location}', beamBackOnPop: true);
+        }
+      },
       shape: isHappening
           ? Border(
               left: BorderSide(

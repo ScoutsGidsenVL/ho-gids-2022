@@ -9,14 +9,20 @@ import 'package:provider/provider.dart';
 class NewsList extends StatelessWidget {
   final List<NewsItemData> news;
   final bool? includeArchive;
+  final List<Widget> children;
 
-  const NewsList(this.news, {super.key, this.includeArchive});
+  const NewsList({
+    super.key,
+    required this.news,
+    this.includeArchive,
+    this.children = const [],
+  });
 
   @override
   Widget build(BuildContext context) {
     final timeManager = context.watch<TimeManager>();
     final clock = timeManager.now();
-    final feed = news.where((n) => n.publishTime != null).sorted((a, b) {
+    final newsToAdd = news.where((n) => n.publishTime != null).sorted((a, b) {
       // pinned articles above non-pinned
       if (a.isPinned(clock) != b.isPinned(clock)) {
         return a.isPinned(clock) ? -1 : 1;
@@ -31,13 +37,22 @@ class NewsList extends StatelessWidget {
       return n.isPublished(clock) &&
           (includeArchive == true || !n.isArchived(clock));
     }).toList();
-    final allPublished = news.where((n) => n.isPublished(clock));
+    final archivedCount =
+        news.where((n) => n.isPublished(clock)).length - newsToAdd.length;
 
-    return Column(
-      children: [
-        ...feed.map((item) => NewsCard(item)),
-        if (includeArchive != true && allPublished.length != feed.length)
-          Padding(
+    final entries = <Widget>[];
+    final childrenToAdd = List.from(children);
+    var newsCount = 0;
+
+    while (newsToAdd.isNotEmpty || childrenToAdd.isNotEmpty) {
+      if ((newsCount >= 3 || newsToAdd.isEmpty) && childrenToAdd.isNotEmpty) {
+        entries.add(childrenToAdd.removeAt(0));
+        newsCount = 0;
+      } else if (newsToAdd.isNotEmpty) {
+        entries.add(NewsCard(newsToAdd.removeAt(0)));
+        newsCount += 1;
+        if (newsToAdd.isEmpty && archivedCount > 0) {
+          entries.add(Padding(
             padding: const EdgeInsets.all(10),
             child: OutlinedButton(
                 onPressed: () {
@@ -46,8 +61,13 @@ class NewsList extends StatelessWidget {
                           const NoAnimationTransitionDelegate());
                 },
                 child: const Text('Meer nieuws...')),
-          ),
-      ],
+          ));
+        }
+      }
+    }
+
+    return ListView(
+      children: entries,
     );
   }
 }
