@@ -4,9 +4,10 @@ import 'package:ho_gids/model/dynamic_data.dart';
 import 'package:ho_gids/model/map_data.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
+import 'package:ho_gids/widgets/feature_card.dart';
+import 'package:ho_gids/widgets/osm_attribution.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:collection/collection.dart';
 
@@ -166,7 +167,7 @@ class KaartState extends State<Kaart> {
               constraints: const BoxConstraints(minWidth: double.infinity),
               onClosing: () {},
               builder: (context) {
-                return SelectedFeature(_selectedFeature!);
+                return FeatureCard(_selectedFeature!);
               },
             ),
     );
@@ -178,59 +179,4 @@ class PolygonStyle {
   final Color? fill;
 
   const PolygonStyle({this.border, this.fill});
-}
-
-class SelectedFeature extends StatelessWidget {
-  final MapFeature feature;
-
-  const SelectedFeature(this.feature, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-      child: Text(
-        feature.properties.displayName ?? feature.properties.name ?? '',
-        style: const TextStyle(fontSize: 20),
-        textAlign: TextAlign.center,
-      ),
-    );
-  }
-}
-
-class OsmAttribution extends StatelessWidget {
-  const OsmAttribution({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AttributionWidget(
-      attributionBuilder: (context) => Align(
-        alignment: Alignment.bottomRight,
-        child: ColoredBox(
-          color: const Color(0xCCFFFFFF),
-          child: GestureDetector(
-            onTap: () {
-              launchUrl(Uri.parse('https://www.openstreetmap.org/copyright'),
-                  mode: LaunchMode.externalApplication);
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(3),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: Text(
-                      '© OpenStreetMap',
-                      style: TextStyle(color: Color(0xFF0078a8)),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
 }
