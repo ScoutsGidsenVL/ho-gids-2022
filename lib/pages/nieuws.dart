@@ -82,8 +82,10 @@ class Nieuws extends StatelessWidget {
                           ListTile(
                             dense: true,
                             onTap: () {
+                              final random = Random().nextInt(1000000);
                               Beamer.of(context, root: true)
-                                  .beamToReplacementNamed('/programma');
+                                  .beamToReplacementNamed(
+                                      '/programma?refresh=$random');
                             },
                             leading: const Icon(Icons.calendar_today),
                             horizontalTitleGap: 0,

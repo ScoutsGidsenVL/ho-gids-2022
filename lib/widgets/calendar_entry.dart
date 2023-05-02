@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:ho_gids/model/calendar_data.dart';
@@ -18,8 +20,9 @@ class CalendarEntry extends StatelessWidget {
     return ListTile(
       onTap: () {
         if (item.location != null) {
+          final random = Random().nextInt(1000000);
           Beamer.of(context, root: true)
-              .beamToNamed('/kaart?id=${item.location}', beamBackOnPop: true);
+              .beamToNamed('/kaart?id=${item.location}&refresh=$random');
         }
       },
       shape: isHappening

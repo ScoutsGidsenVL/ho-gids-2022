@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
@@ -28,6 +30,8 @@ void Function(String, String?, String) linkHandler(BuildContext context) {
         url.startsWith("mailto:")) {
       launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
     } else if (url.startsWith("/")) {
+      final random = Random().nextInt(1000000);
+      url += '${url.contains('?') ? '&' : '?'}refresh=$random';
       Beamer.of(context, root: true).beamToNamed(url);
     }
   };
