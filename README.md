@@ -15,7 +15,7 @@ Gebouwd met [Flutter](https://docs.flutter.dev/).
 
 ### Automatisch genereren van bestanden
 Enkele delen van de app worden automatisch gegenereerd. Bij het aanpassen van de configuratie (in `pubspec.yaml`) of bron bestanden moeten volgende commands uitgevoerd worden:
-1. [Launcher icons](https://pub.dev/packages/flutter_launcher_icons): `flutter pub run flutter_launcher_icons:main`
+1. [Launcher icons](https://pub.dev/packages/flutter_launcher_icons): `flutter pub run flutter_launcher_icons`
 2. [Splash screens](https://pub.dev/packages/flutter_native_splash): `flutter pub run flutter_native_splash:create`
 2. [Json parsers](https://pub.dev/packages/json_serializable): `flutter pub run build_runner watch --delete-conflicting-outputs`
 
