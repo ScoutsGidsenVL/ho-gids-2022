@@ -10,7 +10,7 @@ Telefonisch bereikbaar op [0477 38 24 12](tel:0477382412)
 Verwittig de hulpdiensten niet zelf!
 
 Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Bel dan het noodnummer: [0474 26 14 01](tel:0474261401)
-* Kleine ongelukjes: Rode kruis in gebouw 39
+* Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=39)
 * Nood en ramp: [0474 26 14 01](tel:0474261401)
 
 ---
@@ -47,7 +47,7 @@ Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Bel dan het 
 |Welpen - Kabouters         |[Kamp 33](/kaart?id=K33)           |
 |Jonggidsen - Jongverkenners|[Kamp 34](/kaart?id=K34)           |
 |Jins                       |[Rond vijver](/kaart?id=Vijver%201)    |
-|Groepsleiding (+ lokalen, financien en groepsadministratie)|[Grote grond](/kaart?id=GG) + gebouw 11|
+|Groepsleiding (+ lokalen, financien en groepsadministratie)|[Grote grond](/kaart?id=GG) + [gebouw 11](/kaart?id=11)|
 |Zeescouting                |[Vijver](/kaart?id=Vijver%201)         |
 |Akabe                      |[Kleine grond](/kaart?id=KG) + [loods kamp 30](/kaart?id=30)|
 |Safety First (Rode Kruis)  |[Grote tent op grote grond](/kaart?id=GG)|

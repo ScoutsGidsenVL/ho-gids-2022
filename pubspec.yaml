@@ -40,6 +40,7 @@ dependencies:
   beamer: ^1.5.3
   timeago: ^3.3.0
   geolocator: ^9.0.2
+  flutter_native_splash: ^2.2.16
 
 dev_dependencies:
   flutter_test:
@@ -61,17 +62,25 @@ flutter:
 
 # https://pub.dev/packages/flutter_launcher_icons
 flutter_icons:
+  image_path: "assets/icons/icon.png"
   android: "ic_launcher"
-  ios: true
-  image_path: "assets/icons/icon-512x.png"
-  image_path_ios: "assets/icons/icon-ios-512x.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
+  adaptive_icon_background: "assets/icons/icon-background.png"
+  adaptive_icon_foreground: "assets/icons/icon.png"
+  ios: true
+  image_path_ios: "assets/icons/icon-ios.png"
   web:
     generate: true
-    image_path: "assets/icons/icon-512x.png"
+    image_path: "assets/icons/icon.png"
     background_color: "#fafafa"
     theme_color: "#48827f"
   windows:
     generate: true
-    image_path: "assets/icons/icon-512x.png"
+    image_path: "assets/icons/icon.png"
     icon_size: 48 # min:48, max:256, default: 48
+
+# https://pub.dev/packages/flutter_native_splash
+flutter_native_splash:
+  color: "#fafafa"
+  color_dark: "#272727"
+  image: "assets/images/splash.png"

@@ -8,6 +8,7 @@ import 'package:ho_gids/pages/artikel.dart';
 import 'package:provider/provider.dart';
 import 'package:beamer/beamer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 final List<TabInfo> tabs = [
   TabInfo(
@@ -37,6 +38,11 @@ final List<TabInfo> tabs = [
 ];
 
 void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  Future.delayed(const Duration(milliseconds: 600)).then((_) {
+    FlutterNativeSplash.remove();
+  });
   runApp(MyApp());
 }
 
