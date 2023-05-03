@@ -92,9 +92,9 @@ BEGIN
             VALUE "CompanyName", "be.scoutsengidsenvlaanderen.hogids" "\0"
             VALUE "FileDescription", "ho-gids" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "ho_gids" "\0"
+            VALUE "InternalName", "hogids" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 Scouts en Gidsen Vlaanderen vzw. All rights reserved." "\0"
-            VALUE "OriginalFilename", "ho_gids.exe" "\0"
+            VALUE "OriginalFilename", "hogids.exe" "\0"
             VALUE "ProductName", "HO-gids" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END

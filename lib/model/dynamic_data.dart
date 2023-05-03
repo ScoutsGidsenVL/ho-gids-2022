@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:ho_gids/model/calendar_data.dart';
-import 'package:ho_gids/model/map_data.dart';
+import 'package:hogids/model/calendar_data.dart';
+import 'package:hogids/model/map_data.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:ho_gids/model/news_data.dart';
+import 'package:hogids/model/news_data.dart';
 
 const dataRepo =
     'https://raw.githubusercontent.com/ScoutsGidsenVL/ho-gids-2022/main';

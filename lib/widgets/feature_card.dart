@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/map_data.dart';
+import 'package:hogids/model/map_data.dart';
 
 class FeatureCard extends StatelessWidget {
   final MapFeature feature;

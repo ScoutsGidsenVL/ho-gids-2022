@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/calendar_data.dart';
-import 'package:ho_gids/model/time_manager.dart';
+import 'package:hogids/model/calendar_data.dart';
+import 'package:hogids/model/time_manager.dart';
 import 'package:provider/provider.dart';
 
 class CalendarEntry extends StatelessWidget {

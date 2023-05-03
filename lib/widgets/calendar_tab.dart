@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/calendar_data.dart';
-import 'package:ho_gids/widgets/calendar_entry.dart';
+import 'package:hogids/model/calendar_data.dart';
+import 'package:hogids/widgets/calendar_entry.dart';
 
 class CalendarTab extends StatelessWidget {
   const CalendarTab({Key? key, required this.tab}) : super(key: key);

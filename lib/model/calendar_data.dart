@@ -1,4 +1,4 @@
-import 'package:ho_gids/util.dart';
+import 'package:hogids/util.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'calendar_data.g.dart';

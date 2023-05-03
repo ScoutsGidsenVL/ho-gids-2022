@@ -1,9 +1,9 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/calendar_data.dart';
-import 'package:ho_gids/model/dynamic_data.dart';
-import 'package:ho_gids/model/time_manager.dart';
-import 'package:ho_gids/widgets/calendar_tab.dart';
+import 'package:hogids/model/calendar_data.dart';
+import 'package:hogids/model/dynamic_data.dart';
+import 'package:hogids/model/time_manager.dart';
+import 'package:hogids/widgets/calendar_tab.dart';
 import 'package:provider/provider.dart';
 
 const tabs = ['Vrijdag', 'Zaterdag', 'Zondag'];

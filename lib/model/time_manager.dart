@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ho_gids/util.dart';
+import 'package:hogids/util.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class TimeManager extends ChangeNotifier {

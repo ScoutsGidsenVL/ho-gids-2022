@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/dynamic_data.dart';
-import 'package:ho_gids/model/time_manager.dart';
-import 'package:ho_gids/widgets/calendar_entry.dart';
-import 'package:ho_gids/widgets/news_list.dart';
+import 'package:hogids/model/dynamic_data.dart';
+import 'package:hogids/model/time_manager.dart';
+import 'package:hogids/widgets/calendar_entry.dart';
+import 'package:hogids/widgets/news_list.dart';
 import 'package:provider/provider.dart';
 
 // Disable when publishing

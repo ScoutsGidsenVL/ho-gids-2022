@@ -1,9 +1,9 @@
 import 'package:beamer/beamer.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/news_data.dart';
-import 'package:ho_gids/model/time_manager.dart';
-import 'package:ho_gids/widgets/news_card.dart';
+import 'package:hogids/model/news_data.dart';
+import 'package:hogids/model/time_manager.dart';
+import 'package:hogids/widgets/news_card.dart';
 import 'package:provider/provider.dart';
 
 class NewsList extends StatelessWidget {

@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:ho_gids/model/dynamic_data.dart';
-import 'package:ho_gids/model/map_data.dart';
+import 'package:hogids/model/dynamic_data.dart';
+import 'package:hogids/model/map_data.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
-import 'package:ho_gids/widgets/feature_card.dart';
-import 'package:ho_gids/widgets/osm_attribution.dart';
+import 'package:hogids/widgets/feature_card.dart';
+import 'package:hogids/widgets/osm_attribution.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';

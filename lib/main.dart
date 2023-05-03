@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/dynamic_data.dart';
-import 'package:ho_gids/model/time_manager.dart';
-import 'package:ho_gids/pages/nieuws.dart';
-import 'package:ho_gids/pages/kaart.dart';
-import 'package:ho_gids/pages/programma.dart';
-import 'package:ho_gids/pages/artikel.dart';
+import 'package:hogids/model/dynamic_data.dart';
+import 'package:hogids/model/time_manager.dart';
+import 'package:hogids/pages/nieuws.dart';
+import 'package:hogids/pages/kaart.dart';
+import 'package:hogids/pages/programma.dart';
+import 'package:hogids/pages/artikel.dart';
 import 'package:provider/provider.dart';
 import 'package:beamer/beamer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

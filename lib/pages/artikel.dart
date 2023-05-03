@@ -1,7 +1,7 @@
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter/material.dart';
-import 'package:ho_gids/model/dynamic_data.dart';
-import 'package:ho_gids/util.dart';
+import 'package:hogids/model/dynamic_data.dart';
+import 'package:hogids/util.dart';
 import 'package:provider/provider.dart';
 
 class Artikel extends StatelessWidget {
