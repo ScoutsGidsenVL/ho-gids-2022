@@ -18,12 +18,13 @@ class Nieuws extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final news = context.watch<DynamicData>().news ?? [];
+    final dynamicData = context.watch<DynamicData>();
     final timeManager = context.watch<TimeManager>();
     final clock = timeManager.now();
+    final news = dynamicData.news ?? [];
     final allPublished = news.where((n) => n.isPublished(timeManager.now()));
 
-    final calendar = context.watch<DynamicData>().calendar ?? [];
+    final calendar = dynamicData.calendar ?? [];
     final allEvents = calendar.expand((tab) => tab.items).toList();
     var nowEvent = allEvents.indexWhere((item) => item.isHappening(clock));
     if (nowEvent == -1) {

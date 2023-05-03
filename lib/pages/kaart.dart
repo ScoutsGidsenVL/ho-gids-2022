@@ -13,6 +13,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:collection/collection.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:flutter_map_tile_caching/flutter_map_tile_caching.dart';
 
 class Kaart extends StatefulWidget {
   const Kaart({Key? key, this.id}) : super(key: key);
@@ -184,6 +185,7 @@ class KaartState extends State<Kaart> {
             urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             subdomains: const ['a', 'b', 'c'],
             userAgentPackageName: 'be.scoutsengidsenvlaanderen.hogids',
+            tileProvider: FMTC.instance('mapStore').getTileProvider(),
             retinaMode: MediaQuery.of(context).devicePixelRatio > 1.0,
             maxZoom: 19,
           ),

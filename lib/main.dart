@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import 'package:beamer/beamer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_map_tile_caching/flutter_map_tile_caching.dart';
 
 final List<TabInfo> tabs = [
   TabInfo(
@@ -37,12 +38,14 @@ final List<TabInfo> tabs = [
   ),
 ];
 
-void main() {
+Future<void> main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   Future.delayed(const Duration(milliseconds: 600)).then((_) {
     FlutterNativeSplash.remove();
   });
+  await FlutterMapTileCaching.initialise();
+  FMTC.instance('mapStore').manage.create();
   runApp(MyApp());
 }
 
