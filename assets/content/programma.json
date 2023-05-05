@@ -26,7 +26,8 @@
                     "start": "VR 23:00",
                     "end": "VR 23:15",
                     "location": "GG",
-                    "group": "Hoofdpodium"
+                    "group": "Hoofdpodium",
+                    "notify": true
                 },
                 {
                     "title": "DJ Battle",
@@ -74,24 +75,28 @@
                 {
                     "title": "Goesting in inspiratie & goesting in actie",
                     "start": "ZA 10:00",
-                    "end": "ZA 13:00"
+                    "end": "ZA 13:00",
+                    "notify": true
                 },
                 {
                     "title": "Eten & show op de grote grond",
                     "start": "ZA 13:00",
                     "end": "ZA 15:00",
-                    "location": "GG"
+                    "location": "GG",
+                    "notify": true
                 },
                 {
                     "title": "Marktje op de grote grond",
                     "start": "ZA 15:00",
                     "end": "ZA 18:00",
-                    "location": "GG"
+                    "location": "GG",
+                    "notify": true
                 },
                 {
                     "title": "District/gouwmoment & eten op de gouwgrond",
                     "start": "ZA 18:00",
-                    "end": "ZA 22:00"
+                    "end": "ZA 22:00",
+                    "notify": true
                 },
                 {
                     "title": "Winnaar DJ Battle",
@@ -159,13 +164,15 @@
                     "title": "Verrassingsact vol goesting",
                     "start": "ZO 11:30",
                     "end": "ZO 12:30",
-                    "location": "GG"
+                    "location": "GG",
+                    "notify": true
                 },
                 {
                     "title": "Lunch op de grote grond",
                     "start": "ZO 12:30",
                     "end": "ZO 13:00",
-                    "location": "GG"
+                    "location": "GG",
+                    "notify": true
                 },
                 {
                     "title": "Einde HO",

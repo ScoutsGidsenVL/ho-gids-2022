@@ -23,8 +23,10 @@ CalendarTabData _$CalendarTabDataFromJson(Map<String, dynamic> json) =>
 CalendarItemData _$CalendarItemDataFromJson(Map<String, dynamic> json) =>
     CalendarItemData(
       json['title'] as String,
+      json['subtitle'] as String?,
       json['start'] as String,
-    )
-      ..end = json['end'] as String?
-      ..location = json['location'] as String?
-      ..group = json['group'] as String?;
+      json['end'] as String?,
+      json['location'] as String?,
+      json['group'] as String?,
+      json['notify'] as bool?,
+    );

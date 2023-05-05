@@ -26,13 +26,16 @@ class CalendarTabData {
 
 @JsonSerializable(createToJson: false)
 class CalendarItemData {
-  CalendarItemData(this.title, this.start);
+  CalendarItemData(this.title, this.subtitle, this.start, this.end,
+      this.location, this.group, this.notify);
 
   String title;
+  String? subtitle;
   String start;
   String? end;
   String? location;
   String? group;
+  bool? notify;
 
   DateTime getStartTime() {
     return parseTime(start)!;

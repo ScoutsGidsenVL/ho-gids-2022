@@ -109,26 +109,47 @@ class DynamicData extends ChangeNotifier {
       return notificationsPlugin!.cancel(n.id);
     }));
     final random = Random();
-    await Future.wait(news!
-        .where((item) =>
-            item.publishTime != null &&
-            (item.notify ?? false) &&
-            item.published!.isAfter(DateTime.now()))
-        .map((item) {
-      final time = tz.TZDateTime.from(item.published!, tz.local);
-      final id = random.nextInt(1000000000);
-      return notificationsPlugin!.zonedSchedule(
-          id,
+    await Future.wait([
+      ...news!
+          .where((item) =>
+              (item.notify ?? false) &&
+              item.publishTime != null &&
+              item.published!.isAfter(DateTime.now()))
+          .map((item) {
+        return notificationsPlugin!.zonedSchedule(
+          random.nextInt(1000000000),
           item.title,
           item.subtitle,
-          time,
+          tz.TZDateTime.from(item.published!, tz.local),
           const NotificationDetails(
-            android: AndroidNotificationDetails('hogids_news', 'HO Nieuws'),
+            android: AndroidNotificationDetails('hogids_news', 'Nieuws'),
             iOS: DarwinNotificationDetails(),
           ),
           androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
           uiLocalNotificationDateInterpretation:
-              UILocalNotificationDateInterpretation.absoluteTime);
-    }));
+              UILocalNotificationDateInterpretation.absoluteTime,
+        );
+      }),
+      ...calendar!.expand((tab) => tab.items
+              .where((item) =>
+                  (item.notify ?? false) &&
+                  item.getStartTime().isAfter(DateTime.now()))
+              .map((item) {
+            return notificationsPlugin!.zonedSchedule(
+              random.nextInt(1000000000),
+              item.title,
+              item.subtitle,
+              tz.TZDateTime.from(item.getStartTime(), tz.local),
+              const NotificationDetails(
+                android:
+                    AndroidNotificationDetails('hogids_programma', 'Programma'),
+                iOS: DarwinNotificationDetails(),
+              ),
+              androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+              uiLocalNotificationDateInterpretation:
+                  UILocalNotificationDateInterpretation.absoluteTime,
+            );
+          })),
+    ]);
   }
 }
