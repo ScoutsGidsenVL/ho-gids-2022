@@ -1,7 +1,7 @@
 # HO gids 2022
 > Gids voor de Herfstontmoeting van Scouts en Gidsen Vlaanderen.
 
-Gebouwd met [Flutter](https://docs.flutter.dev/).
+Om aanpassingen aan nieuws, het programma of de kaart te maken, zie [HANDLEIDING.md](/HANDLEIDING.md).
 
 ## Installatie
 1. Installeer flutter: [Get started](https://docs.flutter.dev/get-started/install).
