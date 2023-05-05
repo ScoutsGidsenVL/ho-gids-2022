@@ -23,6 +23,7 @@ class NewsItemData {
     this.publishTime,
     this.archiveTime,
     this.pin,
+    this.notify,
   );
 
   String title;
@@ -32,6 +33,7 @@ class NewsItemData {
   String? publishTime;
   String? archiveTime;
   bool? pin;
+  bool? notify;
 
   DateTime? get published =>
       publishTime == null ? null : parseTime(publishTime!);

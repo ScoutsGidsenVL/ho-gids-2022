@@ -20,4 +20,5 @@ NewsItemData _$NewsItemDataFromJson(Map<String, dynamic> json) => NewsItemData(
       json['publishTime'] as String?,
       json['archiveTime'] as String?,
       json['pin'] as bool?,
+      json['notify'] as bool?,
     );

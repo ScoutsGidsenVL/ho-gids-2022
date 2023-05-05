@@ -11,7 +11,8 @@
             "image": "dasgoesting.jpg",
             "body": "jaarthema",
             "publishTime": "VR 18:00",
-            "pin": true
+            "pin": true,
+            "notify": true
         },
         {
             "title": "Jaarlied",
@@ -29,7 +30,8 @@
         {
             "title": "Wat vond je van de vorming?",
             "publishTime": "ZA 12:00",
-            "archiveTime": "ZA 16:00"
+            "archiveTime": "ZA 16:00",
+            "notify": true
         },
         {
             "title": "Tot volgend jaar!",
