@@ -53,7 +53,7 @@ Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=39)
 Het programma is gedefinieerd in [`assets/content/programma.json`](/assets/content/programma.json). Het programma is opgedeeld in verschillende tabs voor elke dag. Elke gebeurtenis heeft een aantal configuratie mogelijkheden. Enkel `title` en `start` zijn verplicht.
 
 * `title`: De naam van de gebeurtenis. Wordt ook gebruikt in meldingen. Probeer dit onder de 50 karakters te houden, zo past het altijd op twee lijnen.
-* `subtitle`: Voorlopig enkel gebruikt in meldingen.
+* `subtitle`: Een korte beschrijving van de gebeurtenis. Wordt gebruikt in meldingen en bij een programma detail.
 * `start`: Wanneer deze gebeurtenis begint. Het formaat van dit veld wordt [hieronder](#tijd-formaat) beschreven.
 * `end`: Wanneer deze gebeurtenis eindigt. Het formaat van dit veld wordt [hieronder](#tijd-formaat) beschreven. Als dit veld niet wordt meegegeven dan blijft de gebeurtenis eeuwig duren, kan bijvoorbeeld gebruikt worden voor de laatste gebrurtenis "Einde HO".
 * `location`: De plaats op de kaart van deze gebeurtenis. Komt overeen met de eigenschap `name` op de [kaart](#kaart).
