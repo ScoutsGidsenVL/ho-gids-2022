@@ -44,7 +44,7 @@ class CalendarEntry extends StatelessWidget {
                         padding: EdgeInsets.only(right: 5),
                         child: Icon(Icons.schedule),
                       ),
-                      Text(item.formatTimeRange()),
+                      Text('${item.tab} ${item.formatTimeRange()}'),
                     ]),
                     if (feature != null)
                       Row(children: [

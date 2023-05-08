@@ -20,8 +20,13 @@ class CalendarTabData {
   String label;
   List<CalendarItemData> items;
 
-  factory CalendarTabData.fromJson(Map<String, dynamic> json) =>
-      _$CalendarTabDataFromJson(json);
+  factory CalendarTabData.fromJson(Map<String, dynamic> json) {
+    final res = _$CalendarTabDataFromJson(json);
+    for (final item in res.items) {
+      item.tab = res.label;
+    }
+    return res;
+  }
 }
 
 @JsonSerializable(createToJson: false)
@@ -36,6 +41,9 @@ class CalendarItemData {
   String? location;
   String? group;
   bool? notify;
+
+  @JsonKey(includeFromJson: false)
+  String tab = '';
 
   DateTime getStartTime() {
     return parseTime(start)!;

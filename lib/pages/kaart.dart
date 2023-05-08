@@ -277,6 +277,7 @@ class KaartState extends State<Kaart> {
           ? null
           : BottomSheet(
               constraints: const BoxConstraints(minWidth: double.infinity),
+              enableDrag: false,
               onClosing: () {},
               builder: (context) {
                 return FeatureCard(_selectedFeature!);

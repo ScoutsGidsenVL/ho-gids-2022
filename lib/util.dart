@@ -1,8 +1,10 @@
 import 'dart:math';
 
 import 'package:beamer/beamer.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:hogids/model/calendar_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 MarkdownStyleSheet markdownStyle(BuildContext context) {
@@ -57,4 +59,19 @@ DateTime? parseTime(String str) {
 
 String formatTime(DateTime time) {
   return '${time.hour.toString().padLeft(2, '0')}.${time.minute.toString().padLeft(2, '0')}';
+}
+
+List<CalendarItemData> getFeaturedEvents(
+    List<CalendarItemData> items, DateTime clock) {
+  final events = items.sortedBy((item) => item.getStartTime());
+  var nowEvent = events.indexWhere((item) => item.isHappening(clock));
+  if (nowEvent == -1) {
+    // if no event is currently happening, find the next upcoming event
+    nowEvent = events.indexWhere((item) => item.getStartTime().isAfter(clock));
+  }
+  if (nowEvent == -1) {
+    // if no event is upcoming, show the first event
+    nowEvent = 0;
+  }
+  return events.sublist(nowEvent, min(nowEvent + 3, events.length));
 }

@@ -4,6 +4,7 @@ import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:hogids/model/dynamic_data.dart';
 import 'package:hogids/model/time_manager.dart';
+import 'package:hogids/util.dart';
 import 'package:hogids/widgets/calendar_entry.dart';
 import 'package:hogids/widgets/news_list.dart';
 import 'package:provider/provider.dart';
@@ -26,18 +27,7 @@ class Nieuws extends StatelessWidget {
 
     final calendar = dynamicData.calendar ?? [];
     final allEvents = calendar.expand((tab) => tab.items).toList();
-    var nowEvent = allEvents.indexWhere((item) => item.isHappening(clock));
-    if (nowEvent == -1) {
-      // if no event is currently happening, find the next upcoming event
-      nowEvent =
-          allEvents.indexWhere((item) => item.getStartTime().isAfter(clock));
-    }
-    if (nowEvent == -1) {
-      // if no event is upcoming, show the first event
-      nowEvent = 0;
-    }
-    final featuredEvents =
-        allEvents.sublist(nowEvent, min(nowEvent + 3, allEvents.length));
+    final featuredEvents = getFeaturedEvents(allEvents, clock);
 
     return Scaffold(
       appBar: AppBar(
