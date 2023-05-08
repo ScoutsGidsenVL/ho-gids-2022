@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hogids/model/dynamic_data.dart';
 import 'package:hogids/model/map_data.dart';
 import 'package:hogids/model/time_manager.dart';
-import 'package:hogids/util.dart';
 import 'package:hogids/widgets/calendar_entry.dart';
 import 'package:provider/provider.dart';
 
@@ -14,15 +13,16 @@ class FeatureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final calendar = context.watch<DynamicData>().calendar ?? [];
-    final clock = context.watch<TimeManager>().now();
+    final timeManager = context.watch<TimeManager>();
 
     final hereEvents = calendar
         .expand((tab) => tab.items)
         .where((item) => item.location == feature.properties.name)
-        .where((item) =>
-            item.getStartTime().isBefore(clock.add(const Duration(days: 1))))
+        .where((item) => item
+            .getStartTime(timeManager)
+            .isBefore(timeManager.now().add(const Duration(days: 1))))
         .toList();
-    final featuredEvents = getFeaturedEvents(hereEvents, clock);
+    final featuredEvents = timeManager.getFeaturedEvents(hereEvents);
 
     return Column(
       mainAxisSize: MainAxisSize.min,

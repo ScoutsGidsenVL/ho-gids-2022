@@ -35,10 +35,10 @@ class _ProgrammaState extends State<Programma>
   @override
   Widget build(BuildContext context) {
     final calendar = context.watch<DynamicData>().calendar;
-    final clock = context.watch<TimeManager>().now();
+    final timeManager = context.watch<TimeManager>();
 
     final newActiveTab = calendar?.indexWhere((tab) {
-          return tab.items.any((item) => item.isHappening(clock));
+          return tab.items.any((item) => item.isHappening(timeManager));
         }) ??
         -1;
     if (newActiveTab != -1 && newActiveTab != activeTab) {

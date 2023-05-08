@@ -12,7 +12,6 @@ class NewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final timeManager = context.watch<TimeManager>();
-    final clock = timeManager.now();
 
     return InkWell(
       onTap: () {
@@ -29,7 +28,7 @@ class NewsCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text.rich(TextSpan(children: [
-                    if (item.isPinned(clock))
+                    if (item.isPinned(timeManager))
                       const WidgetSpan(child: Icon(Icons.push_pin, size: 18)),
                     TextSpan(
                         text: item.title,

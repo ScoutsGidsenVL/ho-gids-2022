@@ -1,4 +1,4 @@
-import 'package:hogids/util.dart';
+import 'package:hogids/model/time_manager.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'news_data.g.dart';
@@ -35,22 +35,24 @@ class NewsItemData {
   bool? pin;
   bool? notify;
 
-  DateTime? get published =>
-      publishTime == null ? null : parseTime(publishTime!);
-
-  DateTime? get archived =>
-      archiveTime == null ? null : parseTime(archiveTime!);
-
-  bool isPublished(DateTime clock) {
-    return published?.isBefore(clock) ?? false;
+  DateTime? getPublishedTime(TimeManager manager) {
+    return publishTime == null ? null : manager.parseTime(publishTime!);
   }
 
-  bool isArchived(DateTime clock) {
-    return archived?.isBefore(clock) ?? false;
+  DateTime? getArchivedTime(TimeManager manager) {
+    return archiveTime == null ? null : manager.parseTime(archiveTime!);
   }
 
-  bool isPinned(DateTime clock) {
-    return pin == true && !isArchived(clock);
+  bool isPublished(TimeManager manager) {
+    return getPublishedTime(manager)?.isBefore(manager.now()) ?? false;
+  }
+
+  bool isArchived(TimeManager manager) {
+    return getArchivedTime(manager)?.isBefore(manager.now()) ?? false;
+  }
+
+  bool isPinned(TimeManager manager) {
+    return pin == true && !isArchived(manager);
   }
 
   factory NewsItemData.fromJson(Map<String, dynamic> json) =>

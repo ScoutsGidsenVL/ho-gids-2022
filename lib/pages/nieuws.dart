@@ -4,9 +4,9 @@ import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:hogids/model/dynamic_data.dart';
 import 'package:hogids/model/time_manager.dart';
-import 'package:hogids/util.dart';
 import 'package:hogids/widgets/calendar_entry.dart';
 import 'package:hogids/widgets/news_list.dart';
+import 'package:hogids/widgets/tap_detector.dart';
 import 'package:provider/provider.dart';
 
 // Disable when publishing
@@ -21,37 +21,21 @@ class Nieuws extends StatelessWidget {
   Widget build(BuildContext context) {
     final dynamicData = context.watch<DynamicData>();
     final timeManager = context.watch<TimeManager>();
-    final clock = timeManager.now();
     final news = dynamicData.news ?? [];
-    final allPublished = news.where((n) => n.isPublished(timeManager.now()));
+    final allPublished = news.where((n) => n.isPublished(timeManager));
 
     final calendar = dynamicData.calendar ?? [];
     final allEvents = calendar.expand((tab) => tab.items).toList();
-    final featuredEvents = getFeaturedEvents(allEvents, clock);
+    final featuredEvents = timeManager.getFeaturedEvents(allEvents);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HO-Gids'),
-        actions: [
-          if (canChangeClock)
-            IconButton(
-                onPressed: () async {
-                  final date = await showDatePicker(
-                      context: context,
-                      initialDate: clock,
-                      firstDate: DateTime(2020),
-                      lastDate: DateTime(2024),
-                      locale: const Locale('nl', 'BE'));
-                  if (date == null) return;
-                  // ignore: use_build_context_synchronously
-                  final time = await showTimePicker(
-                      context: context, initialTime: TimeOfDay.now());
-                  if (time == null) return;
-                  timeManager.setOverride(DateTime(
-                      date.year, date.month, date.day, time.hour, time.minute));
-                },
-                icon: const Icon(Icons.today))
-        ],
+        title: TapDetector(
+            count: 4,
+            onTapped: () {
+              context.beamToNamed('/nieuws/developer');
+            },
+            child: const Text('HO-Gids')),
       ),
       body: allPublished.isEmpty
           ? const Padding(

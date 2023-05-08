@@ -1,4 +1,4 @@
-import 'package:hogids/util.dart';
+import 'package:hogids/model/time_manager.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'calendar_data.g.dart';
@@ -45,29 +45,29 @@ class CalendarItemData {
   @JsonKey(includeFromJson: false)
   String tab = '';
 
-  DateTime getStartTime() {
-    return parseTime(start)!;
+  DateTime getStartTime(TimeManager manager) {
+    return manager.parseTime(start)!;
   }
 
-  DateTime? getEndTime() {
-    return end == null ? null : parseTime(end!)!;
+  DateTime? getEndTime(TimeManager manager) {
+    return end == null ? null : manager.parseTime(end!)!;
   }
 
-  String formatTimeRange() {
-    var time = formatTime(getStartTime());
+  String formatTimeRange(TimeManager manager) {
+    var time = TimeManager.formatTime(getStartTime(manager));
     if (end != null) {
-      time += '-${formatTime(getEndTime()!)}';
+      time += '-${TimeManager.formatTime(getEndTime(manager)!)}';
     }
     return time;
   }
 
-  bool hasPassed(DateTime clock) {
-    return getEndTime()?.isBefore(clock) ?? false;
+  bool hasPassed(TimeManager manager) {
+    return getEndTime(manager)?.isBefore(manager.now()) ?? false;
   }
 
-  bool isHappening(DateTime clock) {
-    return getStartTime().isBefore(clock) &&
-        (getEndTime()?.isAfter(clock) ?? true);
+  bool isHappening(TimeManager manager) {
+    return getStartTime(manager).isBefore(manager.now()) &&
+        (getEndTime(manager)?.isAfter(manager.now()) ?? true);
   }
 
   factory CalendarItemData.fromJson(Map<String, dynamic> json) =>

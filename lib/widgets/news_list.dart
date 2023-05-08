@@ -21,24 +21,25 @@ class NewsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final timeManager = context.watch<TimeManager>();
-    final clock = timeManager.now();
     final newsToAdd = news.where((n) => n.publishTime != null).sorted((a, b) {
       // pinned articles above non-pinned
-      if (a.isPinned(clock) != b.isPinned(clock)) {
-        return a.isPinned(clock) ? -1 : 1;
+      if (a.isPinned(timeManager) != b.isPinned(timeManager)) {
+        return a.isPinned(timeManager) ? -1 : 1;
       }
       // non-archived articles above archived
-      if (a.isArchived(clock) != b.isArchived(clock)) {
-        return a.isArchived(clock) ? 1 : -1;
+      if (a.isArchived(timeManager) != b.isArchived(timeManager)) {
+        return a.isArchived(timeManager) ? 1 : -1;
       }
       // otherwise order by publish date
-      return b.published!.compareTo(a.published!);
+      return b
+          .getPublishedTime(timeManager)!
+          .compareTo(a.getPublishedTime(timeManager)!);
     }).where((n) {
-      return n.isPublished(clock) &&
-          (includeArchive == true || !n.isArchived(clock));
+      return n.isPublished(timeManager) &&
+          (includeArchive == true || !n.isArchived(timeManager));
     }).toList();
     final archivedCount =
-        news.where((n) => n.isPublished(clock)).length - newsToAdd.length;
+        news.where((n) => n.isPublished(timeManager)).length - newsToAdd.length;
 
     final entries = <Widget>[];
     final childrenToAdd = List.from(children);

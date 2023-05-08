@@ -15,9 +15,9 @@ class CalendarEntry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final clock = context.watch<TimeManager>().now();
-    final hasPassed = item.hasPassed(clock);
-    final isHappening = item.isHappening(clock);
+    final timeManager = context.watch<TimeManager>();
+    final hasPassed = item.hasPassed(timeManager);
+    final isHappening = item.isHappening(timeManager);
 
     return ListTile(
       onTap: () {
@@ -44,7 +44,7 @@ class CalendarEntry extends StatelessWidget {
                         padding: EdgeInsets.only(right: 5),
                         child: Icon(Icons.schedule),
                       ),
-                      Text('${item.tab} ${item.formatTimeRange()}'),
+                      Text('${item.tab} ${item.formatTimeRange(timeManager)}'),
                     ]),
                     if (feature != null)
                       Row(children: [
@@ -85,7 +85,7 @@ class CalendarEntry extends StatelessWidget {
       contentPadding: EdgeInsets.only(left: isHappening ? 10 : 16, right: 16),
       leading: SizedBox(
         width: 120,
-        child: Text(item.formatTimeRange(),
+        child: Text(item.formatTimeRange(timeManager),
             style: TextStyle(
                 color: hasPassed ? Colors.grey : null,
                 fontSize: 16,

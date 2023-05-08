@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hogids/model/dynamic_data.dart';
+import 'package:hogids/model/notification_manager.dart';
 import 'package:hogids/model/time_manager.dart';
+import 'package:hogids/pages/developer.dart';
 import 'package:hogids/pages/nieuws.dart';
 import 'package:hogids/pages/kaart.dart';
 import 'package:hogids/pages/programma.dart';
@@ -64,6 +66,13 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => DynamicData()),
         ChangeNotifierProvider(create: (_) => TimeManager()),
+        ChangeNotifierProxyProvider2<DynamicData, TimeManager,
+            NotificationManager>(
+          lazy: false,
+          create: (_) => NotificationManager(),
+          update: (_, dynamicData, timeManager, prev) =>
+              prev!..update(dynamicData, timeManager),
+        )
       ],
       child: MaterialApp.router(
         title: 'HO-gids',
@@ -184,7 +193,10 @@ class NieuwsLocation extends BeamLocation<BeamState> {
           child: Nieuws(
               includeArchive: state.uri.queryParameters['archive'] == 'true'),
         ),
-        if (state.uri.pathSegments.length == 2)
+        if (state.uri.pathSegments.length == 2 &&
+            state.uri.pathSegments[1] == 'developer')
+          const BeamPage(key: ValueKey('nieuws/developer'), child: Developer())
+        else if (state.uri.pathSegments.length == 2)
           BeamPage(
             key: ValueKey('nieuws/${state.uri.pathSegments[1]}'),
             type: BeamPageType.noTransition,

@@ -1,10 +1,8 @@
 import 'dart:math';
 
 import 'package:beamer/beamer.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:hogids/model/calendar_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 MarkdownStyleSheet markdownStyle(BuildContext context) {
@@ -37,41 +35,4 @@ void Function(String, String?, String) linkHandler(BuildContext context) {
       Beamer.of(context, root: true).beamToNamed(url);
     }
   };
-}
-
-final startDate = DateTime(2022, 8, 26, 0, 0);
-const days = ['VR', 'ZA', 'ZO'];
-
-DateTime? parseTime(String str) {
-  final parts = str.split(' ');
-  if (parts.length != 2) return null;
-  final dayIndex = days.indexOf(parts[0]);
-  if (dayIndex == -1) return null;
-  final timeParts = parts[1].split(':');
-  if (timeParts.length != 2) return null;
-  final hour = int.tryParse(timeParts[0]);
-  final minute = int.tryParse(timeParts[1]);
-  if (hour == null || minute == null) return null;
-  return startDate
-      .add(Duration(days: dayIndex))
-      .copyWith(hour: hour, minute: minute);
-}
-
-String formatTime(DateTime time) {
-  return '${time.hour.toString().padLeft(2, '0')}.${time.minute.toString().padLeft(2, '0')}';
-}
-
-List<CalendarItemData> getFeaturedEvents(
-    List<CalendarItemData> items, DateTime clock) {
-  final events = items.sortedBy((item) => item.getStartTime());
-  var nowEvent = events.indexWhere((item) => item.isHappening(clock));
-  if (nowEvent == -1) {
-    // if no event is currently happening, find the next upcoming event
-    nowEvent = events.indexWhere((item) => item.getStartTime().isAfter(clock));
-  }
-  if (nowEvent == -1) {
-    // if no event is upcoming, show the first event
-    nowEvent = 0;
-  }
-  return events.sublist(nowEvent, min(nowEvent + 3, events.length));
 }
