@@ -58,7 +58,7 @@ Het programma is gedefinieerd in [`assets/content/programma.json`](/assets/conte
 * `end`: Wanneer deze gebeurtenis eindigt. Het formaat van dit veld wordt [hieronder](#tijd-formaat) beschreven. Als dit veld niet wordt meegegeven dan blijft de gebeurtenis eeuwig duren, kan bijvoorbeeld gebruikt worden voor de laatste gebrurtenis "Einde HO".
 * `location`: De plaats op de kaart van deze gebeurtenis. Komt overeen met de eigenschap `name` op de [kaart](#kaart).
 * `group`: De tekst van de groep waar deze gebeurtenis toe behoord. Kan bijvoorbeeld gebruikt worden om enkele gebeurtenisen te groeperen onder "hoofdpodium".
-* `notify`: Als dit `true` krijgt de gebruiker hiervoor een melding op met moment dat deze gebeurtenis begint (volgens `start`).
+* `notify`: Als dit `true` is krijgt de gebruiker hiervoor een melding op met moment dat deze gebeurtenis begint (volgens `start`).
 
 Een voorbeeld van een gebeurtenis:
 ```json
@@ -100,3 +100,12 @@ De eerste dag van HO is gedefineerd in [`lib/util.dart`](/lib/util.dart) (zoek n
 
 ## Themakleuren
 Om de themakleuren aan te passen is een app release nodig. De kleuren zijn gedefinieerd in [`lib/main.dart`](/lib/main.dart), (zoek naar `ThemeData`).
+
+## Developer instellingen
+Om de features rond nieuws, programma en meldingen gemakkelijk te kunnen testen bestaat er een "geheime" pagina. Hier kan je naartoe gaan door 4 keer te klikken op de titel "HO-Gids" op het nieuws startscherm.
+
+* **Klok overschrijven**: dit levert ongeveer hetzelfde resultaat op alsof je de klok van je toestel zou wijzigen in de instellingen. Dit heeft geen effect op meldingen!
+* **Start HO (vrijdag)**: op welke dag dat HO begint. Alle nieuws en programma tijden zijn gebaseerd op deze dag.
+* **Meldingen opnieuw inplannen**: dit gebeurt automatisch bij het opstarten van de app, maar hiermee kan je ook manueel de meldingen terug schedulen. Vooral nuttig net na het aanpassen van "Start HO".
+
+![developer scherm](https://user-images.githubusercontent.com/68152530/238377676-cd411172-cdf0-41a8-88db-7e0de3a588c4.png)
