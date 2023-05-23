@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OsmAttribution extends StatelessWidget {
@@ -7,30 +6,28 @@ class OsmAttribution extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AttributionWidget(
-      attributionBuilder: (context) => Align(
-        alignment: Alignment.bottomLeft,
-        child: ColoredBox(
-          color: const Color(0xCCFFFFFF),
-          child: GestureDetector(
-            onTap: () {
-              launchUrl(Uri.parse('https://www.openstreetmap.org/copyright'),
-                  mode: LaunchMode.externalApplication);
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(3),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: Text(
-                      '© OpenStreetMap',
-                      style: TextStyle(color: Color(0xFF0078a8)),
-                    ),
+    return Align(
+      alignment: Alignment.bottomLeft,
+      child: ColoredBox(
+        color: const Color(0xCCFFFFFF),
+        child: GestureDetector(
+          onTap: () {
+            launchUrl(Uri.parse('https://www.openstreetmap.org/copyright'),
+                mode: LaunchMode.externalApplication);
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(3),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Text(
+                    '© OpenStreetMap',
+                    style: TextStyle(color: Color(0xFF0078a8)),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
