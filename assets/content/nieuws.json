@@ -6,32 +6,20 @@
             "publishTime": "VR 18:00"
         },
         {
-            "title": "DAS Goesting!",
+            "title": "Speelstek, reuzeplek!",
             "subtitle": "Ontdek het jaarthema...",
-            "image": "dasgoesting.jpg",
+            "image": "jaarthema.jpg",
             "body": "jaarthema",
             "publishTime": "VR 18:00",
             "pin": true,
             "notify": true
         },
         {
-            "title": "Jaarlied",
-            "image": "dasgoesting.jpg",
-            "body": "jaarlied"
-        },
-        {
-            "title": "Onze leefregels",
+            "title": "Leefregels op HO",
             "subtitle": "Dankzij deze leefregels zorgen we dat het leuk is voor iedereen!",
-            "image": "leefregels.png",
             "body": "leefregels",
             "publishTime": "VR 19:00",
             "archiveTime": "ZO 23:59"
-        },
-        {
-            "title": "Wat vond je van de vorming?",
-            "publishTime": "ZA 12:00",
-            "archiveTime": "ZA 16:00",
-            "notify": true
         },
         {
             "title": "Tot volgend jaar!",
