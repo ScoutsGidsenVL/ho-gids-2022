@@ -96,7 +96,7 @@ De kleuren van regio's zijn gedefinieerd in [`lib/pages/kaart.dart`](/lib/pages/
 ## Tijd formaat
 In zowel nieuwsberichten als het programma wordt gebruikgemaakt van een simpel formaat om tijd voor te stellen. Bijvoorbeeld `"VR 21:00"` betekent vrijdag (de eerste dag van HO) om 21u. De mogelijke dagen zijn `VR`, `ZA`, en `ZO`.
 
-De eerste dag van HO is gedefineerd in [`lib/util.dart`](/lib/util.dart) (zoek naar `startDate`). Deze datum moet dus elk jaar aangepast worden voor de app release.
+De eerste dag van HO is gedefineerd in [`lib/model/time_manager.dart`](/lib/model/time_manager.dart) (zoek naar `defaultStart`). Deze datum moet dus elk jaar aangepast worden voor de app release.
 
 ## Themakleuren
 Om de themakleuren aan te passen is een app release nodig. De kleuren zijn gedefinieerd in [`lib/main.dart`](/lib/main.dart), (zoek naar `ThemeData`).

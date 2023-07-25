@@ -48,6 +48,8 @@ Het afbraakplan bestaat uit twee delen:
 * Een deel zondagvoormiddag met deelnemers en medewerkers, na het ontbijt tot 11uur.
 * Een deel zondagnamiddag met alle medewerkers.
 
+---
+
 ## Gouwgronden
 |Gouw                |Locatie                 |
 |--------------------|------------------------|

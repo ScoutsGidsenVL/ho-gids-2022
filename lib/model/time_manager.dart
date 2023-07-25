@@ -7,7 +7,7 @@ import 'package:hogids/model/calendar_data.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class TimeManager extends ChangeNotifier {
-  static final defaultStart = DateTime(2022, 8, 26, 0, 0);
+  static final defaultStart = DateTime(2023, 8, 25, 0, 0);
   static const days = ['VR', 'ZA', 'ZO'];
   DateTime? nowOverride;
   DateTime startDate = defaultStart;
