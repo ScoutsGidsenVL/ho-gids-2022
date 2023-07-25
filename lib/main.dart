@@ -78,9 +78,9 @@ class MyApp extends StatelessWidget {
         title: 'HO-gids',
         theme: ThemeData(
             colorScheme: const ColorScheme.light(
-                primary: Color.fromRGBO(72, 130, 127, 1),
-                secondary: Color.fromRGBO(197, 227, 232, 1),
-                tertiary: Color.fromRGBO(227, 47, 43, 1))),
+                primary: Color.fromRGBO(75, 108, 48, 1),
+                secondary: Color.fromRGBO(111, 160, 68, 1),
+                tertiary: Color.fromRGBO(111, 160, 68, 1))),
         localizationsDelegates: GlobalMaterialLocalizations.delegates,
         supportedLocales: const [Locale('nl')],
         routerDelegate: routerDelegate,
