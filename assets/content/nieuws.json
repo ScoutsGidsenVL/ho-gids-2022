@@ -8,7 +8,7 @@
         {
             "title": "DAS Goesting!",
             "subtitle": "Ontdek het jaarthema...",
-            "image": "dasgoesting.jpg",
+            "image": "jaarthema.jpg",
             "body": "jaarthema",
             "publishTime": "VR 18:00",
             "pin": true,
@@ -16,7 +16,7 @@
         },
         {
             "title": "Jaarlied",
-            "image": "dasgoesting.jpg",
+            "image": "jaarthema.jpg",
             "body": "jaarlied"
         },
         {

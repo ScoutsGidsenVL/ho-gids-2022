@@ -2,4 +2,4 @@ Met het jaarthema DAS Goesting kiezen we ervoor om stil te staan bij de drijvend
 
 [Meer lezen over het jaarthema?](https://www.scoutsengidsenvlaanderen.be/leiding/ondersteuning/leiding/jaarthema/das-goesting)
 
-![DAS goesting](resource:assets/images/dasgoesting.jpg)
+![DAS goesting](resource:assets/images/jaarthema.jpg)

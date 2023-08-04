@@ -24,7 +24,7 @@ Een voorbeeld van een nieuws artikel:
 {
     "title": "DAS Goesting!",
     "subtitle": "Ontdek het jaarthema...",
-    "image": "dasgoesting.jpg",
+    "image": "jaarthema.jpg",
     "body": "jaarthema",
     "publishTime": "VR 18:00",
     "archiveTime": "ZO 13:00",
