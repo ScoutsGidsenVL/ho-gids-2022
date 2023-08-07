@@ -1,4 +1,4 @@
-## Infopunt (Grote Grond)
+## Infopunt ([grote grond](/kaart?id=GG) en op [K15](/kaart?id=15) tijdens de markt)
 * voor al je vragen
 * verloren voorwerpen melden of brengen
 
@@ -6,51 +6,75 @@ Telefonisch bereikbaar op [0477 38 24 12](tel:0477382412)
 
 ---
 
-## Noodgevallen
+## NOODGEVAL?!
 Verwittig de hulpdiensten niet zelf!
 
-Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Bel dan het noodnummer: [0474 26 14 01](tel:0474261401)
-* Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=39)
-* Nood en ramp: [0474 26 14 01](tel:0474261401)
+Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=39)
+
+Nood en ramp: [0474 26 14 01](tel:0474261401)
+
+Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Spreek dan een medewerker aan of bel het noodnummer: [0474 26 14 01](tel:0474261401). Samen bekijken we wat nodig is. We streven naar een Herfstontmoeting waar iedereen zich veilig voelt.
 
 ---
 
-## Barinfo
-* De bar op de grote grond sluit om 02.00
-* De bar van het Zeescoutscafé sluit om 01.30
-* De bar van het Hoppercafé sluit om 01.30
+## Openingsuren bar
+
+**Bar op de [grote grond](/kaart?id=GG)**:
+
+* Vrijdag 22.30 - 02.15
+* Zaterdag 13.00 - 14.00 & 22.30 - 02.15
+* Zondag 11.00 - 13.00
+
+**Bar [K30](/kaart?id=K30)**:
+
+* Vrijdag 23.00 - 01.30
+* Zaterdag 23.00 - 01.30
+
+**Bar [Loods K30](/kaart?id=30)**:
+
+* Vrijdag 23.00 - 01.30
+* Zaterdag 23.00 - 01.30
+
+**Bar [markt K15](/kaart?id=K15)**:
+
+* Zaterdag 14.30 - 17.00
 
 ---
 
-## Gouw gronden
-|Gouw                |Locatie                       |
-|--------------------|------------------------------|
-|Antwerpen           |[Kamp 8 Zuid](/kaart?id=K8)   |
-|Heide               |[Kamp 42](/kaart?id=K42)      |
-|Opsinjoor           |[Kamp 10](/kaart?id=K10)      |
-|Kempen              |[Kamp 41](/kaart?id=K41)      |
-|Webra               |[Kamp 8 Noord](/kaart?id=K8)  |
-|Oost-Brabant        |[Kamp 48 Oost](/kaart?id=K48) |
-|Limburg             |[Kamp 9](/kaart?id=K9)        |
-|Gent                |[Kamp 48 West](/kaart?id=K48) |
-|Land van Egmont     |[Kamp 49 Zuid](/kaart?id=K49) |
-|Waas                |[Kamp 7 Noord](/kaart?id=K7)  |
-|Noordzee            |[Kamp 49 Noord](/kaart?id=K49)|
-|Zuid-West-Vlaanderen|[Kamp 7 Zuid](/kaart?id=K7)   |
+## Herfstontmoeting is een WIJ-evenement!
+Laten we op Herfstontmoeting zorg dragen voor elkaar en de omgeving. Dankjewel om mee je schouders te zetten onder een wervelende editie. Een hand uit de mouwen hier, een ‘mercieke’ daar, het zijn kleine dingen die een groot verschil maken. Zo hebben we ook jouw handen nodig bij het afbraakplan.
+
+Het afbraakplan bestaat uit twee delen: 
+* Een deel zondagvoormiddag met deelnemers en medewerkers, na het ontbijt tot 11uur.
+* Een deel zondagnamiddag met alle medewerkers.
+
+## Gouwgronden
+|Gouw                |Locatie                 |
+|--------------------|------------------------|
+|Waas                |[Kamp 7](/kaart?id=K7)  |
+|Zuid-West-Vlaanderen|[Kamp 7](/kaart?id=K7)  |
+|Antwerpen           |[Kamp 8](/kaart?id=K8)  |
+|Webra               |[Kamp 8](/kaart?id=K8)  |
+|Limburg             |[Kamp 9](/kaart?id=K9)  |
+|Kempen              |[Kamp 41](/kaart?id=K41)|
+|Heide               |[Kamp 42](/kaart?id=K42) + [Kamp 43](/kaart?id=K43)|
+|Gent                |[Kamp 48](/kaart?id=K48)|
+|Oost-Brabant        |[Kamp 48](/kaart?id=K48)|
+|Land van Egmont     |[Kamp 49](/kaart?id=K49)|
+|Noordzee            |[Kamp 49](/kaart?id=K49)|
 
 ---
 
-## Vormingsaanbod zaterdag
-|Vorming                    |Locatie                            |
-|---------------------------|-----------------------------------|
-|Kapoenen                   |[Kamp 30](/kaart?id=K30)           |
-|Welpen - Kabouters         |[Kamp 33](/kaart?id=K33)           |
-|Jonggidsen - Jongverkenners|[Kamp 34](/kaart?id=K34)           |
-|Jins                       |[Rond vijver](/kaart?id=Vijver%201)    |
-|Groepsleiding (+ lokalen, financien en groepsadministratie)|[Grote grond](/kaart?id=GG) + [gebouw 11](/kaart?id=11)|
-|Zeescouting                |[Vijver](/kaart?id=Vijver%201)         |
-|Akabe                      |[Kleine grond](/kaart?id=KG) + [loods kamp 30](/kaart?id=30)|
-|Safety First (Rode Kruis)  |[Grote tent op grote grond](/kaart?id=GG)|
-|Spel en actie              |[Rond de kampvuurkring + grote grond](/kaart?id=GG)|
-|Technieken                 |[Grote grond rond kampvuur](/kaart?id=GG)|
-|Help ik stop als leiding   |[Naast gebouw 9](/kaart?id=9)      |
+## Locaties Goesting in inspiratie & Goesting in actie zaterdag
+|Vorming                    |Locatie                                      |
+|---------------------------|---------------------------------------------|
+|Kapoenen                   |[Kamp 30](/kaart?id=K30)                     |
+|Kabouters - Welpen         |[Kamp 33](/kaart?id=K33)                     |
+|Jonggivers                 |[Kamp 34](/kaart?id=K34)                     |
+|Givers & Zeescouting       |[Vijver](/kaart?id=K34)                      |
+|Jins                       |[Kamp 40](/kaart?id=Vijver%201)              |
+|AKABE                      |Rond [gebouw 30](/kaart?id=30)               |
+|Groepsleiding              |In en rond [gebouw 11](/kaart?id=11)         |
+|Achtergrond: goesting in inspiratie|Rond [gebouw 39](/kaart?id=39)       |
+|Achtergrond: goesting in actie|[Grote grond rond kampvuur](/kaart?id=GG) |
+|EHBO                       |[Grote grond](/kaart?id=GG) (onder de tenten)|
