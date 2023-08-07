@@ -7,11 +7,11 @@ import 'package:hogids/model/map_data.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:hogids/model/news_data.dart';
 
-const dataRepo =
-    'https://raw.githubusercontent.com/ScoutsGidsenVL/ho-gids-2022/main';
+const dataRepo = 'https://raw.githubusercontent.com/ScoutsGidsenVL/ho-gids-2022';
 
 class DynamicData extends ChangeNotifier {
   late Timer timer;
+  bool experimentalContent = false;
   List<MapFeature>? annotations;
   List<CalendarTabData>? calendar;
   List<NewsItemData>? news;
@@ -28,6 +28,12 @@ class DynamicData extends ChangeNotifier {
   void dispose() {
     timer.cancel();
     super.dispose();
+  }
+
+  void setExperimentalContent(bool value) {
+    experimentalContent = value;
+    notifyListeners();
+    refreshData();
   }
 
   Future refreshData() async {
@@ -69,7 +75,8 @@ class DynamicData extends ChangeNotifier {
         throw Exception("Always read from the local bundle in debug mode");
       }
       var manager = DefaultCacheManager();
-      var url = '$dataRepo/assets/$path';
+      final ref = experimentalContent ? 'dev' : 'main';
+      var url = '$dataRepo/$ref/assets/$path';
       try {
         // First try to fetch the most recent version
         var fileInfo = await manager.downloadFile(url);

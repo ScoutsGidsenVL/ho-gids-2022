@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogids/model/dynamic_data.dart';
 import 'package:hogids/model/notification_manager.dart';
 import 'package:hogids/model/time_manager.dart';
 import 'package:provider/provider.dart';
@@ -13,6 +14,7 @@ class Developer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dynamicData = context.watch<DynamicData>();
     final timeManager = context.watch<TimeManager>();
     final notificationManager = context.watch<NotificationManager>();
 
@@ -76,6 +78,14 @@ class Developer extends StatelessWidget {
               },
               leading: const Icon(Icons.notifications),
               title: const Text('Meldingen opnieuw inplannen'),
+            ),
+            SwitchListTile(
+              value: dynamicData.experimentalContent,
+              onChanged: (enabled) {
+                dynamicData.setExperimentalContent(enabled);
+              },
+              secondary: const Icon(Icons.science),
+              title: const Text('Experimentele content'),
             )
           ],
         ));
