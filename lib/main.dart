@@ -79,8 +79,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             colorScheme: const ColorScheme.light(
                 primary: Color.fromRGBO(75, 108, 48, 1),
-                secondary: Color.fromRGBO(251, 248, 222, 1),
-                tertiary: Color.fromRGBO(75, 108, 48, 1))),
+                secondary: Color.fromRGBO(184, 206, 148, 1),
+                tertiary: Color.fromRGBO(184, 206, 148, 1))),
         localizationsDelegates: GlobalMaterialLocalizations.delegates,
         supportedLocales: const [Locale('nl')],
         routerDelegate: routerDelegate,
