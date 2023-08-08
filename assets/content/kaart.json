@@ -4,56 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "GG",
-        "displayName": "Grote Grond",
-        "style": "podiumgrond"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              4.936359,
-              51.239173
-            ],
-            [
-              4.936268,
-              51.238636
-            ],
-            [
-              4.938859,
-              51.23827
-            ],
-            [
-              4.938569,
-              51.238848
-            ],
-            [
-              4.936359,
-              51.239173
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "infopunt",
-        "displayName": "Infopunt",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.938194,
-          51.238401
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "border",
         "displayName": "Grens",
         "style": "border"
@@ -237,6 +187,179 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "markt",
+        "displayName": "Markt",
+        "style": "podiumgrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.9451198694372005,
+              51.24552521953004
+            ],
+            [
+              4.945468303084058,
+              51.24474327524164
+            ],
+            [
+              4.946830214703347,
+              51.24569043555944
+            ],
+            [
+              4.947762204063892,
+              51.246663193045144
+            ],
+            [
+              4.946886993817677,
+              51.24674720953732
+            ],
+            [
+              4.945836447241355,
+              51.246008101484776
+            ],
+            [
+              4.9451198694372005,
+              51.24552521953004
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "afwasbatterij",
+        "displayName": "Afwasbatterij",
+        "style": "afwasbatterij"
+      },
+      "geometry": {
+        "coordinates": [
+          4.938076,
+          51.238932
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K30",
+        "displayName": "Kamp 30",
+        "style": "podiumgrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.937958,
+              51.236562
+            ],
+            [
+              4.93785,
+              51.23608
+            ],
+            [
+              4.939765,
+              51.236097
+            ],
+            [
+              4.939937,
+              51.236345
+            ],
+            [
+              4.937958,
+              51.236562
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.939628187662704,
+          51.236395700104204
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "bar",
+        "displayName": "Bar",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.939333335124434,
+          51.236428099765334
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GG",
+        "displayName": "Grote Grond",
+        "style": "podiumgrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.936359,
+              51.239173
+            ],
+            [
+              4.936268,
+              51.238636
+            ],
+            [
+              4.938859,
+              51.23827
+            ],
+            [
+              4.938569,
+              51.238848
+            ],
+            [
+              4.936359,
+              51.239173
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "infopunt",
+        "displayName": "Infopunt",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.938194,
+          51.238401
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "sanitair",
         "displayName": "Sanitair",
         "style": "sanitair"
@@ -317,49 +440,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "markt",
-        "displayName": "Markt",
-        "style": "podiumgrond"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              4.9451198694372005,
-              51.24552521953004
-            ],
-            [
-              4.945468303084058,
-              51.24474327524164
-            ],
-            [
-              4.946830214703347,
-              51.24569043555944
-            ],
-            [
-              4.947762204063892,
-              51.246663193045144
-            ],
-            [
-              4.946886993817677,
-              51.24674720953732
-            ],
-            [
-              4.945836447241355,
-              51.246008101484776
-            ],
-            [
-              4.9451198694372005,
-              51.24552521953004
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "EHBO",
         "displayName": "EHBO",
         "style": "faciliteit"
@@ -386,22 +466,6 @@
         ],
         "type": "Point"
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "afwasbatterij",
-        "displayName": "Afwasbatterij",
-        "style": "afwasbatterij"
-      },
-      "geometry": {
-        "coordinates": [
-          4.938076,
-          51.238932
-        ],
-        "type": "Point"
-      },
-      "id": 10
     },
     {
       "type": "Feature",
@@ -1984,41 +2048,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "K30",
-        "displayName": "Kamp 30",
-        "style": "aanbod"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              4.937958,
-              51.236562
-            ],
-            [
-              4.93785,
-              51.23608
-            ],
-            [
-              4.939765,
-              51.236097
-            ],
-            [
-              4.939937,
-              51.236345
-            ],
-            [
-              4.937958,
-              51.236562
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "G50",
         "displayName": "Loods 50",
         "style": "loods"
@@ -2324,21 +2353,6 @@
       },
       "geometry": {
         "coordinates": [
-          4.939261,
-          51.236428
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "sanitair",
-        "displayName": "Sanitair",
-        "style": "sanitair"
-      },
-      "geometry": {
-        "coordinates": [
           4.930211987554874,
           51.245561350810185
         ],
@@ -2404,36 +2418,6 @@
         "coordinates": [
           4.945157,
           51.238921
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "bar",
-        "displayName": "Bar",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.939567,
-          51.236335
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "eten",
-        "displayName": "Eten",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.939857,
-          51.236335
         ],
         "type": "Point"
       }
