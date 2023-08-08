@@ -455,7 +455,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 10,
+        "name": "10",
         "displayName": "Loods 10",
         "style": "loods"
       },
@@ -494,7 +494,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 14,
+        "name": "14",
         "displayName": "Pavilioen 14",
         "style": "pavilioen"
       },
@@ -599,7 +599,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 15,
+        "name": "15",
         "displayName": "Loods 15",
         "style": "loods"
       },
@@ -679,7 +679,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 8,
+        "name": "8",
         "displayName": "Loods 8",
         "style": "loods"
       },
@@ -714,7 +714,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 6,
+        "name": "6",
         "displayName": "Pavilioen 6",
         "style": "pavilioen"
       },
@@ -749,7 +749,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 9,
+        "name": "9",
         "displayName": "Loods 9",
         "style": "loods"
       },
@@ -1021,7 +1021,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 11,
+        "name": "11",
         "displayName": "Gebouw 11",
         "style": "aanbod"
       },
@@ -1091,7 +1091,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 36,
+        "name": "36",
         "displayName": "Loods 36",
         "style": "loods"
       },
@@ -1126,7 +1126,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 32,
+        "name": "32",
         "displayName": "Pavilioen 32",
         "style": "pavilioen"
       },
@@ -1161,7 +1161,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 30,
+        "name": "30",
         "displayName": "Loods 30",
         "style": "aanbod"
       },
@@ -1325,7 +1325,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 35,
+        "name": "35",
         "displayName": "Pavilioen 35",
         "style": "pavilioen"
       },
@@ -1360,7 +1360,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 39,
+        "name": "39",
         "displayName": "Pavilioen 39",
         "style": "pavilioen"
       },
@@ -1551,7 +1551,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 47,
+        "name": "47",
         "displayName": "Pavilioen 47",
         "style": "pavilioen"
       },
@@ -1664,7 +1664,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 53,
+        "name": "53",
         "displayName": "Pavilioen 53",
         "style": "pavilioen"
       },
@@ -1699,7 +1699,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 56,
+        "name": "56",
         "displayName": "Pavilioen 56",
         "style": "pavilioen"
       },
@@ -1769,7 +1769,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 40,
+        "name": "40",
         "displayName": "Loods 40",
         "style": "loods"
       },
@@ -1843,7 +1843,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 22,
+        "name": "22",
         "displayName": "Loods 22",
         "style": "loods"
       },
@@ -1878,7 +1878,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 26,
+        "name": "26",
         "displayName": "Loods 26",
         "style": "loods"
       },
@@ -1913,7 +1913,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 28,
+        "name": "28",
         "displayName": "Pavilioen 28",
         "style": "pavilioen"
       },
@@ -1948,7 +1948,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 29,
+        "name": "29",
         "displayName": "Pavilioen 39",
         "style": "pavilioen"
       },
@@ -2018,7 +2018,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 50,
+        "name": "50",
         "displayName": "Loods 50",
         "style": "loods"
       },
@@ -2053,7 +2053,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 27,
+        "name": "27",
         "displayName": "Loods 27",
         "style": "loods"
       },
@@ -2088,7 +2088,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 17,
+        "name": "17",
         "displayName": "Loods 17",
         "style": "loods"
       },
@@ -2123,7 +2123,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": 18,
+        "name": "18",
         "displayName": "Loods 18",
         "style": "loods"
       },
