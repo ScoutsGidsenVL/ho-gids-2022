@@ -1,4 +1,4 @@
-## Infopunt ([grote grond](/kaart?id=GG) en op [K15](/kaart?id=15) tijdens de markt)
+## Infopunt ([grote grond](/kaart?id=GG) en op [K15](/kaart?id=G15) tijdens de markt)
 * voor al je vragen
 * verloren voorwerpen melden of brengen
 
@@ -9,7 +9,7 @@ Telefonisch bereikbaar op [0477 38 24 12](tel:0477382412)
 ## NOODGEVAL?!
 Verwittig de hulpdiensten niet zelf!
 
-Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=39)
+Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=G39)
 
 Nood en ramp: [0474 26 14 01](tel:0474261401)
 
@@ -30,12 +30,12 @@ Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Spreek dan e
 * Vrijdag 23.00 - 01.30
 * Zaterdag 23.00 - 01.30
 
-**Bar [Loods K30](/kaart?id=30)**:
+**Bar [Loods K30](/kaart?id=G30)**:
 
 * Vrijdag 23.00 - 01.30
 * Zaterdag 23.00 - 01.30
 
-**Bar [markt K15](/kaart?id=K15)**:
+**Bar [markt K15](/kaart?id=markt)**:
 
 * Zaterdag 14.30 - 17.00
 
@@ -72,9 +72,9 @@ Het afbraakplan bestaat uit twee delen:
 |Kabouters - Welpen         |[Kamp 33](/kaart?id=K33)                     |
 |Jonggivers                 |[Kamp 34](/kaart?id=K34)                     |
 |Givers & Zeescouting       |[Vijver](/kaart?id=K34)                      |
-|Jins                       |[Kamp 40](/kaart?id=Vijver%201)              |
-|AKABE                      |Rond [gebouw 30](/kaart?id=30)               |
-|Groepsleiding              |In en rond [gebouw 11](/kaart?id=11)         |
-|Achtergrond: goesting in inspiratie|Rond [gebouw 39](/kaart?id=39)       |
+|Jins                       |[Kamp 40](/kaart?id=vijver)                  |
+|AKABE                      |Rond [gebouw 30](/kaart?id=G30)              |
+|Groepsleiding              |In en rond [gebouw 11](/kaart?id=G11)        |
+|Achtergrond: goesting in inspiratie|Rond [gebouw 39](/kaart?id=G39)      |
 |Achtergrond: goesting in actie|[Grote grond rond kampvuur](/kaart?id=GG) |
 |EHBO                       |[Grote grond](/kaart?id=GG) (onder de tenten)|

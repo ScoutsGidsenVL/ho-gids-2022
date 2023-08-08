@@ -46,7 +46,7 @@ Gebruik het volgende formaat om afbeeldingen in het artikel te plaatsen:
 
 Artikels kunnen zelf doorverwijzen naar andere pagina's, bijvoorbeeld:
 ```md
-Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=39)
+Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=G39)
 ```
 
 ## 2. Programma

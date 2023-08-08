@@ -68,7 +68,7 @@
                     "title": "Marktje",
                     "start": "ZA 14:30",
                     "end": "ZA 17:00",
-                    "location": "K15",
+                    "location": "markt",
                     "notify": true
                 },
                 {
