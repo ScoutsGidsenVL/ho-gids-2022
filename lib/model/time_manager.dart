@@ -71,16 +71,27 @@ class TimeManager extends ChangeNotifier {
   DateTime? parseTime(String str) {
     final parts = str.split(' ');
     if (parts.length != 2) return null;
+
+    var date = startDate;
     final dayIndex = days.indexOf(parts[0]);
-    if (dayIndex == -1) return null;
+    if (dayIndex > -1) {
+      date = date.add(Duration(days: dayIndex));
+    } else {
+      final dayParts = parts[0].split('/');
+      if (dayParts.length != 2) return null;
+      final day = int.tryParse(dayParts[0]);
+      final month = int.tryParse(dayParts[1]);
+      if (day == null || month == null) return null;
+      date = date.copyWith(day: day, month: month);
+    }
+  
     final timeParts = parts[1].split(':');
     if (timeParts.length != 2) return null;
     final hour = int.tryParse(timeParts[0]);
     final minute = int.tryParse(timeParts[1]);
     if (hour == null || minute == null) return null;
-    return startDate
-        .add(Duration(days: dayIndex))
-        .copyWith(hour: hour, minute: minute);
+
+    return date.copyWith(hour: hour, minute: minute);
   }
 
   static String formatTime(DateTime time) {
