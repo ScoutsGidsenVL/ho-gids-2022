@@ -3,6 +3,7 @@ import 'package:hogids/model/dynamic_data.dart';
 import 'package:hogids/model/notification_manager.dart';
 import 'package:hogids/model/time_manager.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // Disable when publishing
 const canChangeClock = true;
@@ -17,6 +18,7 @@ class Developer extends StatelessWidget {
     final dynamicData = context.watch<DynamicData>();
     final timeManager = context.watch<TimeManager>();
     final notificationManager = context.watch<NotificationManager>();
+    final pkg = dynamicData.packageInfo;
 
     return Scaffold(
         appBar: AppBar(
@@ -86,6 +88,16 @@ class Developer extends StatelessWidget {
               },
               secondary: const Icon(Icons.science),
               title: const Text('Experimentele content'),
+            ),
+            ListTile(
+              onTap: () {
+                launchUrl(
+                    Uri.parse('https://github.com/ScoutsGidsenVL/ho-gids-2022'),
+                    mode: LaunchMode.externalApplication);
+              },
+              leading: const Icon(Icons.info),
+              title: const Text('Scouts en Gidsen Vlaanderen ©'),
+              subtitle: Text('HO gids ${pkg == null ? '' : '${pkg.version}+${pkg.buildNumber}'}'),
             )
           ],
         ));

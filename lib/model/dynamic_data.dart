@@ -6,12 +6,14 @@ import 'package:hogids/model/calendar_data.dart';
 import 'package:hogids/model/map_data.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:hogids/model/news_data.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 const dataRepo = 'https://raw.githubusercontent.com/ScoutsGidsenVL/ho-gids-2022';
 
 class DynamicData extends ChangeNotifier {
   late Timer timer;
   bool experimentalContent = false;
+  PackageInfo? packageInfo;
   List<MapFeature>? annotations;
   List<CalendarTabData>? calendar;
   List<NewsItemData>? news;
@@ -39,12 +41,17 @@ class DynamicData extends ChangeNotifier {
   Future refreshData() async {
     await refreshNewsData();
     await Future.wait([
+      getPackageInfo(),
       refreshMapData(),
       refreshCalendarData(),
       ...news?.where((n) => n.body != null).map((n) => refreshText(n.body!)) ??
           [],
     ]);
     notifyListeners();
+  }
+
+  Future getPackageInfo() async {
+    packageInfo = await PackageInfo.fromPlatform();
   }
 
   Future refreshMapData() async {
