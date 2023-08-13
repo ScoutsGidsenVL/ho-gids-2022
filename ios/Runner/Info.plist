@@ -48,6 +48,8 @@
 		<key>UIStatusBarHidden</key>
 		<false/>
 		<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
+		<true/>
+		<key>ITSAppUsesNonExemptEncryption</key>
+		<false/>
 </dict>
 </plist>
