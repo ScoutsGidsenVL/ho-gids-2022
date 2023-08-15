@@ -2227,21 +2227,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "SIS",
-        "displayName": "SIS",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.937936,
-          51.240661
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "sanitair",
         "displayName": "Sanitair",
         "style": "sanitair"

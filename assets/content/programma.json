@@ -10,18 +10,17 @@
                     "end": "VR 22:30"
                 },
                 {
-                    "title": "Start! Openingsshow & scouteske avond",
-                    "subtitle": "met Meet the Simons en DJ Alles Kapot",
+                    "title": "Start! Openingsshow & scouteske avond met Meet the Simons en DJ Alles Kapot",
                     "start": "VR 23:00",
                     "end": "ZA 02:00",
                     "location": "GG",
                     "notify": true
                 },
                 {
-                    "title": "Internationaal en Jincafé",
+                    "title": "Bar International",
                     "start": "VR 23:00",
                     "end": "ZA 01:30",
-                    "location": "30"
+                    "location": "G30"
                 },
                 {
                     "title": "Scouteske Karaoke",
@@ -65,7 +64,7 @@
                     "notify": true
                 },
                 {
-                    "title": "Marktje",
+                    "title": "Markt",
                     "start": "ZA 14:30",
                     "end": "ZA 17:00",
                     "location": "markt",
@@ -79,14 +78,13 @@
                     "notify": true
                 },
                 {
-                    "title": "Scouteske avond",
-                    "subtitle": "met Ave Noenkel, Pardon Service en BJ Orn",
+                    "title": "Scouteske avond met Ave Noenkel, Pardon Service en BJ Orn",
                     "start": "ZA 22:30",
                     "end": "ZO 02:00",
                     "location": "GG"
                 },
                 {
-                    "title": "Rustige activiteit Ploeg Zingeving",
+                    "title": "Prikkelarme activiteit Ploeg Zingeving",
                     "start": "ZA 22:30",
                     "end": "ZO 01:30",
                     "location": "K33"
@@ -98,7 +96,7 @@
                     "location": "K30"
                 },
                 {
-                    "title": "Hoppervolkscafé",
+                    "title": "Hopper-volkscafé",
                     "start": "ZA 23:00",
                     "end": "ZO 01:30",
                     "location": "30"
@@ -125,7 +123,7 @@
                     "end": "ZO 10:30"
                 },
                 {
-                    "title": "Verrassingsact",
+                    "title": "Slotshow met verrassingsact",
                     "start": "ZO 11:00",
                     "end": "ZO 13:00",
                     "location": "GG",

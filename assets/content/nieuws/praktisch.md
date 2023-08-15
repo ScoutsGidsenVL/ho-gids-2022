@@ -1,4 +1,4 @@
-## Infopunt ([grote grond](/kaart?id=GG) en op [K15](/kaart?id=G15) tijdens de markt)
+## Infopunt ([grote grond](/kaart?id=GG) en [K15](/kaart?id=G15) tijdens de markt)
 * voor al je vragen
 * verloren voorwerpen melden of brengen
 
@@ -42,13 +42,13 @@ Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Spreek dan e
 ---
 
 ## Herfstontmoeting is een WIJ-evenement!
-Laten we op Herfstontmoeting zorg dragen voor elkaar en de omgeving. Dankjewel om mee je schouders te zetten onder een wervelende editie. Een hand uit de mouwen hier, een ‘mercieke’ daar, het zijn kleine dingen die een groot verschil maken. Zo hebben we ook jouw handen nodig bij het afbraakplan.
+Laten we op Herfstontmoeting zorg dragen voor elkaar en de omgeving. Dankjewel om mee je schouders te zetten onder een wervelende editie. Een hand uit de mouwen hier, een ‘merci’ke’ daar, het zijn kleine dingen die een groot verschil maken. Zo hebben we ook jouw handen nodig bij het afbraakplan.
 
 Het afbraakplan bestaat uit twee delen: 
 * Een deel zondagvoormiddag met deelnemers en medewerkers, na het ontbijt tot 11uur.
 * Een deel zondagnamiddag met alle medewerkers.
 
-## Gouwgronden
+## Gouwgronden TODO
 |Gouw                |Locatie                 |
 |--------------------|------------------------|
 |Waas                |[Kamp 7](/kaart?id=K7)  |
@@ -66,15 +66,15 @@ Het afbraakplan bestaat uit twee delen:
 ---
 
 ## Locaties Goesting in inspiratie & Goesting in actie zaterdag
-|Vorming                    |Locatie                                      |
+|                           |                                             |
 |---------------------------|---------------------------------------------|
-|Kapoenen                   |[Kamp 30](/kaart?id=K30)                     |
-|Kabouters - Welpen         |[Kamp 33](/kaart?id=K33)                     |
-|Jonggivers                 |[Kamp 34](/kaart?id=K34)                     |
-|Givers & Zeescouting       |[Vijver](/kaart?id=K34)                      |
-|Jins                       |[Kamp 40](/kaart?id=vijver)                  |
-|AKABE                      |Rond [gebouw 30](/kaart?id=G30)              |
-|Groepsleiding              |In en rond [gebouw 11](/kaart?id=G11)        |
+|Kapoenengrond              |[Kamp 30](/kaart?id=K30)                     |
+|Welpen- / Kaboutergrond    |[Kamp 33](/kaart?id=K33)                     |
+|Jonggivergrond             |[Kamp 34](/kaart?id=K34)                     |
+|Givergrond en zeescoutsgrond|[Vijver](/kaart?id=K34)                     |
+|Jingrond                   |[Kamp 40](/kaart?id=vijver)                  |
+|Akabegrond                 |Rond [loods K30](/kaart?id=G30)              |
+|Groepsleidingsgrond        |In en rond [gebouw 11](/kaart?id=G11)        |
 |Achtergrond: goesting in inspiratie|Rond [gebouw 39](/kaart?id=G39)      |
-|Achtergrond: goesting in actie|[Grote grond rond kampvuur](/kaart?id=GG) |
-|EHBO                       |[Grote grond](/kaart?id=GG) (onder de tenten)|
+|Achtergrond: goesting in actie|[GG](/kaart?id=GG)aan het podium          |
+|EHBO                       |[GG](/kaart?id=GG)                           |
