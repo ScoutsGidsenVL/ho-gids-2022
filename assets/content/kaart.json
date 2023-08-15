@@ -1,1549 +1,2521 @@
 {
-    "type": "FeatureCollection",
-    "features": [{
-        "type": "Feature",
-        "properties": {
-            "name": "border",
-            "displayName": "Grens",
-            "style": "border"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.918292, 51.243663],
-                    [4.918077, 51.242884],
-                    [4.91915, 51.240466],
-                    [4.919879, 51.23735],
-                    [4.924257, 51.238505],
-                    [4.924321, 51.238774],
-                    [4.925952, 51.238612],
-                    [4.926252, 51.239083],
-                    [4.928055, 51.238908],
-                    [4.929471, 51.235966],
-                    [4.93402, 51.23657],
-                    [4.934363, 51.235926],
-                    [4.939899, 51.23602],
-                    [4.943225, 51.236853],
-                    [4.94477, 51.238948],
-                    [4.945629, 51.240198],
-                    [4.947485, 51.241763],
-                    [4.949727, 51.242347],
-                    [4.951878, 51.242139],
-                    [4.954662, 51.244402],
-                    [4.954759, 51.244919],
-                    [4.953847, 51.246269],
-                    [4.954791, 51.247115],
-                    [4.953074, 51.248982],
-                    [4.952002, 51.249479],
-                    [4.950156, 51.249533],
-                    [4.948397, 51.248794],
-                    [4.948997, 51.248405],
-                    [4.947731, 51.247895],
-                    [4.943032, 51.247035],
-                    [4.943075, 51.246833],
-                    [4.942324, 51.246632],
-                    [4.942195, 51.246887],
-                    [4.937067, 51.245907],
-                    [4.934814, 51.245745],
-                    [4.934084, 51.246619],
-                    [4.929235, 51.246283],
-                    [4.924128, 51.245745],
-                    [4.922991, 51.245772],
-                    [4.921339, 51.24588],
-                    [4.920309, 51.245477],
-                    [4.918292, 51.243663]
-                ]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "border",
+        "displayName": "Grens",
+        "style": "border"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.918292,
+              51.243663
+            ],
+            [
+              4.918077,
+              51.242884
+            ],
+            [
+              4.91915,
+              51.240466
+            ],
+            [
+              4.919879,
+              51.23735
+            ],
+            [
+              4.924257,
+              51.238505
+            ],
+            [
+              4.924321,
+              51.238774
+            ],
+            [
+              4.925952,
+              51.238612
+            ],
+            [
+              4.926252,
+              51.239083
+            ],
+            [
+              4.928055,
+              51.238908
+            ],
+            [
+              4.929471,
+              51.235966
+            ],
+            [
+              4.93402,
+              51.23657
+            ],
+            [
+              4.934363,
+              51.235926
+            ],
+            [
+              4.939899,
+              51.23602
+            ],
+            [
+              4.943225,
+              51.236853
+            ],
+            [
+              4.94477,
+              51.238948
+            ],
+            [
+              4.945629,
+              51.240198
+            ],
+            [
+              4.947485,
+              51.241763
+            ],
+            [
+              4.949727,
+              51.242347
+            ],
+            [
+              4.951878,
+              51.242139
+            ],
+            [
+              4.954662,
+              51.244402
+            ],
+            [
+              4.954759,
+              51.244919
+            ],
+            [
+              4.953847,
+              51.246269
+            ],
+            [
+              4.954791,
+              51.247115
+            ],
+            [
+              4.953074,
+              51.248982
+            ],
+            [
+              4.952002,
+              51.249479
+            ],
+            [
+              4.950156,
+              51.249533
+            ],
+            [
+              4.948397,
+              51.248794
+            ],
+            [
+              4.948997,
+              51.248405
+            ],
+            [
+              4.947731,
+              51.247895
+            ],
+            [
+              4.943032,
+              51.247035
+            ],
+            [
+              4.943075,
+              51.246833
+            ],
+            [
+              4.942324,
+              51.246632
+            ],
+            [
+              4.942195,
+              51.246887
+            ],
+            [
+              4.937067,
+              51.245907
+            ],
+            [
+              4.934814,
+              51.245745
+            ],
+            [
+              4.934084,
+              51.246619
+            ],
+            [
+              4.929235,
+              51.246283
+            ],
+            [
+              4.924128,
+              51.245745
+            ],
+            [
+              4.922991,
+              51.245772
+            ],
+            [
+              4.921339,
+              51.24588
+            ],
+            [
+              4.920309,
+              51.245477
+            ],
+            [
+              4.918292,
+              51.243663
             ]
-        },
-        "id": "2ad0f0b8-c521-4478-92ab-7d363cf88372"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "GG",
-            "displayName": "Grote Grond",
-            "style": "podiumgrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.936359, 51.239173],
-                    [4.936268, 51.238636],
-                    [4.938859, 51.23827],
-                    [4.938569, 51.238848],
-                    [4.936359, 51.239173]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "markt",
+        "displayName": "Markt",
+        "style": "podiumgrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.9451198694372005,
+              51.24552521953004
+            ],
+            [
+              4.945468303084058,
+              51.24474327524164
+            ],
+            [
+              4.946830214703347,
+              51.24569043555944
+            ],
+            [
+              4.947762204063892,
+              51.246663193045144
+            ],
+            [
+              4.946886993817677,
+              51.24674720953732
+            ],
+            [
+              4.945836447241355,
+              51.246008101484776
+            ],
+            [
+              4.9451198694372005,
+              51.24552521953004
             ]
-        },
-        "id": "a027eb46-cdbb-4750-bbf9-78f9b4a965dd"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K8",
-            "displayName": "Kamp 8",
-            "style": "kampeergrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.93196, 51.245648],
-                    [4.933054, 51.245893],
-                    [4.934235, 51.246148],
-                    [4.933795, 51.246286],
-                    [4.93343, 51.246528],
-                    [4.932352, 51.246424],
-                    [4.932628, 51.246268],
-                    [4.932128, 51.246045],
-                    [4.931928, 51.245897],
-                    [4.93196, 51.245648]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "afwasbatterij",
+        "displayName": "Afwasbatterij",
+        "style": "afwasbatterij"
+      },
+      "geometry": {
+        "coordinates": [
+          4.938076,
+          51.238932
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K30",
+        "displayName": "Kamp 30",
+        "style": "podiumgrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.937958,
+              51.236562
+            ],
+            [
+              4.93785,
+              51.23608
+            ],
+            [
+              4.939765,
+              51.236097
+            ],
+            [
+              4.939937,
+              51.236345
+            ],
+            [
+              4.937958,
+              51.236562
             ]
-        },
-        "id": "e5504cbf-f423-4d12-a7fd-e74a39e625f5"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K7",
-            "style": "kampeergrond",
-            "displayName": "Kamp 7"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.931499, 51.24641],
-                    [4.929739, 51.246249],
-                    [4.929648, 51.246115],
-                    [4.9296, 51.245494],
-                    [4.929482, 51.245259],
-                    [4.930002, 51.245339],
-                    [4.930002, 51.245675],
-                    [4.930603, 51.245782],
-                    [4.931188, 51.245818],
-                    [4.931434, 51.246219],
-                    [4.931499, 51.24641]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.939628187662704,
+          51.236395700104204
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "bar",
+        "displayName": "Bar",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.939333335124434,
+          51.236428099765334
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GG",
+        "displayName": "Grote Grond",
+        "style": "podiumgrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.936359,
+              51.239173
+            ],
+            [
+              4.936268,
+              51.238636
+            ],
+            [
+              4.938859,
+              51.23827
+            ],
+            [
+              4.938569,
+              51.238848
+            ],
+            [
+              4.936359,
+              51.239173
             ]
-        },
-        "id": "5f255614-c380-4d0c-a70c-b80908c74140"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "8",
-            "displayName": "Loods 8",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.933543, 51.245279],
-                    [4.933575, 51.245171],
-                    [4.93402, 51.245205],
-                    [4.933999, 51.245319],
-                    [4.933543, 51.245279]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "infopunt",
+        "displayName": "Infopunt",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.938194,
+          51.238401
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.936370434295715,
+          51.23860919182378
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "bar",
+        "displayName": "Bar",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.94064318624558,
+          51.2374476309015
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K15",
+        "displayName": "Kamp 15",
+        "style": "kampeergrond-ongebruikt"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.943585,
+              51.244919
+            ],
+            [
+              4.943848,
+              51.244453
+            ],
+            [
+              4.944851,
+              51.244711
+            ],
+            [
+              4.944577,
+              51.245252
+            ],
+            [
+              4.943585,
+              51.244919
             ]
-        },
-        "id": "c7f7493e-cab9-4ce2-b5e2-25151a5f271f"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "10",
-            "displayName": "Loods 10",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.937228, 51.244849],
-                    [4.937432, 51.244856],
-                    [4.937426, 51.24498],
-                    [4.937443, 51.245117],
-                    [4.937239, 51.245121],
-                    [4.937228, 51.244849]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "bar",
+        "displayName": "Bar",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.938494,
+          51.238562
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "EHBO",
+        "displayName": "EHBO",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.933789253608962,
+          51.239795007626384
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "eten",
+        "displayName": "Eten",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.938365,
+          51.238861
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "bar",
+        "displayName": "Bar",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.945361689436993,
+          51.244853677066374
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K17",
+        "displayName": "Kamp 17",
+        "style": "kampeergrond-ongebruikt"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.94731863375712,
+              51.24685737879649
+            ],
+            [
+              4.947844487305908,
+              51.24679014459236
+            ],
+            [
+              4.948402,
+              51.247418
+            ],
+            [
+              4.947989,
+              51.247515
+            ],
+            [
+              4.94731863375712,
+              51.24685737879649
             ]
-        },
-        "id": "e63029e4-9942-4abf-9850-fa241ec9f9cd"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "14",
-            "displayName": "Pavilioen 14",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.940822, 51.245443],
-                    [4.940956, 51.245514],
-                    [4.940763, 51.245722],
-                    [4.940608, 51.245675],
-                    [4.940822, 51.245443]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G10",
+        "displayName": "Loods 10",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.937228,
+              51.244849
+            ],
+            [
+              4.937432,
+              51.244856
+            ],
+            [
+              4.937426,
+              51.24498
+            ],
+            [
+              4.937443,
+              51.245117
+            ],
+            [
+              4.937239,
+              51.245121
+            ],
+            [
+              4.937228,
+              51.244849
             ]
-        },
-        "id": "fdc61c26-7073-4092-a7f9-38776ee7ffe4"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K12",
-            "displayName": "Kamp 12",
-            "style": "kampeergrond-ongebruikt"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.939865, 51.246053],
-                    [4.939594, 51.246333],
-                    [4.938228, 51.246091],
-                    [4.938497, 51.24571],
-                    [4.939865, 51.246053]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G14",
+        "displayName": "Gebouw 14",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.940822,
+              51.245443
+            ],
+            [
+              4.940956,
+              51.245514
+            ],
+            [
+              4.940763,
+              51.245722
+            ],
+            [
+              4.940608,
+              51.245675
+            ],
+            [
+              4.940822,
+              51.245443
             ]
-        },
-        "id": "ba296c55-e3ac-4f84-8283-5a79193fa770"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "6",
-            "displayName": "Pavilioen 6",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.930233, 51.244825],
-                    [4.930254, 51.244691],
-                    [4.930876, 51.244745],
-                    [4.93085, 51.244879],
-                    [4.930233, 51.244825]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K12",
+        "displayName": "Kamp 12",
+        "style": "kampeergrond-ongebruikt"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.939865,
+              51.246053
+            ],
+            [
+              4.939594,
+              51.246333
+            ],
+            [
+              4.938228,
+              51.246091
+            ],
+            [
+              4.938497,
+              51.24571
+            ],
+            [
+              4.939865,
+              51.246053
             ]
-        },
-        "id": "57263a8d-a555-4b3f-9eea-34a79cef1bc6"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "11",
-            "displayName": "Gebouw 11",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.937099, 51.242676],
-                    [4.937153, 51.242962],
-                    [4.93697, 51.242972],
-                    [4.936906, 51.242696],
-                    [4.937099, 51.242676]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K10",
+        "displayName": "Kamp 10",
+        "style": "kampeergrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.938006,
+              51.244933
+            ],
+            [
+              4.937866,
+              51.244268
+            ],
+            [
+              4.939572,
+              51.244946
+            ],
+            [
+              4.939288,
+              51.245232
+            ],
+            [
+              4.938006,
+              51.244933
             ]
-        },
-        "id": "6d1a411c-adad-4ecf-8567-1486d9038c04"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "SIS",
-            "displayName": "Gebouw 37 (SIS)",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.937443, 51.240926],
-                    [4.937528, 51.240661],
-                    [4.937721, 51.240685],
-                    [4.93763, 51.240957],
-                    [4.937443, 51.240926]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G15",
+        "displayName": "Loods 15",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.94337,
+              51.246555
+            ],
+            [
+              4.943424,
+              51.246447
+            ],
+            [
+              4.943826,
+              51.246521
+            ],
+            [
+              4.943767,
+              51.246632
+            ],
+            [
+              4.94337,
+              51.246555
             ]
-        },
-        "id": "7aef5e2f-5992-4024-930c-9be95ff76e4a"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "36",
-            "displayName": "Loods 36",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.939095, 51.239405],
-                    [4.939073, 51.239294],
-                    [4.939513, 51.239272],
-                    [4.939529, 51.239382],
-                    [4.939095, 51.239405]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.937907,
+          51.244763
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.945152749615584,
+          51.2456533427945
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.934060489879828,
+          51.24539595643509
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G8",
+        "displayName": "Loods 8",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.933543,
+              51.245279
+            ],
+            [
+              4.933575,
+              51.245171
+            ],
+            [
+              4.93402,
+              51.245205
+            ],
+            [
+              4.933999,
+              51.245319
+            ],
+            [
+              4.933543,
+              51.245279
             ]
-        },
-        "id": "15024fef-514b-44ff-a824-dd80392478b2"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "32",
-            "displayName": "Pavilioen 32",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.937185, 51.237531],
-                    [4.937094, 51.237434],
-                    [4.937523, 51.237309],
-                    [4.937582, 51.237413],
-                    [4.937185, 51.237531]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G6",
+        "displayName": "Gebouw 6",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.930233,
+              51.244825
+            ],
+            [
+              4.930254,
+              51.244691
+            ],
+            [
+              4.930876,
+              51.244745
+            ],
+            [
+              4.93085,
+              51.244879
+            ],
+            [
+              4.930233,
+              51.244825
             ]
-        },
-        "id": "5daa2e78-d14c-4df0-9e41-8f3a00129d0a"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "30",
-            "displayName": "Loods 30",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.940549, 51.237437],
-                    [4.940441, 51.237148],
-                    [4.940597, 51.237125],
-                    [4.940688, 51.237413],
-                    [4.940549, 51.237437]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G9",
+        "displayName": "Loods 9",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.934036,
+              51.243156
+            ],
+            [
+              4.934186,
+              51.243109
+            ],
+            [
+              4.934438,
+              51.243351
+            ],
+            [
+              4.934294,
+              51.243405
+            ],
+            [
+              4.934036,
+              51.243156
             ]
-        },
-        "id": "65fde766-ae54-482e-99db-ab0a469f03e9"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "KG",
-            "displayName": "Kleine Grond",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.940431, 51.237497],
-                    [4.939926, 51.237578],
-                    [4.939717, 51.237262],
-                    [4.939873, 51.237084],
-                    [4.940275, 51.237037],
-                    [4.940431, 51.237497]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K9",
+        "displayName": "Kamp 9",
+        "style": "kampeergrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.932829,
+              51.243801
+            ],
+            [
+              4.932148,
+              51.243113
+            ],
+            [
+              4.93248,
+              51.242817
+            ],
+            [
+              4.9327,
+              51.242794
+            ],
+            [
+              4.932615,
+              51.242951
+            ],
+            [
+              4.933312,
+              51.243657
+            ],
+            [
+              4.932829,
+              51.243801
             ]
-        },
-        "id": "6649dfe3-6ba3-400f-9800-9eb7c79ef164"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K33",
-            "displayName": "Kamp 33",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.936659, 51.237665],
-                    [4.936187, 51.237837],
-                    [4.935914, 51.237585],
-                    [4.935989, 51.23737],
-                    [4.935924, 51.237172],
-                    [4.935619, 51.237192],
-                    [4.935565, 51.236943],
-                    [4.935393, 51.236879],
-                    [4.936402, 51.236863],
-                    [4.936659, 51.237665]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.932796663953682,
+          51.242964268916104
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "evacuatiepunt",
+        "displayName": "Evacuatiepunt",
+        "style": "evacuatiepunt"
+      },
+      "geometry": {
+        "coordinates": [
+          4.917498,
+          51.243368
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G4/5",
+        "displayName": "Gebouw 4/5",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.926864,
+              51.244637
+            ],
+            [
+              4.926934,
+              51.244474
+            ],
+            [
+              4.927682,
+              51.244594
+            ],
+            [
+              4.927604,
+              51.244763
+            ],
+            [
+              4.926864,
+              51.244637
             ]
-        },
-        "id": "80ba5342-6bad-46e9-b6db-445cc1036008"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K34",
-            "displayName": "Kamp 34",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.934734, 51.238119],
-                    [4.934127, 51.237259],
-                    [4.934932, 51.237067],
-                    [4.9352, 51.237951],
-                    [4.934734, 51.238119]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "evacuatiepunt",
+        "displayName": "Evacuatiepunt",
+        "style": "evacuatiepunt"
+      },
+      "geometry": {
+        "coordinates": [
+          4.9237374831213,
+          51.24604957968799
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K8",
+        "displayName": "Kamp 8",
+        "style": "kampeergrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.93196,
+              51.245648
+            ],
+            [
+              4.933054,
+              51.245893
+            ],
+            [
+              4.934235,
+              51.246148
+            ],
+            [
+              4.933795,
+              51.246286
+            ],
+            [
+              4.93343,
+              51.246528
+            ],
+            [
+              4.932352,
+              51.246424
+            ],
+            [
+              4.932628,
+              51.246268
+            ],
+            [
+              4.932128,
+              51.246045
+            ],
+            [
+              4.931928,
+              51.245897
+            ],
+            [
+              4.93196,
+              51.245648
             ]
-        },
-        "id": "00818dad-b89b-4f84-91e1-b29e3f36d2ad"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "35",
-            "displayName": "Pavilioen 35",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.93409, 51.238599],
-                    [4.934503, 51.238471],
-                    [4.934578, 51.238565],
-                    [4.934165, 51.238696],
-                    [4.93409, 51.238599]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K7",
+        "style": "kampeergrond",
+        "displayName": "Kamp 7"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.931499,
+              51.24641
+            ],
+            [
+              4.929739,
+              51.246249
+            ],
+            [
+              4.929648,
+              51.246115
+            ],
+            [
+              4.9296,
+              51.245494
+            ],
+            [
+              4.929482,
+              51.245259
+            ],
+            [
+              4.930002,
+              51.245339
+            ],
+            [
+              4.930002,
+              51.245675
+            ],
+            [
+              4.930603,
+              51.245782
+            ],
+            [
+              4.931188,
+              51.245818
+            ],
+            [
+              4.931434,
+              51.246219
+            ],
+            [
+              4.931499,
+              51.24641
             ]
-        },
-        "id": "f67cd96c-2dc8-4ac4-8bd1-fc2e5b1d43f7"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "39",
-            "displayName": "Pavilioen 39",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.933945, 51.239865],
-                    [4.933929, 51.239758],
-                    [4.93417, 51.239738],
-                    [4.934186, 51.239852],
-                    [4.933945, 51.239865]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G11",
+        "displayName": "Gebouw 11",
+        "style": "aanbod"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.937099,
+              51.242676
+            ],
+            [
+              4.937153,
+              51.242962
+            ],
+            [
+              4.93697,
+              51.242972
+            ],
+            [
+              4.936906,
+              51.242696
+            ],
+            [
+              4.937099,
+              51.242676
             ]
-        },
-        "id": "38517815-ef3e-46f5-bfb7-d22f0491500d"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "N&A",
-            "displayName": "Pavilioen 45 (Natuur & Avontuur)",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.931569, 51.239815],
-                    [4.931558, 51.239674],
-                    [4.932003, 51.239664],
-                    [4.932019, 51.239791],
-                    [4.931569, 51.239815]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SIS",
+        "displayName": "Gebouw 37 (SIS)",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.937443,
+              51.240926
+            ],
+            [
+              4.937528,
+              51.240661
+            ],
+            [
+              4.937721,
+              51.240685
+            ],
+            [
+              4.93763,
+              51.240957
+            ],
+            [
+              4.937443,
+              51.240926
             ]
-        },
-        "id": "b94a5d29-ed41-4bbf-8f21-0c5756cb0af5"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K42",
-            "displayName": "Kamp 42",
-            "style": "kampeergrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.929927, 51.239264],
-                    [4.929884, 51.238549],
-                    [4.930678, 51.238481],
-                    [4.930699, 51.239227],
-                    [4.929927, 51.239264]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G36",
+        "displayName": "Loods 36",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.939095,
+              51.239405
+            ],
+            [
+              4.939073,
+              51.239294
+            ],
+            [
+              4.939513,
+              51.239272
+            ],
+            [
+              4.939529,
+              51.239382
+            ],
+            [
+              4.939095,
+              51.239405
             ]
-        },
-        "id": "3b8fc7ce-ae98-4cbf-9052-1ce24bf18e68"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K41",
-            "displayName": "Kamp 41",
-            "style": "kampeergrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.929686, 51.236624],
-                    [4.932083, 51.237162],
-                    [4.931805, 51.237816],
-                    [4.930426, 51.237675],
-                    [4.930254, 51.237353],
-                    [4.929492, 51.237225],
-                    [4.929686, 51.236624]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G32",
+        "displayName": "Gebouw 32",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.937185,
+              51.237531
+            ],
+            [
+              4.937094,
+              51.237434
+            ],
+            [
+              4.937523,
+              51.237309
+            ],
+            [
+              4.937582,
+              51.237413
+            ],
+            [
+              4.937185,
+              51.237531
             ]
-        },
-        "id": "552ae196-bc66-4534-b966-d613bdc7034c"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K43",
-            "displayName": "Kamp 43",
-            "style": "kampeergrond-ongebruikt"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.927862, 51.239489],
-                    [4.927921, 51.239056],
-                    [4.9282, 51.239046],
-                    [4.928554, 51.238676],
-                    [4.928961, 51.23871],
-                    [4.92842, 51.239459],
-                    [4.927862, 51.239489]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G30",
+        "displayName": "Loods 30",
+        "style": "aanbod"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.940549,
+              51.237437
+            ],
+            [
+              4.940441,
+              51.237148
+            ],
+            [
+              4.940597,
+              51.237125
+            ],
+            [
+              4.940688,
+              51.237413
+            ],
+            [
+              4.940549,
+              51.237437
             ]
-        },
-        "id": "62518503-19d2-4008-975f-97e75d06ba3c"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "47",
-            "displayName": "Pavilioen 47",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.927626, 51.240658],
-                    [4.927475, 51.240446],
-                    [4.928167, 51.240278],
-                    [4.928291, 51.240493],
-                    [4.927626, 51.240658]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "KG",
+        "displayName": "Kleine Grond",
+        "style": "aanbod"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.940431,
+              51.237497
+            ],
+            [
+              4.939926,
+              51.237578
+            ],
+            [
+              4.939717,
+              51.237262
+            ],
+            [
+              4.939873,
+              51.237084
+            ],
+            [
+              4.940275,
+              51.237037
+            ],
+            [
+              4.940431,
+              51.237497
             ]
-        },
-        "id": "3c9298d3-f72a-429e-bd25-ab632b79ab72"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K48",
-            "displayName": "Kamp 48",
-            "style": "kampeergrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.922819, 51.240251],
-                    [4.922653, 51.239476],
-                    [4.923919, 51.239721],
-                    [4.923838, 51.240436],
-                    [4.922819, 51.240251]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K33",
+        "displayName": "Kamp 33",
+        "style": "aanbod"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.936659,
+              51.237665
+            ],
+            [
+              4.936187,
+              51.237837
+            ],
+            [
+              4.935914,
+              51.237585
+            ],
+            [
+              4.935989,
+              51.23737
+            ],
+            [
+              4.935924,
+              51.237172
+            ],
+            [
+              4.935619,
+              51.237192
+            ],
+            [
+              4.935565,
+              51.236943
+            ],
+            [
+              4.935393,
+              51.236879
+            ],
+            [
+              4.936402,
+              51.236863
+            ],
+            [
+              4.936659,
+              51.237665
             ]
-        },
-        "id": "c4d1b300-0db7-4291-b767-3c64e8f4da69"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K49",
-            "displayName": "Kamp 49",
-            "style": "kampeergrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.920588, 51.238821],
-                    [4.922234, 51.23914],
-                    [4.922406, 51.239885],
-                    [4.920158, 51.239499],
-                    [4.920239, 51.239321],
-                    [4.92055, 51.239371],
-                    [4.920588, 51.238821]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K34",
+        "displayName": "Kamp 34",
+        "style": "aanbod"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.934734,
+              51.238119
+            ],
+            [
+              4.934127,
+              51.237259
+            ],
+            [
+              4.934932,
+              51.237067
+            ],
+            [
+              4.9352,
+              51.237951
+            ],
+            [
+              4.934734,
+              51.238119
             ]
-        },
-        "id": "6dd8d0ab-7c84-41c1-b0aa-d2cee19f86d2"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "53",
-            "displayName": "Pavilioen 53",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.922245, 51.240896],
-                    [4.922186, 51.240762],
-                    [4.922626, 51.240725],
-                    [4.922696, 51.240863],
-                    [4.922245, 51.240896]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G35",
+        "displayName": "Gebouw 35",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.93409,
+              51.238599
+            ],
+            [
+              4.934503,
+              51.238471
+            ],
+            [
+              4.934578,
+              51.238565
+            ],
+            [
+              4.934165,
+              51.238696
+            ],
+            [
+              4.93409,
+              51.238599
             ]
-        },
-        "id": "0a8f3a6b-6d21-41b8-bcf3-b86be3a1838c"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "56",
-            "displayName": "Pavilioen 56",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.921199, 51.24227],
-                    [4.921961, 51.242082],
-                    [4.922159, 51.242411],
-                    [4.921312, 51.242508],
-                    [4.921199, 51.24227]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G39",
+        "displayName": "Gebouw 39",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.933945,
+              51.239865
+            ],
+            [
+              4.933929,
+              51.239758
+            ],
+            [
+              4.93417,
+              51.239738
+            ],
+            [
+              4.934186,
+              51.239852
+            ],
+            [
+              4.933945,
+              51.239865
             ]
-        },
-        "id": "882486bb-6202-4b7d-8f1e-c35faea94b83"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "Tejater",
-            "displayName": "Theater",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.924289, 51.241689],
-                    [4.924203, 51.241565],
-                    [4.924638, 51.241464],
-                    [4.92474, 51.241595],
-                    [4.924289, 51.241689]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "N&A",
+        "displayName": "Gebouw 45 (Natuur & Avontuur)",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.931569,
+              51.239815
+            ],
+            [
+              4.931558,
+              51.239674
+            ],
+            [
+              4.932003,
+              51.239664
+            ],
+            [
+              4.932019,
+              51.239791
+            ],
+            [
+              4.931569,
+              51.239815
             ]
-        },
-        "id": "c5f5e52b-0ae3-474c-8f71-91d2f8ca2fb6"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "9",
-            "displayName": "Loods 9",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.934036, 51.243156],
-                    [4.934186, 51.243109],
-                    [4.934438, 51.243351],
-                    [4.934294, 51.243405],
-                    [4.934036, 51.243156]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K42",
+        "displayName": "Kamp 42",
+        "style": "kampeergrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.929927,
+              51.239264
+            ],
+            [
+              4.929884,
+              51.238549
+            ],
+            [
+              4.930678,
+              51.238481
+            ],
+            [
+              4.930699,
+              51.239227
+            ],
+            [
+              4.929927,
+              51.239264
             ]
-        },
-        "id": "be22608d-bff8-4c93-9f51-70777d4156bb"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K9",
-            "displayName": "Kamp 9",
-            "style": "kampeergrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.932829, 51.243801],
-                    [4.932148, 51.243113],
-                    [4.93248, 51.242817],
-                    [4.9327, 51.242794],
-                    [4.932615, 51.242951],
-                    [4.933312, 51.243657],
-                    [4.932829, 51.243801]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K41",
+        "displayName": "Kamp 41",
+        "style": "kampeergrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.929686,
+              51.236624
+            ],
+            [
+              4.932083,
+              51.237162
+            ],
+            [
+              4.931805,
+              51.237816
+            ],
+            [
+              4.930426,
+              51.237675
+            ],
+            [
+              4.930254,
+              51.237353
+            ],
+            [
+              4.929492,
+              51.237225
+            ],
+            [
+              4.929686,
+              51.236624
             ]
-        },
-        "id": "10cdd88b-e688-4dd9-9e02-c6ba0d619476"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "40",
-            "displayName": "Loods 40",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.9335, 51.241659],
-                    [4.933478, 51.24138],
-                    [4.933663, 51.241376],
-                    [4.933677, 51.241642],
-                    [4.9335, 51.241659]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K43",
+        "displayName": "Kamp 43",
+        "style": "kampeergrond-ongebruikt"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.927862,
+              51.239489
+            ],
+            [
+              4.927921,
+              51.239056
+            ],
+            [
+              4.9282,
+              51.239046
+            ],
+            [
+              4.928554,
+              51.238676
+            ],
+            [
+              4.928961,
+              51.23871
+            ],
+            [
+              4.92842,
+              51.239459
+            ],
+            [
+              4.927862,
+              51.239489
             ]
-        },
-        "id": "499e3d5a-45e8-4b4f-8c4e-e1ace2741f9a"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K40",
-            "displayName": "Kamp 40",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.933746, 51.241695],
-                    [4.933725, 51.241427],
-                    [4.934573, 51.241601],
-                    [4.934412, 51.24191],
-                    [4.93387, 51.241796],
-                    [4.933746, 51.241695]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G47",
+        "displayName": "Gebouw 47",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.927626,
+              51.240658
+            ],
+            [
+              4.927475,
+              51.240446
+            ],
+            [
+              4.928167,
+              51.240278
+            ],
+            [
+              4.928291,
+              51.240493
+            ],
+            [
+              4.927626,
+              51.240658
             ]
-        },
-        "id": "45f5fd0c-4ffc-4a34-b17b-5843d73a08bb"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K10",
-            "displayName": "Kamp 10",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.938006, 51.244933],
-                    [4.937866, 51.244268],
-                    [4.939572, 51.244946],
-                    [4.939288, 51.245232],
-                    [4.938006, 51.244933]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K48",
+        "displayName": "Kamp 48",
+        "style": "kampeergrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.922819,
+              51.240251
+            ],
+            [
+              4.922653,
+              51.239476
+            ],
+            [
+              4.923919,
+              51.239721
+            ],
+            [
+              4.923838,
+              51.240436
+            ],
+            [
+              4.922819,
+              51.240251
             ]
-        },
-        "id": "c6ffd83f-3800-4eab-99ec-d5bb3404f883"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "15",
-            "displayName": "Loods 15",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.94337, 51.246555],
-                    [4.943424, 51.246447],
-                    [4.943826, 51.246521],
-                    [4.943767, 51.246632],
-                    [4.94337, 51.246555]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K49",
+        "displayName": "Kamp 49",
+        "style": "kampeergrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.920588,
+              51.238821
+            ],
+            [
+              4.922234,
+              51.23914
+            ],
+            [
+              4.922406,
+              51.239885
+            ],
+            [
+              4.920158,
+              51.239499
+            ],
+            [
+              4.920239,
+              51.239321
+            ],
+            [
+              4.92055,
+              51.239371
+            ],
+            [
+              4.920588,
+              51.238821
             ]
-        },
-        "id": "bf880e75-29c3-4a88-a4d8-6753f391f5ab"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K15",
-            "displayName": "Kamp 15",
-            "style": "kampeergrond-ongebruikt"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.945006, 51.245598],
-                    [4.945291, 51.244892],
-                    [4.946396, 51.245423],
-                    [4.945816, 51.245756],
-                    [4.945006, 51.245598]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G53",
+        "displayName": "Gebouw 53",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.922245,
+              51.240896
+            ],
+            [
+              4.922186,
+              51.240762
+            ],
+            [
+              4.922626,
+              51.240725
+            ],
+            [
+              4.922696,
+              51.240863
+            ],
+            [
+              4.922245,
+              51.240896
             ]
-        },
-        "id": "27e5cd7e-1c4e-41cb-b39e-7cd298d0b6c0"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K15",
-            "displayName": "Kamp 15",
-            "style": "kampeergrond-ongebruikt"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.943585, 51.244919],
-                    [4.943848, 51.244453],
-                    [4.944851, 51.244711],
-                    [4.944577, 51.245252],
-                    [4.943585, 51.244919]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G56",
+        "displayName": "Gebouw 56",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.921199,
+              51.24227
+            ],
+            [
+              4.921961,
+              51.242082
+            ],
+            [
+              4.922159,
+              51.242411
+            ],
+            [
+              4.921312,
+              51.242508
+            ],
+            [
+              4.921199,
+              51.24227
             ]
-        },
-        "id": "f39a4bbc-8425-4bf8-9c83-dcc620623354"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "22",
-            "displayName": "Loods 22",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.945476, 51.244108],
-                    [4.945382, 51.243999],
-                    [4.945819, 51.243882],
-                    [4.945908, 51.243986],
-                    [4.945476, 51.244108]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tejater",
+        "displayName": "Theater",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.924289,
+              51.241689
+            ],
+            [
+              4.924203,
+              51.241565
+            ],
+            [
+              4.924638,
+              51.241464
+            ],
+            [
+              4.92474,
+              51.241595
+            ],
+            [
+              4.924289,
+              51.241689
             ]
-        },
-        "id": "acdbc06e-2f4a-416d-a9bf-32ac0e8a9c45"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "26",
-            "displayName": "Loods 26",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.94326, 51.242276],
-                    [4.943467, 51.242226],
-                    [4.943633, 51.242463],
-                    [4.943429, 51.242515],
-                    [4.94326, 51.242276]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G40",
+        "displayName": "Loods 40",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.9335,
+              51.241659
+            ],
+            [
+              4.933478,
+              51.24138
+            ],
+            [
+              4.933663,
+              51.241376
+            ],
+            [
+              4.933677,
+              51.241642
+            ],
+            [
+              4.9335,
+              51.241659
             ]
-        },
-        "id": "dc87e72a-4e5a-4cab-a8e0-ad7f08646f49"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "28",
-            "displayName": "Pavilioen 28",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.94197, 51.240315],
-                    [4.942136, 51.240268],
-                    [4.942303, 51.24052],
-                    [4.942142, 51.240574],
-                    [4.94197, 51.240315]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K40",
+        "displayName": "Kamp 40",
+        "style": "kampeergrond-ongebruikt"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.933746,
+              51.241695
+            ],
+            [
+              4.933725,
+              51.241427
+            ],
+            [
+              4.934573,
+              51.241601
+            ],
+            [
+              4.934412,
+              51.24191
+            ],
+            [
+              4.93387,
+              51.241796
+            ],
+            [
+              4.933746,
+              51.241695
             ]
-        },
-        "id": "48134a7f-f6dc-440d-b513-ffb882e665ec"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "29",
-            "displayName": "Pavilioen 39",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.944035, 51.239274],
-                    [4.944175, 51.239146],
-                    [4.944454, 51.239294],
-                    [4.944379, 51.239402],
-                    [4.944035, 51.239274]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G22",
+        "displayName": "Loods 22",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.945476,
+              51.244108
+            ],
+            [
+              4.945382,
+              51.243999
+            ],
+            [
+              4.945819,
+              51.243882
+            ],
+            [
+              4.945908,
+              51.243986
+            ],
+            [
+              4.945476,
+              51.244108
             ]
-        },
-        "id": "0b8f4d15-159f-43ff-85e6-86c485d9fff0"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K30",
-            "displayName": "Kamp 30",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.937958, 51.236562],
-                    [4.93785, 51.23608],
-                    [4.939765, 51.236097],
-                    [4.939937, 51.236345],
-                    [4.937958, 51.236562]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G26",
+        "displayName": "Loods 26",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.94326,
+              51.242276
+            ],
+            [
+              4.943467,
+              51.242226
+            ],
+            [
+              4.943633,
+              51.242463
+            ],
+            [
+              4.943429,
+              51.242515
+            ],
+            [
+              4.94326,
+              51.242276
             ]
-        },
-        "id": "fe9801a9-c744-4081-8257-4f04eadf6b57"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "50",
-            "displayName": "Loods 50",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.922658, 51.238884],
-                    [4.922717, 51.238764],
-                    [4.923146, 51.238854],
-                    [4.923098, 51.238975],
-                    [4.922658, 51.238884]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G28",
+        "displayName": "Gebouw 28",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.94197,
+              51.240315
+            ],
+            [
+              4.942136,
+              51.240268
+            ],
+            [
+              4.942303,
+              51.24052
+            ],
+            [
+              4.942142,
+              51.240574
+            ],
+            [
+              4.94197,
+              51.240315
             ]
-        },
-        "id": "9cbe8052-1278-4345-ae89-96e33d612f2f"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "27",
-            "displayName": "Loods 27",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.940629, 51.242115],
-                    [4.9405, 51.242038],
-                    [4.940806, 51.241857],
-                    [4.940924, 51.241924],
-                    [4.940629, 51.242115]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G29",
+        "displayName": "Gebouw 39",
+        "style": "pavilioen"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.944035,
+              51.239274
+            ],
+            [
+              4.944175,
+              51.239146
+            ],
+            [
+              4.944454,
+              51.239294
+            ],
+            [
+              4.944379,
+              51.239402
+            ],
+            [
+              4.944035,
+              51.239274
             ]
-        },
-        "id": "9f85c26e-ae95-4318-9c6a-5e11789641dd"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "17",
-            "displayName": "Loods 17",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.947198, 51.245876],
-                    [4.947364, 51.245811],
-                    [4.947581, 51.246043],
-                    [4.947418, 51.246106],
-                    [4.947198, 51.245876]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G50",
+        "displayName": "Loods 50",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.922658,
+              51.238884
+            ],
+            [
+              4.922717,
+              51.238764
+            ],
+            [
+              4.923146,
+              51.238854
+            ],
+            [
+              4.923098,
+              51.238975
+            ],
+            [
+              4.922658,
+              51.238884
             ]
-        },
-        "id": "79a68f20-e78b-43f0-9484-e4922be032ff"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "18",
-            "displayName": "Loods 18",
-            "style": "loods"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.948735, 51.247478],
-                    [4.948874, 51.247434],
-                    [4.949067, 51.247666],
-                    [4.948922, 51.247713],
-                    [4.948735, 51.247478]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G27",
+        "displayName": "Loods 27",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.940629,
+              51.242115
+            ],
+            [
+              4.9405,
+              51.242038
+            ],
+            [
+              4.940806,
+              51.241857
+            ],
+            [
+              4.940924,
+              51.241924
+            ],
+            [
+              4.940629,
+              51.242115
             ]
-        },
-        "id": "b6e82452-360c-446d-a1dc-3f7cb33c5805"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "EHBO",
-            "displayName": "EHBO",
-            "style": "faciliteit"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.938912, 51.239294]
-        },
-        "id": "a8174c4c-4baf-462f-a77c-33f137f9c1ff"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "podium",
-            "displayName": "Podium",
-            "style": "podiumgrond"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.938996, 51.239277],
-                    [4.938977, 51.239172],
-                    [4.939159, 51.239104],
-                    [4.939551, 51.239145],
-                    [4.939505, 51.239261],
-                    [4.938996, 51.239277]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G17",
+        "displayName": "Loods 17",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.947198,
+              51.245876
+            ],
+            [
+              4.947364,
+              51.245811
+            ],
+            [
+              4.947581,
+              51.246043
+            ],
+            [
+              4.947418,
+              51.246106
+            ],
+            [
+              4.947198,
+              51.245876
             ]
-        },
-        "id": "5e82ad67-6dbd-4b0c-9826-80faea4b57e4"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "SIS",
-            "displayName": "SIS",
-            "style": "faciliteit"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.937936, 51.240661]
-        },
-        "id": "505e4dc1-92a0-42ea-ac1e-8e1b8edf1d18"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "infopunt",
-            "displayName": "Infopunt",
-            "style": "faciliteit"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.938194, 51.238401]
-        },
-        "id": "9a4423d3-422c-4316-bef4-966ef82f9db4"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.921993, 51.239246]
-        },
-        "id": "7395da29-df6f-4983-9422-cb429dc23062"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.922975, 51.239497]
-        },
-        "id": "5fd5ba12-fe67-441a-8d45-02463cff99be"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.928079, 51.239402]
-        },
-        "id": "a6cb561a-6930-4451-a21c-63c22ca478c4"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.930203, 51.239177]
-        },
-        "id": "e22c761e-b2ec-40e2-aa5e-10efe8038e7a"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.93049, 51.237638]
-        },
-        "id": "c9a5d644-3f10-44fd-bcd0-358e9bee801f"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.935015, 51.237172]
-        },
-        "id": "aee47823-69bb-468e-a20d-e4fde80bfb27"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.936107, 51.237457]
-        },
-        "id": "1a9f00d4-5eb5-45e3-a842-be9d980ec9a7"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.939261, 51.236428]
-        },
-        "id": "f6e44d71-9194-4149-b07d-d2913f3abb7c"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.930179, 51.245551]
-        },
-        "id": "29d2ac40-2d85-4897-83a4-97d90c86571d"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.93324, 51.245823]
-        },
-        "id": "fbd40907-7290-46be-8a8a-0b89b8780d7f"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.937147, 51.238498]
-        },
-        "id": "11548ff8-6f30-4d23-8b6d-720c0c1472d3"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "afwasbatterij",
-            "displayName": "Afwasbatterij",
-            "style": "afwasbatterij"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.931917, 51.245492]
-        },
-        "id": "5ae006d4-5919-4117-91a1-b38e6d5368cd"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.939905, 51.246174]
-        },
-        "id": "f9093063-2b38-4ac9-9e00-322c90d3ee9b"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.937907, 51.244763]
-        },
-        "id": "4c66c02b-2137-491b-b1e0-b62327861453"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.945159, 51.245554]
-        },
-        "id": "1cff865d-9cd8-482d-b957-23e49ef72970"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "K17",
-            "displayName": "Kamp 17",
-            "style": "kampeergrond-ongebruikt"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.946331, 51.246088],
-                    [4.946948, 51.24586],
-                    [4.948402, 51.247418],
-                    [4.947989, 51.247515],
-                    [4.947243, 51.24685],
-                    [4.946331, 51.246088]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G18",
+        "displayName": "Loods 18",
+        "style": "loods"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.948735,
+              51.247478
+            ],
+            [
+              4.948874,
+              51.247434
+            ],
+            [
+              4.949067,
+              51.247666
+            ],
+            [
+              4.948922,
+              51.247713
+            ],
+            [
+              4.948735,
+              51.247478
             ]
-        },
-        "id": "fe078a2e-41ba-4472-b5c1-e96c4fcdaab2"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.947152, 51.246783]
-        },
-        "id": "1b7ee26c-3146-4b1d-b597-7478d87676e2"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "Touwenparcours",
-            "displayName": "Touwenparcours",
-            "style": "bos"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.927046, 51.239717],
-                    [4.927749, 51.239677],
-                    [4.927889, 51.239885],
-                    [4.927213, 51.239956],
-                    [4.927046, 51.239717]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "podium",
+        "displayName": "Podium",
+        "style": "podiumgrond"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.938996,
+              51.239277
+            ],
+            [
+              4.938977,
+              51.239172
+            ],
+            [
+              4.939159,
+              51.239104
+            ],
+            [
+              4.939551,
+              51.239145
+            ],
+            [
+              4.939505,
+              51.239261
+            ],
+            [
+              4.938996,
+              51.239277
             ]
-        },
-        "id": "d3868d0a-62bf-4ba7-9a14-9e0c797fd7cd"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "bar",
-            "displayName": "Bar",
-            "style": "faciliteit"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.938494, 51.238562]
-        },
-        "id": "73971cc8-3992-4f72-b53d-a517a5d37720"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "eten",
-            "displayName": "Eten",
-            "style": "faciliteit"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.938365, 51.238861]
-        },
-        "id": "6899b9e6-c153-44db-ac85-fa599e1f8fc3"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "afwasbatterij",
-            "displayName": "Afwasbatterij",
-            "style": "afwasbatterij"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.938076, 51.238932]
-        },
-        "id": "5222a1a5-f3e8-4871-9072-366d3de24087"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "afwasbatterij",
-            "displayName": "Afwasbatterij",
-            "style": "afwasbatterij"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.930716, 51.245732]
-        },
-        "id": "dd40c022-d608-48b3-a6a5-0c70bd3c8bd6"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "sanitair",
-            "displayName": "Sanitair",
-            "style": "sanitair"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.932384, 51.242921]
-        },
-        "id": "c0091f61-016a-4a48-83d5-2910603e1d3f"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "evacuatiepunt",
-            "displayName": "Evacuatiepunt",
-            "style": "evacuatiepunt"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.917498, 51.243368]
-        },
-        "id": "f1c72d80-57da-4995-ad91-0c1954e54232"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "evacuatiepunt",
-            "displayName": "Evacuatiepunt"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.919472, 51.238317]
-        },
-        "id": "d47c371f-8271-4a58-9929-b24a1666a066"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "evacuatiepunt",
-            "displayName": "Evacuatiepunt"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.945157, 51.238921]
-        },
-        "id": "d5828878-348d-47ce-91a7-ee8ae6f15519"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "hoofdpodium",
-            "displayName": "Hoofdpodium",
-            "style": "podium"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.936616, 51.239103],
-                    [4.93659, 51.239007],
-                    [4.937072, 51.238963],
-                    [4.937097, 51.239057],
-                    [4.936616, 51.239103]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.921993,
+          51.239246
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.922975,
+          51.239497
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.928079,
+          51.239402
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.930203,
+          51.239177
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.93049,
+          51.237638
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.935015,
+          51.237172
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.936107,
+          51.237457
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.930211987554874,
+          51.245561350810185
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Touwenparcours",
+        "displayName": "Touwenparcours",
+        "style": "bos"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.927046,
+              51.239717
+            ],
+            [
+              4.927749,
+              51.239677
+            ],
+            [
+              4.927889,
+              51.239885
+            ],
+            [
+              4.927213,
+              51.239956
+            ],
+            [
+              4.927046,
+              51.239717
             ]
-        },
-        "id": "d790b4af-7d28-42d2-8504-bad10bb90a1b"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "Vijver 1",
-            "displayName": "Vijver",
-            "style": "aanbod"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.93784, 51.241313],
-                    [4.938011, 51.241138],
-                    [4.938419, 51.241098],
-                    [4.938569, 51.241313],
-                    [4.938204, 51.24146],
-                    [4.93784, 51.241313]
-                ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "evacuatiepunt",
+        "displayName": "Evacuatiepunt"
+      },
+      "geometry": {
+        "coordinates": [
+          4.919472,
+          51.238317
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "evacuatiepunt",
+        "displayName": "Evacuatiepunt"
+      },
+      "geometry": {
+        "coordinates": [
+          4.945157,
+          51.238921
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "vijver",
+        "displayName": "Vijver",
+        "style": "vijver"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.938073,
+              51.242051
+            ],
+            [
+              4.937968,
+              51.24202
+            ],
+            [
+              4.937831,
+              51.241915
+            ],
+            [
+              4.937791,
+              51.241855
+            ],
+            [
+              4.937679,
+              51.241806
+            ],
+            [
+              4.937662,
+              51.241751
+            ],
+            [
+              4.937727,
+              51.241482
+            ],
+            [
+              4.937907,
+              51.241279
+            ],
+            [
+              4.937958,
+              51.241262
+            ],
+            [
+              4.938051,
+              51.241259
+            ],
+            [
+              4.938148,
+              51.241277
+            ],
+            [
+              4.938655,
+              51.241502
+            ],
+            [
+              4.938655,
+              51.241541
+            ],
+            [
+              4.938569,
+              51.24164
+            ],
+            [
+              4.938478,
+              51.241695
+            ],
+            [
+              4.938405,
+              51.241719
+            ],
+            [
+              4.93829,
+              51.241816
+            ],
+            [
+              4.938172,
+              51.241994
+            ],
+            [
+              4.93811,
+              51.24204
+            ],
+            [
+              4.938073,
+              51.242051
             ]
-        },
-        "id": "54c5fef1-90a8-47fe-8a77-492886b06c04"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "",
-            "displayName": "Vijver",
-            "style": "vijver"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.938837, 51.242357],
-                    [4.938907, 51.242266],
-                    [4.939395, 51.241931],
-                    [4.93968, 51.242021],
-                    [4.9402, 51.242287],
-                    [4.940286, 51.242414],
-                    [4.940136, 51.242491],
-                    [4.94005, 51.242646],
-                    [4.939749, 51.242773],
-                    [4.939524, 51.24275],
-                    [4.938837, 51.242357]
-                ]
-            ]
-        },
-        "id": "7da2ae49-6f86-4947-81c9-b585f1474cfe"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "",
-            "style": "vijver",
-            "displayName": "Vijver"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.935334, 51.242579],
-                    [4.935522, 51.242569],
-                    [4.936112, 51.242935],
-                    [4.936069, 51.242995],
-                    [4.93579, 51.243025],
-                    [4.935812, 51.243106],
-                    [4.935731, 51.243203],
-                    [4.93586, 51.243284],
-                    [4.935753, 51.243318],
-                    [4.935479, 51.243321],
-                    [4.935243, 51.243271],
-                    [4.935141, 51.243123],
-                    [4.935238, 51.242985],
-                    [4.935189, 51.242908],
-                    [4.935254, 51.242713],
-                    [4.935334, 51.242579]
-                ]
-            ]
-        },
-        "id": "635659af-6e30-4579-9c67-a0e6151483fe"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "4/5",
-            "displayName": "Pavilioen 4/5",
-            "style": "pavilioen"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.926864, 51.244637],
-                    [4.926934, 51.244474],
-                    [4.927682, 51.244594],
-                    [4.927604, 51.244763],
-                    [4.926864, 51.244637]
-                ]
-            ]
-        },
-        "id": "09aedfda-437d-487d-9f9f-897fb3e03c93"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "bar",
-            "displayName": "Bar",
-            "style": "faciliteit"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.939567, 51.236335]
-        },
-        "id": "51ef69b6-1bb0-44f3-bcc2-c59e50b65f78"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "eten",
-            "displayName": "Eten",
-            "style": "faciliteit"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.939857, 51.236335]
-        },
-        "id": "9fe8bd16-140b-449d-b499-677fe6f80786"
-    }, {
-        "type": "Feature",
-        "properties": {
-            "name": "vijver",
-            "displayName": "Vijver",
-            "style": "vijver"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [4.938073, 51.242051],
-                    [4.937968, 51.24202],
-                    [4.937831, 51.241915],
-                    [4.937791, 51.241855],
-                    [4.937679, 51.241806],
-                    [4.937662, 51.241751],
-                    [4.937727, 51.241482],
-                    [4.937907, 51.241279],
-                    [4.937958, 51.241262],
-                    [4.938051, 51.241259],
-                    [4.938148, 51.241277],
-                    [4.938655, 51.241502],
-                    [4.938655, 51.241541],
-                    [4.938569, 51.24164],
-                    [4.938478, 51.241695],
-                    [4.938405, 51.241719],
-                    [4.93829, 51.241816],
-                    [4.938172, 51.241994],
-                    [4.93811, 51.24204],
-                    [4.938073, 51.242051]
-                ]
-            ]
-        },
-        "id": "1278d00c-34a3-4792-8355-d859202e9247"
-    }]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "infopunt",
+        "displayName": "Infopunt",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.944951672117696,
+          51.24538685547083
+        ],
+        "type": "Point"
+      }
+    }
+  ]
 }

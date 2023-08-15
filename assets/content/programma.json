@@ -4,58 +4,35 @@
             "label": "Vrijdag",
             "items": [
                 {
-                    "title": "Aankomst",
-                    "start": "VR 19:00",
-                    "end": "VR 22:00",
-                    "location": "GG"
-                },
-                {
                     "title": "Installeren & onthaal",
-                    "start": "VR 22:00",
+                    "subtitle": "op de gouwgrond",
+                    "start": "VR 19:00",
                     "end": "VR 22:30"
                 },
                 {
-                    "title": "Opwarmer",
+                    "title": "Start! Openingsshow & scouteske avond met Meet the Simons en DJ Alles Kapot",
                     "start": "VR 23:00",
-                    "end": "VR 23:15",
+                    "end": "ZA 02:00",
                     "location": "GG",
-                    "group": "Hoofdpodium"
-                },
-                {
-                    "title": "Openingsshow",
-                    "start": "VR 23:00",
-                    "end": "VR 23:15",
-                    "location": "GG",
-                    "group": "Hoofdpodium",
                     "notify": true
                 },
                 {
-                    "title": "DJ Battle",
-                    "start": "ZA 00:00",
-                    "end": "ZA 01:00",
-                    "location": "GG",
-                    "group": "Hoofdpodium"
+                    "title": "Bar International",
+                    "start": "VR 23:00",
+                    "end": "ZA 01:30",
+                    "location": "G30"
                 },
                 {
-                    "title": "DJ",
-                    "start": "ZA 01:00",
-                    "end": "ZA 02:00",
-                    "location": "GG",
-                    "group": "Hoofdpodium"
+                    "title": "Scouteske Karaoke",
+                    "start": "ZA 00:00",
+                    "end": "ZA 01:30",
+                    "location": "K30"
                 },
                 {
-                    "title": "Scouteske karaoke",
-                    "start": "ZA 00:00",
-                    "end": "ZA 01:45",
-                    "location": "K30",
-                    "group": "K30"
-                },
-                {
-                    "title": "Pijl en boog",
-                    "start": "ZA 00:00",
-                    "end": "ZA 01:45",
-                    "location": "30",
-                    "group": "K30 loods"
+                    "title": "Avondlied",
+                    "start": "ZA 02:00",
+                    "end": "ZA 02:30",
+                    "location": "GG"
                 },
                 {
                     "title": "Slaapwel",
@@ -68,77 +45,67 @@
             "label": "Zaterdag",
             "items": [
                 {
-                    "title": "Opstaan & ontbijten",
+                    "title": "Opstaan & ontbijt",
                     "start": "ZA 08:30",
                     "end": "ZA 09:30"
                 },
                 {
                     "title": "Goesting in inspiratie & goesting in actie",
+                    "subtitle": "op verschillende gronden langs inspiratielus",
                     "start": "ZA 10:00",
                     "end": "ZA 13:00",
                     "notify": true
                 },
                 {
-                    "title": "Eten & show op de grote grond",
+                    "title": "Eten & show",
                     "start": "ZA 13:00",
-                    "end": "ZA 15:00",
+                    "end": "ZA 14:00",
                     "location": "GG",
                     "notify": true
                 },
                 {
-                    "title": "Marktje op de grote grond",
-                    "start": "ZA 15:00",
-                    "end": "ZA 18:00",
-                    "location": "GG",
+                    "title": "Markt",
+                    "start": "ZA 14:30",
+                    "end": "ZA 17:00",
+                    "location": "markt",
                     "notify": true
                 },
                 {
-                    "title": "District/gouwmoment & eten op de gouwgrond",
+                    "title": "Eten & district-/gouwmoment",
+                    "subtitle": "op de gouwgrond",
                     "start": "ZA 18:00",
                     "end": "ZA 22:00",
                     "notify": true
                 },
                 {
-                    "title": "Winnaar DJ Battle",
-                    "start": "ZA 23:00",
-                    "end": "ZA 23:40",
-                    "location": "GG",
-                    "group": "Hoofdpodium"
-                },
-                {
-                    "title": "Simon Collective",
-                    "start": "ZA 23:50",
-                    "end": "ZO 00:50",
-                    "location": "GG",
-                    "group": "Hoofdpodium"
-                },
-                {
-                    "title": "DJ Alles Kapot",
-                    "start": "ZO 01:00",
+                    "title": "Scouteske avond met Ave Noenkel, Pardon Service en BJ Orn",
+                    "start": "ZA 22:30",
                     "end": "ZO 02:00",
-                    "location": "GG",
-                    "group": "Hoofdpodium"
+                    "location": "GG"
                 },
                 {
-                    "title": "Scouteske karaoke",
-                    "start": "ZA 23:15",
-                    "end": "ZO 01:45",
-                    "location": "K30",
-                    "group": "K30"
+                    "title": "Prikkelarme activiteit Ploeg Zingeving",
+                    "start": "ZA 22:30",
+                    "end": "ZO 01:30",
+                    "location": "K33"
                 },
                 {
-                    "title": "The Attic",
-                    "start": "ZA 23:15",
-                    "end": "ZO 00:15",
-                    "location": "30",
-                    "group": "K30 loods"
+                    "title": "Zeescoutsbar met Sidewave en 50/50",
+                    "start": "ZA 23:00",
+                    "end": "ZO 01:30",
+                    "location": "K30"
                 },
                 {
-                    "title": "Nancy's Neighbours",
-                    "start": "ZO 00:45",
-                    "end": "ZO 01:45",
-                    "location": "30",
-                    "group": "K30 loods"
+                    "title": "Hopper-volkscafé",
+                    "start": "ZA 23:00",
+                    "end": "ZO 01:30",
+                    "location": "30"
+                },
+                {
+                    "title": "Avondlied",
+                    "start": "ZO 02:00",
+                    "end": "ZO 02:30",
+                    "location": "GG"
                 },
                 {
                     "title": "Slaapwel",
@@ -151,25 +118,13 @@
             "label": "Zondag",
             "items": [
                 {
-                    "title": "Opstaan & ontbijten",
+                    "title": "Opstaan & ontbijt & opruim",
                     "start": "ZO 08:30",
-                    "end": "ZO 09:30"
+                    "end": "ZO 10:30"
                 },
                 {
-                    "title": "Opruimen & afbraak",
-                    "start": "ZO 09:30",
-                    "end": "ZO 11:00"
-                },
-                {
-                    "title": "Verrassingsact vol goesting",
-                    "start": "ZO 11:30",
-                    "end": "ZO 12:30",
-                    "location": "GG",
-                    "notify": true
-                },
-                {
-                    "title": "Lunch op de grote grond",
-                    "start": "ZO 12:30",
+                    "title": "Slotshow met verrassingsact",
+                    "start": "ZO 11:00",
                     "end": "ZO 13:00",
                     "location": "GG",
                     "notify": true

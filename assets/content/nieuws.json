@@ -1,42 +1,24 @@
 {
     "news": [
         {
-            "title": "Praktische informatie",
-            "body": "praktisch",
-            "publishTime": "VR 18:00"
-        },
-        {
-            "title": "DAS Goesting!",
+            "title": "Speelstek, reuzeplek!",
             "subtitle": "Ontdek het jaarthema...",
             "image": "jaarthema.jpg",
             "body": "jaarthema",
-            "publishTime": "VR 18:00",
+            "publishTime": "01/08 18:00",
             "pin": true,
             "notify": true
         },
         {
-            "title": "Jaarlied",
-            "image": "jaarthema.jpg",
-            "body": "jaarlied"
+            "title": "Praktische informatie",
+            "body": "praktisch",
+            "publishTime": "14/08 18:00"
         },
         {
-            "title": "Onze leefregels",
+            "title": "Leefregels op HO",
             "subtitle": "Dankzij deze leefregels zorgen we dat het leuk is voor iedereen!",
-            "image": "leefregels.png",
             "body": "leefregels",
-            "publishTime": "VR 19:00",
-            "archiveTime": "ZO 23:59"
-        },
-        {
-            "title": "Wat vond je van de vorming?",
-            "publishTime": "ZA 12:00",
-            "archiveTime": "ZA 16:00",
-            "notify": true
-        },
-        {
-            "title": "Tot volgend jaar!",
-            "publishTime": "ZO 13:00",
-            "archiveTime": "ZO 23:59"
+            "publishTime": "14/08 18:00"
         }
     ]
 }
