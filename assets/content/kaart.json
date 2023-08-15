@@ -187,8 +187,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "markt",
-        "displayName": "Markt",
+        "name": "K15",
+        "displayName": "K15 (Markt)",
         "style": "podiumgrond"
       },
       "geometry": {
@@ -385,41 +385,6 @@
           51.2374476309015
         ],
         "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "K15",
-        "displayName": "Kamp 15",
-        "style": "kampeergrond-ongebruikt"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              4.943585,
-              51.244919
-            ],
-            [
-              4.943848,
-              51.244453
-            ],
-            [
-              4.944851,
-              51.244711
-            ],
-            [
-              4.944577,
-              51.245252
-            ],
-            [
-              4.943585,
-              51.244919
-            ]
-          ]
-        ],
-        "type": "Polygon"
       }
     },
     {
@@ -1575,7 +1540,7 @@
       "properties": {
         "name": "K43",
         "displayName": "Kamp 43",
-        "style": "kampeergrond-ongebruikt"
+        "style": "kampeergrond"
       },
       "geometry": {
         "coordinates": [
@@ -1871,7 +1836,7 @@
       "properties": {
         "name": "K40",
         "displayName": "Kamp 40",
-        "style": "kampeergrond-ongebruikt"
+        "style": "aanbod"
       },
       "geometry": {
         "coordinates": [

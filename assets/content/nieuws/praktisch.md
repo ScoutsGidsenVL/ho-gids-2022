@@ -1,4 +1,4 @@
-## Infopunt ([grote grond](/kaart?id=GG) en [K15](/kaart?id=G15) tijdens de markt)
+## Infopunt ([grote grond](/kaart?id=GG) en [K15](/kaart?id=K15) tijdens de markt)
 * voor al je vragen
 * verloren voorwerpen melden of brengen
 
@@ -35,7 +35,7 @@ Zit je met iets? Voel je je onveilig? Wil je een bezorgdheid delen? Spreek dan e
 * Vrijdag 23.00 - 01.30
 * Zaterdag 23.00 - 01.30
 
-**Bar [markt K15](/kaart?id=markt)**:
+**Bar [markt K15](/kaart?id=K15)**:
 
 * Zaterdag 14.30 - 17.00
 
@@ -48,20 +48,23 @@ Het afbraakplan bestaat uit twee delen:
 * Een deel zondagvoormiddag met deelnemers en medewerkers, na het ontbijt tot 11uur.
 * Een deel zondagnamiddag met alle medewerkers.
 
-## Gouwgronden TODO
-|Gouw                |Locatie                 |
-|--------------------|------------------------|
-|Waas                |[Kamp 7](/kaart?id=K7)  |
-|Zuid-West-Vlaanderen|[Kamp 7](/kaart?id=K7)  |
-|Antwerpen           |[Kamp 8](/kaart?id=K8)  |
-|Webra               |[Kamp 8](/kaart?id=K8)  |
-|Limburg             |[Kamp 9](/kaart?id=K9)  |
-|Kempen              |[Kamp 41](/kaart?id=K41)|
-|Heide               |[Kamp 42](/kaart?id=K42) + [Kamp 43](/kaart?id=K43)|
-|Gent                |[Kamp 48](/kaart?id=K48)|
-|Oost-Brabant        |[Kamp 48](/kaart?id=K48)|
-|Land van Egmont     |[Kamp 49](/kaart?id=K49)|
-|Noordzee            |[Kamp 49](/kaart?id=K49)|
+## Gouwgronden
+|Kampeergrond Noord    |Gouw                |
+|----------------------|--------------------|
+|[Kamp 7](/kaart?id=K7)|Waas                |
+|[Kamp 7](/kaart?id=K7)|Zuid-West-Vlaanderen|
+|[Kamp 8](/kaart?id=K8)|Antwerpen           |
+|[Kamp 8](/kaart?id=K8)|Webra               |
+|[Kamp 9](/kaart?id=K9)|Limburg             |
+
+|Kampeergrond Zuid       |Gouw           |
+|------------------------|---------------|
+|[Kamp 41](/kaart?id=K41)|Kempen         |
+|[Kamp 42](/kaart?id=K42) + [43](/kaart?id=K43)|Heide|
+|[Kamp 48](/kaart?id=K48)|Gent           |
+|[Kamp 48](/kaart?id=K48)|Oost-Brabant   |
+|[Kamp 49](/kaart?id=K49)|Land van Egmont|
+|[Kamp 49](/kaart?id=K49)|Noordzee       |
 
 ---
 
@@ -71,8 +74,8 @@ Het afbraakplan bestaat uit twee delen:
 |Kapoenengrond              |[Kamp 30](/kaart?id=K30)                     |
 |Welpen- / Kaboutergrond    |[Kamp 33](/kaart?id=K33)                     |
 |Jonggivergrond             |[Kamp 34](/kaart?id=K34)                     |
-|Givergrond en zeescoutsgrond|[Vijver](/kaart?id=K34)                     |
-|Jingrond                   |[Kamp 40](/kaart?id=vijver)                  |
+|Givergrond en zeescoutsgrond|[Vijver](/kaart?id=vijver)                  |
+|Jingrond                   |[Kamp 40](/kaart?id=K40)                     |
 |Akabegrond                 |Rond [loods K30](/kaart?id=G30)              |
 |Groepsleidingsgrond        |In en rond [gebouw 11](/kaart?id=G11)        |
 |Achtergrond: goesting in inspiratie|Rond [gebouw 39](/kaart?id=G39)      |
