@@ -51,5 +51,7 @@
 		<true/>
 		<key>ITSAppUsesNonExemptEncryption</key>
 		<false/>
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>Location permission is required.</string>
 </dict>
 </plist>
