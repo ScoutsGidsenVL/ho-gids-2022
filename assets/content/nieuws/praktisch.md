@@ -9,7 +9,7 @@ Telefonisch bereikbaar op [0477 38 24 12](tel:0477382412)
 ## NOODGEVAL?!
 Verwittig de hulpdiensten niet zelf!
 
-Kleine ongelukjes: [Rode kruis in gebouw 39](/kaart?id=G39)
+Kleine ongelukjes: [Rode Kruis in gebouw 39](/kaart?id=G39)
 
 Nood en ramp: [0474 26 14 01](tel:0474261401)
 
@@ -49,13 +49,14 @@ Het afbraakplan bestaat uit twee delen:
 * Een deel zondagnamiddag met alle medewerkers.
 
 ## Gouwgronden
-|Kampeergrond Noord    |Gouw                |
-|----------------------|--------------------|
-|[Kamp 7](/kaart?id=K7)|Waas                |
-|[Kamp 7](/kaart?id=K7)|Zuid-West-Vlaanderen|
-|[Kamp 8](/kaart?id=K8)|Antwerpen           |
-|[Kamp 8](/kaart?id=K8)|Webra               |
-|[Kamp 9](/kaart?id=K9)|Limburg             |
+|Kampeergrond Noord      |Gouw                |
+|------------------------|--------------------|
+|[Kamp 7](/kaart?id=K7)  |Waas                |
+|[Kamp 7](/kaart?id=K7)  |Zuid-West-Vlaanderen|
+|[Kamp 8](/kaart?id=K8)  |Antwerpen           |
+|[Kamp 8](/kaart?id=K8)  |Webra               |
+|[Kamp 9](/kaart?id=K9)  |Limburg             |
+|[Kamp 10](/kaart?id=K10)|Opsinjoor           |
 
 |Kampeergrond Zuid       |Gouw           |
 |------------------------|---------------|
@@ -63,7 +64,7 @@ Het afbraakplan bestaat uit twee delen:
 |[Kamp 42](/kaart?id=K42) + [43](/kaart?id=K43)|Heide|
 |[Kamp 48](/kaart?id=K48)|Gent           |
 |[Kamp 48](/kaart?id=K48)|Oost-Brabant   |
-|[Kamp 49](/kaart?id=K49)|Land van Egmont|
+|[Kamp 49](/kaart?id=K49)|Land Van Egmont|
 |[Kamp 49](/kaart?id=K49)|Noordzee       |
 
 ---
@@ -77,7 +78,7 @@ Het afbraakplan bestaat uit twee delen:
 |Givergrond en zeescoutsgrond|[Vijver](/kaart?id=vijver)                  |
 |Jingrond                   |[Kamp 40](/kaart?id=K40)                     |
 |Akabegrond                 |Rond [loods K30](/kaart?id=G30)              |
-|Groepsleidingsgrond        |In en rond [gebouw 11](/kaart?id=G11)        |
+|Groepsleidings-grond       |In en rond [gebouw 11](/kaart?id=G11)        |
 |Achtergrond: goesting in inspiratie|Rond [gebouw 39](/kaart?id=G39)      |
-|Achtergrond: goesting in actie|[GG](/kaart?id=GG)aan het podium          |
+|Achtergrond: goesting in actie|[GG](/kaart?id=GG) aan het podium         |
 |EHBO                       |[GG](/kaart?id=GG)                           |
