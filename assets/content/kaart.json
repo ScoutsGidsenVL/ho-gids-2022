@@ -595,7 +595,7 @@
       "type": "Feature",
       "properties": {
         "name": "K10",
-        "displayName": "Kamp 10",
+        "displayName": "Kamp 10 (Opsinjoor)",
         "style": "kampeergrond"
       },
       "geometry": {
@@ -815,7 +815,7 @@
       "type": "Feature",
       "properties": {
         "name": "K9",
-        "displayName": "Kamp 9",
+        "displayName": "Kamp 9 (Limburg)",
         "style": "kampeergrond"
       },
       "geometry": {
@@ -938,7 +938,7 @@
       "type": "Feature",
       "properties": {
         "name": "K8",
-        "displayName": "Kamp 8",
+        "displayName": "Kamp 8 (Antwerpen en Webra)",
         "style": "kampeergrond"
       },
       "geometry": {
@@ -993,8 +993,8 @@
       "type": "Feature",
       "properties": {
         "name": "K7",
-        "style": "kampeergrond",
-        "displayName": "Kamp 7"
+        "displayName": "Kamp 7 (Waas en Zuid-West-Vlaanderen)",
+        "style": "kampeergrond"
       },
       "geometry": {
         "coordinates": [
@@ -1461,7 +1461,7 @@
       "type": "Feature",
       "properties": {
         "name": "K42",
-        "displayName": "Kamp 42",
+        "displayName": "Kamp 42 (Heide)",
         "style": "kampeergrond"
       },
       "geometry": {
@@ -1496,7 +1496,7 @@
       "type": "Feature",
       "properties": {
         "name": "K41",
-        "displayName": "Kamp 41",
+        "displayName": "Kamp 41 (Kempen)",
         "style": "kampeergrond"
       },
       "geometry": {
@@ -1539,7 +1539,7 @@
       "type": "Feature",
       "properties": {
         "name": "K43",
-        "displayName": "Kamp 43",
+        "displayName": "Kamp 43 (Heide)",
         "style": "kampeergrond"
       },
       "geometry": {
@@ -1617,7 +1617,7 @@
       "type": "Feature",
       "properties": {
         "name": "K48",
-        "displayName": "Kamp 48",
+        "displayName": "Kamp 48 (Gent en Oost-Brabant)",
         "style": "kampeergrond"
       },
       "geometry": {
@@ -1652,7 +1652,7 @@
       "type": "Feature",
       "properties": {
         "name": "K49",
-        "displayName": "Kamp 49",
+        "displayName": "Kamp 49 (Land Van Egmont en Noordzee)",
         "style": "kampeergrond"
       },
       "geometry": {
