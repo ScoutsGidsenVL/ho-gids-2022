@@ -230,21 +230,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "afwasbatterij",
-        "displayName": "Afwasbatterij",
-        "style": "afwasbatterij"
-      },
-      "geometry": {
-        "coordinates": [
-          4.938076,
-          51.238932
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "K30",
         "displayName": "Kamp 30",
         "style": "podiumgrond"
