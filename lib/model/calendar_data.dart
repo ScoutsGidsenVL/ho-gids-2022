@@ -67,7 +67,7 @@ class CalendarItemData {
 
   bool isHappening(TimeManager manager) {
     return getStartTime(manager).isBefore(manager.now()) &&
-        (getEndTime(manager)?.isAfter(manager.now()) ?? true);
+        (getEndTime(manager)?.isAfter(manager.now()) ?? false);
   }
 
   factory CalendarItemData.fromJson(Map<String, dynamic> json) =>
