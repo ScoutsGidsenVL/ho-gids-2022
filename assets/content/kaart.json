@@ -4,6 +4,129 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair & drinkbaar water",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.936370434295715,
+          51.23860919182378
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "gouwexpress",
+        "displayName": "Gouw Express Zuid",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.936862697552641,
+          51.2385453528872
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "infopunt",
+        "displayName": "Infopunt",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.938222300297544,
+          51.238353751203014
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "bar",
+        "displayName": "Bar",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.9386260680574114,
+          51.23866240314538
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "EHBO",
+        "displayName": "EHBO",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.933789253608962,
+          51.239795007626384
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "eten",
+        "displayName": "Eten",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.93827066567331,
+          51.23889053017426
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "gouwexpress",
+        "displayName": "Gouw Express Noord",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.9374192701756385,
+          51.23902374269065
+        ],
+        "type": "Point"
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "kassa",
+        "displayName": "Kassa",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.939004086862099,
+          51.23833863970961
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "border",
         "displayName": "Grens",
         "style": "border"
@@ -182,7 +305,8 @@
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 8
     },
     {
       "type": "Feature",
@@ -260,13 +384,14 @@
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 10
     },
     {
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -275,7 +400,8 @@
           51.236395700104204
         ],
         "type": "Point"
-      }
+      },
+      "id": 11
     },
     {
       "type": "Feature",
@@ -290,7 +416,8 @@
           51.236428099765334
         ],
         "type": "Point"
-      }
+      },
+      "id": 12
     },
     {
       "type": "Feature",
@@ -330,36 +457,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "infopunt",
-        "displayName": "Infopunt",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.938194,
-          51.238401
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "sanitair",
-        "displayName": "Sanitair",
-        "style": "sanitair"
-      },
-      "geometry": {
-        "coordinates": [
-          4.936370434295715,
-          51.23860919182378
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "bar",
         "displayName": "Bar",
         "style": "faciliteit"
@@ -368,51 +465,6 @@
         "coordinates": [
           4.94064318624558,
           51.2374476309015
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "bar",
-        "displayName": "Bar",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.938494,
-          51.238562
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "EHBO",
-        "displayName": "EHBO",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.933789253608962,
-          51.239795007626384
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "eten",
-        "displayName": "Eten",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.938365,
-          51.238861
         ],
         "type": "Point"
       }
@@ -650,7 +702,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -665,7 +717,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -680,7 +732,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -843,7 +895,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -1071,8 +1123,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "SIS",
-        "displayName": "Gebouw 37 (SIS)",
+        "name": "G37",
+        "displayName": "Loods 37",
         "style": "loods"
       },
       "geometry": {
@@ -1101,13 +1153,14 @@
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 36
     },
     {
       "type": "Feature",
       "properties": {
         "name": "G36",
-        "displayName": "Loods 36",
+        "displayName": "Loods 36 (SIS)",
         "style": "loods"
       },
       "geometry": {
@@ -1136,7 +1189,8 @@
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 37
     },
     {
       "type": "Feature",
@@ -1440,7 +1494,8 @@
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 45
     },
     {
       "type": "Feature",
@@ -1596,7 +1651,8 @@
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 49
     },
     {
       "type": "Feature",
@@ -2138,47 +2194,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "podium",
-        "displayName": "Podium",
-        "style": "podiumgrond"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              4.938996,
-              51.239277
-            ],
-            [
-              4.938977,
-              51.239172
-            ],
-            [
-              4.939159,
-              51.239104
-            ],
-            [
-              4.939551,
-              51.239145
-            ],
-            [
-              4.939505,
-              51.239261
-            ],
-            [
-              4.938996,
-              51.239277
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2193,7 +2210,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2208,7 +2225,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2223,7 +2240,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2238,7 +2255,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2253,7 +2270,7 @@
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2262,13 +2279,14 @@
           51.237172
         ],
         "type": "Point"
-      }
+      },
+      "id": 71
     },
     {
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2277,13 +2295,14 @@
           51.237457
         ],
         "type": "Point"
-      }
+      },
+      "id": 72
     },
     {
       "type": "Feature",
       "properties": {
         "name": "sanitair",
-        "displayName": "Sanitair",
+        "displayName": "Sanitair & drinkbaar water",
         "style": "sanitair"
       },
       "geometry": {
@@ -2292,41 +2311,6 @@
           51.245561350810185
         ],
         "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Touwenparcours",
-        "displayName": "Touwenparcours",
-        "style": "bos"
-      },
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              4.927046,
-              51.239717
-            ],
-            [
-              4.927749,
-              51.239677
-            ],
-            [
-              4.927889,
-              51.239885
-            ],
-            [
-              4.927213,
-              51.239956
-            ],
-            [
-              4.927046,
-              51.239717
-            ]
-          ]
-        ],
-        "type": "Polygon"
       }
     },
     {
@@ -2355,7 +2339,8 @@
           51.238921
         ],
         "type": "Point"
-      }
+      },
+      "id": 76
     },
     {
       "type": "Feature",
@@ -2466,6 +2451,70 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "kassa",
+        "displayName": "Kassa",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.946001150889373,
+          51.24508224821159
+        ],
+        "type": "Point"
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "touwenparcours",
+        "displayName": "Touwenparcours",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.928561280445479,
+          51.240134766291135
+        ],
+        "type": "Point"
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "kassa",
+        "displayName": "Kassa",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.939884053755662,
+          51.23617117558814
+        ],
+        "type": "Point"
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "klimbos",
+        "displayName": "Klimbos",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.93944943231719,
+          51.24157608093998
+        ],
+        "type": "Point"
+      },
+      "id": 81
     }
   ]
 }
