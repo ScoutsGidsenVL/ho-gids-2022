@@ -722,21 +722,6 @@
       },
       "geometry": {
         "coordinates": [
-          4.945152749615584,
-          51.2456533427945
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "sanitair",
-        "displayName": "Sanitair & drinkbaar water",
-        "style": "sanitair"
-      },
-      "geometry": {
-        "coordinates": [
           4.934060489879828,
           51.24539595643509
         ],
@@ -2301,21 +2286,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "sanitair",
-        "displayName": "Sanitair & drinkbaar water",
-        "style": "sanitair"
-      },
-      "geometry": {
-        "coordinates": [
-          4.930211987554874,
-          51.245561350810185
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "evacuatiepunt",
         "displayName": "Evacuatiepunt"
       },
@@ -2436,37 +2406,6 @@
         ],
         "type": "Polygon"
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "infopunt",
-        "displayName": "Infopunt",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.944951672117696,
-          51.24538685547083
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "kassa",
-        "displayName": "Kassa",
-        "style": "faciliteit"
-      },
-      "geometry": {
-        "coordinates": [
-          4.946001150889373,
-          51.24508224821159
-        ],
-        "type": "Point"
-      },
-      "id": 79
     },
     {
       "type": "Feature",
