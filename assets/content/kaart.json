@@ -472,6 +472,21 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "bar",
+        "displayName": "Bar",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.945361689436993,
+          51.244853677066374
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "K17",
         "displayName": "Kamp 17",
         "style": "kampeergrond-ongebruikt"
@@ -694,6 +709,21 @@
         "coordinates": [
           4.937907,
           51.244763
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "sanitair",
+        "displayName": "Sanitair & drinkbaar water",
+        "style": "sanitair"
+      },
+      "geometry": {
+        "coordinates": [
+          4.945152749615584,
+          51.2456533427945
         ],
         "type": "Point"
       }
@@ -2406,6 +2436,37 @@
         ],
         "type": "Polygon"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "infopunt",
+        "displayName": "Infopunt",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.944951672117696,
+          51.24538685547083
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "kassa",
+        "displayName": "Kassa",
+        "style": "faciliteit"
+      },
+      "geometry": {
+        "coordinates": [
+          4.946001150889373,
+          51.24508224821159
+        ],
+        "type": "Point"
+      },
+      "id": 79
     },
     {
       "type": "Feature",
